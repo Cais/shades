@@ -1,0 +1,191 @@
+==== Changelog ====
+* as of September 29, 2011:
+
+=== Version 1.7.1 ===
+== Public ==
+* released ...
+
+== CODE Changes ==
+* implement the inclusion of `BNS Theme Add-Ins`
+* removed contextual help in favor of `BNS Theme Add-Ins` usage
+
+== CSS Changes ==
+
+== CODE & CSS Changes ==
+
+== Miscellaneous ==
+* trial adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
+* added Review Ticket section to the "README"
+
+/* Internet Browsers Reviewed
+ * ==========================
+ * Apple Safari v5.1 (Mac)
+ * Apple Safari v5.1 (PC)
+ * Firefox v6.0.2 (Mac)
+ * Firefox v6.0.2 (PC)
+ * Google Chrome v13.0
+ * Internet Explorer v9.0
+ * Opera v11.51
+ **/
+
+--------------------------------------------------------------------------------
+=== Version 1.7 ===
+== Public ==
+* released September 11, 2011
+* published September 13, 2011
+
+== CODE Changes ==
+* added support for post formats: aside, quote, status
+* added the `shades` loop template
+* added theme page for support and a contextual-help readme
+* NB: adding the loop template and support for post formats affected the following template files: archive, author, index, page, single
+* added `shades_used_posted` function to provide a link to the single view of posts without titles
+* updated `BNS_Dynamic_Copyright` function
+* updated `BNS_Theme_Version` function
+* updated WordPress Required Version to 3.1 to implement post-formats (NB: Theme may still function correctly down to version 3.0)
+* removed featured image thumbnail from the single view
+* removed direct IE6 support
+* removed `show_avatar` function
+* removed `shades_page_number` function
+ 
+== CSS Changes ==
+* reduced vertical distance between posts by half
+* modified style for tag elements; add bottom-right border to help define the post they are attached to
+* set base font-size to 100%; updated most other font-sizes to use percentages creating an over-all easier to read text
+* addressed image thumbnail sizes used by gallery shortcode to handle up to 10 columns
+* changed 'widgettitle' to 'widget-title' (NB: not currently used by the theme)  
+
+== CODE & CSS Changes ==
+* updated menu code to better handle parent-child-grandchild etc. structures (NB: menu is no longer centered.)
+* moved the "Comments" to be inline with the post title and made minor style changes
+* changed #main-blog to #the-loop for more code clarity  
+
+--------------------------------------------------------------------------------
+==== Older Changelog Details ====
+-- Version 1.6
+  - released: Sept 13, 2010
+  - added license slug and URI to style.css header block
+  - added unique prefix to themes functions where appropriate
+  - added full wp_nav_menu support
+  - added additional WordPress 3.0 core functionality features i.e.: post thumbnails
+  - added full drop-down menu functionality with credits to http://matthewjamestaylor.com/blog/centered-dropdown-menus
+  - added 'the_shortlink()' based on this post: http://wpfirstaid.com/2010/07/add-the_shortlink/
+  - additional code clean-up  
+  - CSS: adjusted background and font size on allowed tags for comments
+  - CSS: minor clean up  
+
+-- Version 1.5.1
+  - released: June 19, 2010
+  - published on WordPress.org: June 22, 2010
+  - corrections to sidebar.php to remove "second" id=searchform
+  - WP: changed `the_time( 'M j, Y' )` to `the_time( get_option( 'date_format' ) );`
+
+-- Version 1.5
+  - released: June 15, 2010
+  - cleaned up code in functions.php
+  - clean up code to meet WP Standards
+  - WP: updated comments.php to use comment_form() function; old comment form will be removed with next theme revision (post WordPress v3.0)
+
+-- Version 1.4
+  - released: Apr 24, 2010
+  - published on WordPress.org: Apr 28, 2010
+  - Shades of Darkness child theme is no longer included
+  - add revision details to each file
+  - updated bns_dynamic_copyright() function
+  - add class and ID to function widget definition
+  - added WordPress version 3.0 Navigation Menu core widget style elements
+  
+  - additional modifications to meet current guidelines as found at: http://codex.wordpress.org/Theme_Development_Checklist.
+
+-- Version 1.3.3
+  - WP: added "GPL2" license statement to style.css
+  - WP: added 'posted' to page author by-line, now reads 'posted by'
+  - WP: added bns_dynamic_copyright() to functions.php; replaced 'copyright' code in footer.php
+  - WP: added bns_theme_version() to functions.php; replaced 'version' code in footer.php
+  - WP: moved wp_footer into its own 'div'
+  - CSS: removed most empty elements
+  - NB: Shades of Darkness will no longer be included with Shades to reduce theme size after version 1.3.3
+  - NB: Shades of Darkness will be available to download at http://buynowshop.com/themes/shades
+
+-- Version 1.3.2
+  - added clearing div to end of the_Loop display
+
+-- Version 1.3.1
+  - WP: added body_class() function
+  - WP: added author link to page.php
+  - CSS: added author related elements and properties
+  - CSS: add '.page p' class
+  - CSS: added 'blockquote p' element
+  - CSS: general consolidations and/or removal of duplicate elements
+
+-- Version 1.3
+  - CSS (new): added "YUI Reset"
+  - CSS (new): added '.page ol', '.page ul', and '.page li'
+  - CSS (edit): removed #author 'width' property
+  - CSS (edit): removed #comments-main 'width' property
+  - CSS (edit): removed #comments-main code 'width' property
+  - added comments to the page.php template file
+  - added support for posts that have multiple pages
+  - pt_BR language files added - thanks to Habner Costa habnertc@msn.com
+
+-- Version 1.2
+  - Added Threaded Comments and related CSS elements and properties
+  - Added support for Sticky Posts - see changes in template files (archive, author, index) -> post="class" to post_class();
+  - Cleanup code for better readability
+  - Separated "navigation" links at end of page(s)
+  - CSS (new): added navigation class
+  - CSS (new): added sticky class element with example properties
+
+-- Version 1.1.1
+	- CSS (edit): .widget h2 -> removed 'padding: 22px 0 0;'
+	- CSS (edit): .widget -> removed 'margin-top:10px;' and 'margin-bottom:20px;'
+	- re-coded footer.php to correct for issues with fopen() errors
+
+-- Version 1.1
+	- update search box; added simple scripting
+	- added "Edit" link to page.php template
+	- re-coded searchform.php
+	- edited sidebar.php to use new searchform.php
+	- CSS (edit): input:focus, textarea:focus -> changed 'padding-bottom: 30px' to 'padding: 1px 0;' 
+	- CSS (new): input#s { width: 70%; }
+	- CSS (new): .textwidget form {text-align:center;}
+	- CSS (new): added BNS Plugins section at end of style.css
+	* child theme Shades of Darkness updated to version 1.0.1
+
+NB: As of version 1.1 the following deprecated files have been removed from the theme core files:
+	* home.php
+	* header-home.php
+   
+-- Version 1.0.4.1
+  - name correction - removed "(by BNS)"
+-- Version 1.0.4
+  - added child theme Shades of Darkness in folder "shades-of-darkness"
+  - added "child-theme-readme.txt" to help with installation  
+  - CSS: Added "WordPress" rules for images and alignments
+-- Version 1.0.3.2
+  - remove mysterious "new line characters from theme files"
+-- Version 1.0.3.1
+  - NB: Removing a core file from a theme will not be reflected within an automatic update of the theme, which is logically correct.
+  -- The contents of the index.php file have been used to overwrite the contents of the home.php file.
+  -- The contents of the header.php file have been used to overwrite the contents of the header-home.php file.
+  -- revision is only to correct this oversight.
+-- Version 1.0.3
+  - deprecated the header-home.php and home.php files by adding a tilde (~) character to the beginning of the file name. The functionalty was merged into the index.php file with additonal PHP code, specifically an IF statement to test for the displayed page being the "home page", or the "front page". This will reduce maintenance and potential errors that cropped up due to the extra files.
+  -- copies of header-come.php and home.php from version 1.0.2 are still included but will be removed in 1.0.4
+  - re-coded footer to programtically write the theme name in the credit line, including recognition of child themes.
+  - added additional internationalization code
+  - CSS: minor adjustment to ".search-submit" for alignment purposes
+  - CSS: changed "pre" element's "width:570px;" to "width:auto;"
+  - CSS: added "overflow:hidden" to #bottom
+  - CSS: removed 1px border from ".post code" elements to improve readability
+  - CSS: add "clear: both" to .wp-caption to address larger images in posts
+
+-- Version 1.0.2
+  - added internationalization (I18n) code as specified at this page: http://codex.wordpress.org/I18n_for_WordPress_Developers
+  - changed `ul id="menu"...` to `div class="menu"...`; added height, margin, and padding elements to the menu class
+  - changed sidebar text alignment to left (from center); and, corrected screenshot image.
+
+-- Version 1.0.1
+  *** first approved version ***
+  - corrected menu over-run on long page names
+-- Version 1.0 -> Initial release
