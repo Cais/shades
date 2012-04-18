@@ -18,6 +18,7 @@
  * Last revised April 18, 2012
  * @version     1.8
  * Addressed deprecated function call to `get_userdatabylogin`
+ * Replace navigation with call to `get_template_part( 'shades-navigation' )`
  */
 
 get_header();
@@ -81,16 +82,9 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
                         </div><!-- .post #post-ID -->
                     <?php
                     }
-                endwhile; ?>
-                <div id="nav-global" class="navigation">
-                    <div class="left">
-                        <?php next_posts_link( __( '&laquo; Previous entries ', 'shades' ) ); ?>
-                    </div>
-                    <div class="right">
-                        <?php previous_posts_link( __( ' Next entries &raquo;', 'shades' ) ); ?>
-                    </div>
-                </div>
-            <?php else : ?>
+                endwhile;
+                    get_template_part( 'shades-navigation' );
+                else : ?>
                 <h2><?php printf( __( 'Search Results for: %s', 'shades' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h2>
                 <p class="center"><?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?></p>
                 <?php get_search_form(); ?>

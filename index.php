@@ -17,7 +17,7 @@
  * @internal    REQUIRES WordPress version 3.1.0
  * @internal    Tested up to WordPress version 3.4
  *
- * @version     1.8-alpha
+ * @version     1.8
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  *
@@ -41,7 +41,7 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @todo Replace navigation with a function
+ * Replace navigation with call to `get_template_part( 'shades-navigation' )`
  */
 
 get_header(); ?>
@@ -52,16 +52,9 @@ get_header(); ?>
             <?php
             if ( have_posts() ) : while ( have_posts() ) : the_post();
                 get_template_part( 'shades', get_post_format() );
-            endwhile; ?>
-                <div id="nav-global" class="navigation">
-                    <div class="left">
-                        <?php next_posts_link( __( '&laquo; Previous entries ', 'shades' ) ); ?>
-                    </div>
-                    <div class="right">
-                        <?php previous_posts_link( __( ' Next entries &raquo;', 'shades' ) ); ?>
-                    </div>
-                </div>
-            <?php else : ?>
+            endwhile;
+                get_template_part( 'shades-navigation' );
+            else : ?>
                 <h2><?php printf( __( 'Search Results for: %s', 'shades' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h2>
                 <p class="center"><?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?></p>
                 <?php get_search_form();

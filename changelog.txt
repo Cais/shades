@@ -4,6 +4,7 @@ Changelog as of April 18, 2012
 = CODE =
 * Added doc blocks and improved overall code quality and structure
 * Addressed deprecated function call to `get_userdatabylogin`
+* Replaced navigation with call to `get_template_part( 'shades-navigation' )`
 
 = CSS =
 * Added "commenter classes" as defined in 'author.php'

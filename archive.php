@@ -14,6 +14,10 @@
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
+ *
+ * Last revised April 18, 2012
+ * @version     1.8
+ * Replace navigation with call to `get_template_part( 'shades-navigation' )`
  */
 
 get_header(); ?>
@@ -42,16 +46,9 @@ get_header(); ?>
                         <p class="tags"><?php the_tags(); ?></p>
                     </div><!-- .post #post-ID -->
                 <?php }
-            endwhile; ?>
-                <div id="nav-global" class="navigation">
-                    <div class="left">
-                        <?php next_posts_link( __( '&laquo; Previous entries ', 'shades' ) ); ?>
-                    </div>
-                    <div class="right">
-                        <?php previous_posts_link( __( ' Next entries &raquo;', 'shades' ) ); ?>
-                    </div>
-                </div>
-            <?php else : ?>
+            endwhile;
+                get_template_part( 'shades-navigation' );
+            else : ?>
                 <h2><?php printf( __( 'Search Results for: %s', 'shades' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h2>
                 <p class="center"><?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?></p>
                 <?php get_search_form();
