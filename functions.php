@@ -99,20 +99,44 @@ if ( ! function_exists( 'bns_theme_version' ) ) {
      * @uses    get_theme_data (deprecated)
      * @uses    get_template_directory
      * @uses    is_child_theme
+     * @uses    wp_get_theme
+     * @uses    parent
      *
-     * @todo Address deprecated calls to `get_theme_data`
+     * Last revised April 18, 2012
+     * @version 1.8
+     * Addressed deprecated calls to `get_theme_data`
+     *
+     * @todo Remove deprecated calls to `get_theme_data` after the stable release of WordPress 3.4
      */
     function bns_theme_version () {
-        /** Get details of the theme / child theme */
-        $blog_css_url = get_stylesheet_directory() . '/style.css';
-        $my_theme_data = get_theme_data( $blog_css_url );
-        $parent_blog_css_url = get_template_directory() . '/style.css';
-        $parent_theme_data = get_theme_data( $parent_blog_css_url );
+        global $wp_version;
+        /** Check WordPress version before using `wp_get_theme` for collecting theme data */
+        if ( version_compare( $wp_version, "3.4-alpha", "<" ) ) {
+            /** Get details of the theme / child theme */
+            $blog_css_url = get_stylesheet_directory() . '/style.css';
+            $my_theme_data = get_theme_data( $blog_css_url );
+            $parent_blog_css_url = get_template_directory() . '/style.css';
+            $parent_theme_data = get_theme_data( $parent_blog_css_url );
 
-        if ( is_child_theme() ) {
-            printf( __( '<br /><span id="bns-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by <a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], $parent_theme_data['Name'], $parent_theme_data['Version'] );
+            if ( is_child_theme() ) {
+                printf( __( '<br /><span id="bns-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by <a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], $parent_theme_data['Name'], $parent_theme_data['Version'] );
+            } else {
+                printf( __( '<br /><span id="bns-theme-version">The %1$s theme, version %2$s, is a %3$s creation.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
+            }
         } else {
-            printf( __( '<br /><span id="bns-theme-version">The %1$s theme, version %2$s, is a %3$s creation.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
+            /** @var $active_theme_data - array object containing the current theme's data */
+            $active_theme_data = wp_get_theme();
+            if ( is_child_theme() ) {
+                /** @var $parent_theme_data - array object containing the Parent Theme's data */
+                $parent_theme_data = $active_theme_data->parent();
+                /** @noinspection PhpUndefinedMethodInspection - IDE commentary */
+                printf( __( '<br /><span id="bns-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
+                    $active_theme_data['Name'],
+                    $active_theme_data['Version'],
+                    $parent_theme_data['Name'],
+                    $parent_theme_data['Version'],
+                    '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
+            }
         }
     }
 }
@@ -124,6 +148,7 @@ if ( ! function_exists( 'shades_setup' ) ):
      * Shades Setup
      */
     function shades_setup(){
+        global $wp_version;
         /** This theme uses post thumbnails */
         add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
         /** Add default posts and comments RSS feed links to head */
@@ -174,9 +199,16 @@ if ( ! function_exists( 'shades_setup' ) ):
 
         /**
          * This theme allows users to set a custom background
-         * @todo Address deprecated call to `add_custom_background`
+         * @todo Remove backward compatibility code after WordPress 3.4 stable release is public
          */
-    	add_custom_background();
+        if ( version_compare( $wp_version, "3.4-alpha", "<" ) ) {
+            add_custom_background();
+        } else {
+            add_theme_support( 'custom-background' /*, array(
+                'default-color' => '848484',
+                'default-image' => get_stylesheet_directory_uri() . '/images/marble-bg.png'
+            )*/ );
+        }
 
         if ( ! function_exists( 'shades_nav_menu' ) ) {
             /**
@@ -256,7 +288,10 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
         if ( get_the_time() <> get_the_modified_time() ) {
             /** CSS wrapper for modified date details */
             echo '<h6 class="shades-modified-post">';
-            printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'shades' ), get_the_modified_author(), get_the_modified_date( get_option( 'date_format' ) ), get_the_modified_time ( get_option( 'time_format' ) ) );
+            printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'shades' ),
+                get_the_modified_author(),
+                get_the_modified_date( get_option( 'date_format' ) ),
+                get_the_modified_time ( get_option( 'time_format' ) ) );
             echo '</h6><!-- .shades-modified-post -->';
         }
     }

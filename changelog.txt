@@ -4,6 +4,7 @@ Changelog as of April 18, 2012
 = CODE =
 * Added doc blocks and improved overall code quality and structure
 * Addressed deprecated function call to `get_userdatabylogin`
+* Addressed deprecated calls to `get_theme_data`
 * Replaced navigation with call to `get_template_part( 'shades-navigation' )`
 * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
 
