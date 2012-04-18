@@ -1,34 +1,25 @@
-==== Changelog ====
-* as of September 29, 2011:
-
-=== Version 1.7.1 ===
-== Public ==
-* released ...
-
-== CODE Changes ==
+=== Shades ===
+Changelog as of April 18, 2012
+== Version 1.8 ==
+= CODE =
+* add doc blocks and improve code quality structure
 * implement the inclusion of `BNS Theme Add-Ins`
 * removed contextual help in favor of `BNS Theme Add-Ins` usage
 
-== CSS Changes ==
+= CSS =
 
-== CODE & CSS Changes ==
-
-== Miscellaneous ==
-* trial adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
+= Miscellaneous =
+* adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
 * added Review Ticket section to the "README"
 
-/* Internet Browsers Reviewed
- * ==========================
- * Apple Safari v5.1 (Mac)
- * Apple Safari v5.1 (PC)
- * Firefox v6.0.2 (Mac)
- * Firefox v6.0.2 (PC)
- * Google Chrome v13.0
- * Internet Explorer v9.0
- * Opera v11.51
- **/
+= Internet Browsers Reviewed =
+* Apple Safari v5.1.5
+* Firefox v11.0
+* Google Chrome v18.0
+* Internet Explorer v9.0
+* Opera v11.62
 
---------------------------------------------------------------------------------
+/** ------------------------------------------------------------------------- */
 === Version 1.7 ===
 == Public ==
 * released September 11, 2011
