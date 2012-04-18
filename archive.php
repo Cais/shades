@@ -29,10 +29,10 @@ get_header(); ?>
                     <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                         <h1>
                             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array('before' => 'Permalink to: ', 'after' => '')); ?>"><?php the_title(); ?></a>
-                            <div class="post-comments">
-                                <?php comments_popup_link( __( 'No Comments', 'shades' ), __( '1 Comment', 'shades' ), __( '% Comments', 'shades' ), '', __( 'Comments closed', 'shades' ) ); ?>
-                            </div>
                         </h1>
+                        <div class="post-comments">
+                            <?php comments_popup_link( __( 'No Comments', 'shades' ), __( '1 Comment', 'shades' ), __( '% Comments', 'shades' ), '', __( 'Comments closed', 'shades' ) ); ?>
+                        </div>
                         <div class="postdata">
                             <?php printf( __( '%1$s by %2$s on %3$s in ', 'shades' ), shades_use_posted(), get_the_author(), get_the_time( get_option( 'date_format' ) ) ); the_category( ', ' );
                             edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
