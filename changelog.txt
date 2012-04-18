@@ -5,6 +5,7 @@ Changelog as of April 18, 2012
 * Added doc blocks and improved overall code quality and structure
 * Addressed deprecated function call to `get_userdatabylogin`
 * Replaced navigation with call to `get_template_part( 'shades-navigation' )`
+* Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
 
 = CSS =
 * Added "commenter classes" as defined in 'author.php'

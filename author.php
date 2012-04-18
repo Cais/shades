@@ -9,9 +9,6 @@
  * @link        https://github.com/Cais/shades/
  * @link        http://wordpress.org/extend/themes/shades/
  *
- * @internal    REQUIRES WordPress version 3.1.0
- * @internal    Tested up to WordPress version 3.4
- *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  *
@@ -19,6 +16,7 @@
  * @version     1.8
  * Addressed deprecated function call to `get_userdatabylogin`
  * Replace navigation with call to `get_template_part( 'shades-navigation' )`
+ * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
  */
 
 get_header();
@@ -84,11 +82,9 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
                     }
                 endwhile;
                     get_template_part( 'shades-navigation' );
-                else : ?>
-                <h2><?php printf( __( 'Search Results for: %s', 'shades' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h2>
-                <p class="center"><?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?></p>
-                <?php get_search_form(); ?>
-            <?php endif; ?>
+            else :
+                get_template_part( 'shades-no-posts' );
+            endif; ?>
         </div><!-- #the-loop -->
         <?php get_sidebar(); ?>
         <div class="clear"></div>

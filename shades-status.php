@@ -9,9 +9,6 @@
  * @link        https://github.com/Cais/shades/
  * @link        http://wordpress.org/extend/themes/shades/
  *
- * @internal    REQUIRES WordPress version 3.1.0
- * @internal    Tested up to WordPress version 3.4
- *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  */ ?>

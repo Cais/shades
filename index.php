@@ -41,7 +41,10 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Replace navigation with call to `get_template_part( 'shades-navigation' )`
+ * Last modified April 18, 2012
+ * @version     1.8
+ * Replaced navigation with call to get_template_part( 'shades-navigation' )
+ * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
  */
 
 get_header(); ?>
@@ -54,10 +57,8 @@ get_header(); ?>
                 get_template_part( 'shades', get_post_format() );
             endwhile;
                 get_template_part( 'shades-navigation' );
-            else : ?>
-                <h2><?php printf( __( 'Search Results for: %s', 'shades' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h2>
-                <p class="center"><?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?></p>
-                <?php get_search_form();
+            else :
+                get_template_part( 'shades-no-posts' );
             endif; ?>
         </div><!-- #the-loop -->
         <?php get_sidebar(); ?>

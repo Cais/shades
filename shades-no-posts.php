@@ -1,8 +1,8 @@
 <?php
 /**
- * Shades Navigation
+ * Shades No Posts
  *
- * Navigation between posts
+ * Used if no posts are returned by "the_Loop" query
  *
  * @package     Shades
  * @since       1.8
@@ -15,11 +15,6 @@
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  */
 ?>
-<div id="nav-global" class="navigation">
-    <div class="left">
-        <?php next_posts_link( __( '&laquo; Older posts', 'shades' ) ); ?>
-    </div>
-    <div class="right">
-        <?php previous_posts_link( __( 'Newer posts &raquo;', 'shades' ) ); ?>
-    </div>
-</div>
+<h2><?php printf( __( 'Search Results for: %s', 'shades' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h2>
+<p class="center"><?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?></p>
+<?php get_search_form(); ?>
