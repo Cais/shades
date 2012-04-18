@@ -211,16 +211,16 @@ sup { font-size: 75%; }
 #header-left { float: left; }
 #header-center { margin: 0 auto; }
 
+/* Blog Title */
 #header-center h2 {
-    /* Blog Title */
     color: #000;
     font-family: "Copperplate Gothic Bold", Arial, sans-serif;
     font-size: 250%;
     text-align: center;
 }
 
+/* Tagline */
 #header-center p {
-    /* Tagline */
     color: #000;
 	font-size: 150%;
 	text-align: center;
@@ -281,7 +281,6 @@ div#top-navigation-menu {
  * @copyright 2006-2008 Live Web Institute. All Rights Reserved.
  *
  */
-
 ul.nav-menu,
 ul.nav-menu li,
 ul.nav-menu ul {
@@ -475,13 +474,20 @@ span.no-title { font-weight: bold; }
 }
 
 #author {
-    /* add additional styling to the author's taste */
     border: 1px solid #000;
     font-size: 117%;
     font-style: italic;
     padding: 5px;
     text-align: left;
 }
+
+/* Commenter classes */
+.administrator-prime {}
+.administrator {}
+.editor {}
+.contributor {}
+.subscriber {}
+.guest {}
 
 #author h2 { padding: 0; }
 

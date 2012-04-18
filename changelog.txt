@@ -2,15 +2,15 @@
 Changelog as of April 18, 2012
 == Version 1.8 ==
 = CODE =
-* add doc blocks and improve code quality structure
-* implement the inclusion of `BNS Theme Add-Ins`
-* removed contextual help in favor of `BNS Theme Add-Ins` usage
+* Added doc blocks and improved overall code quality and structure
+* Addressed deprecated function call to `get_userdatabylogin`
 
 = CSS =
+* Added "commenter classes" as defined in 'author.php'
 
 = Miscellaneous =
-* adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
-* added Review Ticket section to the "README"
+* Adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
+* Added Review Ticket section to 'readme.txt'
 
 = Internet Browsers Reviewed =
 * Apple Safari v5.1.5

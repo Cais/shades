@@ -15,26 +15,35 @@
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  *
- * @todo Address deprecated function call to `get_userdatabylogin`
+ * Last revised April 18, 2012
+ * @version     1.8
+ * Addressed deprecated function call to `get_userdatabylogin`
  */
 
 get_header();
 
 /** This sets the $curauth variable */
-if( isset( $_GET['author_name'] ) ) :
-    $curauth = get_userdatabylogin( $author_name );
-else :
-    $curauth = get_userdata( intval( $author ) );
-endif;
-?>
+$curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) ); ?>
 <div id="maintop"></div><!--end maintop-->
 <div id="wrapper">
     <div id="content">
         <div id="the-loop">
-            <div id="author" class="<?php if ( ( get_userdata( intval( $author ) )->ID ) == '1' ) echo 'administrator';
-                /** elseif ( ( get_userdata( intval( $author ) )->ID ) == '2' ) echo 'jellybeen'; */ /** sample */
-                /** add additional user_id following above example, echo the 'CSS element' you want to use for styling */
-                ?>">
+            <div id="author" class="<?php
+                    /** Add class as related to the user role (see 'Role:' drop-down in User options) */
+                    if ( user_can( $curauth->ID, 'administrator' ) ) {
+                        echo 'administrator';
+                    } elseif ( user_can( $curauth->ID, 'editor' ) ) {
+                        echo 'editor';
+                    } elseif ( user_can( $curauth->ID, 'contributor' ) ) {
+                        echo 'contributor';
+                    } elseif ( user_can( $curauth->ID, 'subscriber' ) ) {
+                        echo 'subscriber';
+                    } else {
+                        echo 'guest';
+                    }
+                    if ( ( $curauth->ID ) == '1' ) echo ' administrator-prime'; /** sample */
+                        /** elseif ( ( $curauth->ID ) == '2' ) echo ' jellybeen'; */
+                        /** add user classes by ID following the above samples */ ?>">
                 <h2><?php _e( 'About ', 'shades' ); ?><?php echo $curauth->display_name; ?></h2>
                 <ul>
                     <li><?php _e( 'Website', 'shades' ); ?>: <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a> <?php _e( 'or', 'shades' ); ?> <a href="mailto:<?php echo $curauth->user_email; ?>"><?php _e( 'email', 'shades' ); ?></a></li>
