@@ -91,7 +91,7 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
     }
 }
 
-if ( ! function_exists( 'bns_theme_version' ) ) {
+if ( ! function_exists( 'shades_theme_version' ) ) {
     /**
      * BNS Theme Version
      *
@@ -107,10 +107,11 @@ if ( ! function_exists( 'bns_theme_version' ) ) {
      * Last revised April 18, 2012
      * @version 1.8
      * Addressed deprecated calls to `get_theme_data`
+     * Renamed to `shades_theme_version`
      *
      * @todo Remove deprecated calls to `get_theme_data` after the stable release of WordPress 3.4
      */
-    function bns_theme_version () {
+    function shades_theme_version () {
         global $wp_version;
         /** Check WordPress version before using `wp_get_theme` for collecting theme data */
         if ( version_compare( $wp_version, "3.4-alpha", "<" ) ) {
@@ -121,9 +122,9 @@ if ( ! function_exists( 'bns_theme_version' ) ) {
             $parent_theme_data = get_theme_data( $parent_blog_css_url );
 
             if ( is_child_theme() ) {
-                printf( __( '<br /><span id="bns-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by <a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], $parent_theme_data['Name'], $parent_theme_data['Version'] );
+                printf( __( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by <a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], $parent_theme_data['Name'], $parent_theme_data['Version'] );
             } else {
-                printf( __( '<br /><span id="bns-theme-version">The %1$s theme, version %2$s, is a %3$s creation.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
+                printf( __( '<br /><span id="shades-theme-version">The %1$s theme, version %2$s, is a %3$s creation.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
             }
         } else {
             /** @var $active_theme_data - array object containing the current theme's data */
@@ -132,7 +133,7 @@ if ( ! function_exists( 'bns_theme_version' ) ) {
                 /** @var $parent_theme_data - array object containing the Parent Theme's data */
                 $parent_theme_data = $active_theme_data->parent();
                 /** @noinspection PhpUndefinedMethodInspection - IDE commentary */
-                printf( __( '<br /><span id="bns-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
+                printf( __( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
                     $active_theme_data['Name'],
                     $active_theme_data['Version'],
                     $parent_theme_data['Name'],

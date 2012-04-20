@@ -6,6 +6,7 @@ Changelog as of April 18, 2012
 * Addressed deprecated function call to `get_userdatabylogin`
 * Addressed deprecated calls to `get_theme_data`
 * Renamed `bns_dynamic_copyright` to `shades_dynamic_copyright`
+* Renamed `bns_theme_version` to `shades_theme_version`
 * Replaced navigation with call to `get_template_part( 'shades-navigation' )`
 * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
 
@@ -98,7 +99,7 @@ Changelog as of April 18, 2012
   - WP: added "GPL2" license statement to style.css
   - WP: added 'posted' to page author by-line, now reads 'posted by'
   - WP: added shades_dynamic_copyright() to functions.php; replaced 'copyright' code in footer.php
-  - WP: added bns_theme_version() to functions.php; replaced 'version' code in footer.php
+  - WP: added shades_theme_version() to functions.php; replaced 'version' code in footer.php
   - WP: moved wp_footer into its own 'div'
   - CSS: removed most empty elements
   - NB: Shades of Darkness will no longer be included with Shades to reduce theme size after version 1.3.3

@@ -18,7 +18,7 @@
             <p>
                 <?php
                 shades_dynamic_copyright();
-                bns_theme_version(); ?>
+                shades_theme_version(); ?>
             </p>
             <div id="footer"></div>
         </div><!-- #bottom-container -->
