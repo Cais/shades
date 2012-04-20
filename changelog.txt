@@ -3,8 +3,9 @@ Changelog as of April 20, 2012
 == Version 1.8 ==
 = CODE =
 * Added doc blocks and improved overall code quality and structure
-* Addressed deprecated function call to `get_userdatabylogin`
-* Addressed deprecated calls to `get_theme_data`
+* Addressed call to deprecated function `get_userdatabylogin`
+* Addressed calls to deprecated function `get_theme_data`
+* Addressed call to deprecated function `add_custom_background`
 * Renamed `bns_dynamic_copyright` to `shades_dynamic_copyright`
 * Renamed `bns_theme_version` to `shades_theme_version`
 * Replaced navigation with call to `get_template_part( 'shades-navigation' )`

@@ -149,6 +149,12 @@ add_action( 'after_setup_theme', 'shades_setup' );
 if ( ! function_exists( 'shades_setup' ) ):
     /**
      * Shades Setup
+     *
+     * Defines for core functionality supported by theme
+     *
+     * Last revised April 18, 2012
+     * @version 1.8
+     * Addressed call to deprecated function `add_custom_background`
      */
     function shades_setup(){
         global $wp_version;
