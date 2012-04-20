@@ -485,14 +485,6 @@ span.no-title { font-weight: bold; }
     text-align: left;
 }
 
-/* Commenter classes */
-.administrator-prime {}
-.administrator {}
-.editor {}
-.contributor {}
-.subscriber {}
-.guest {}
-
 #author h2 { padding: 0; }
 
 #author ul { list-style: none none; }
@@ -787,7 +779,9 @@ textarea#comment { width: 98%; }
     margin-top: 1px;
 }
 
-.administrator, .user-id-1 {
+.administrator,
+.administrator-prime,
+.user-id-1 {
     /* This will also styles author page user block */
     background-color: #dedede;
     border: 1px solid #7e7d75;
@@ -800,6 +794,14 @@ textarea#comment { width: 98%; }
     border: 1px solid #7e7d75;
     margin-top: 1px;
 }
+
+/* Comment author classes */
+.administrator-prime {}
+.administrator {}
+.editor {}
+.contributor {}
+.subscriber {}
+.guest {}
 
 .reply {
     font-size: 85%;
