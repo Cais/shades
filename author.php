@@ -17,6 +17,7 @@
  * Addressed deprecated function call to `get_userdatabylogin`
  * Replace navigation with call to `get_template_part( 'shades-navigation' )`
  * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
+ * Added conditionals to only show website URL (with email) if the address is found in the user profile; and only show biography if it exists.
  */
 
 get_header();
@@ -45,8 +46,12 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
                         /** add user classes by ID following the above samples */ ?>">
                 <h2><?php _e( 'About ', 'shades' ); ?><?php echo $curauth->display_name; ?></h2>
                 <ul>
-                    <li><?php _e( 'Website', 'shades' ); ?>: <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a> <?php _e( 'or', 'shades' ); ?> <a href="mailto:<?php echo $curauth->user_email; ?>"><?php _e( 'email', 'shades' ); ?></a></li>
-                    <li><?php _e( 'Biography', 'shades' ); ?>: <?php echo $curauth->user_description; ?></li>
+                    <?php if ( ! empty( $curauth->user_url ) ) { ?>
+                        <li><?php _e( 'Website', 'shades' ); ?>: <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a> <?php _e( 'or', 'shades' ); ?> <a href="mailto:<?php echo $curauth->user_email; ?>"><?php _e( 'email', 'shades' ); ?></a></li>
+                    <?php }
+                    if ( ! empty( $curauth->user_description ) ) { ?>
+                        <li><?php _e( 'Biography', 'shades' ); ?>: <?php echo $curauth->user_description; ?></li>
+                    <?php } ?>
                 </ul>
             </div><!-- #author -->
             <h2><?php _e( 'Posts by ', 'shades' ); ?><?php echo $curauth->display_name; ?>:</h2>

@@ -4,6 +4,7 @@ Changelog as of April 20, 2012
 = CODE =
 * Added doc blocks and improved overall code quality and structure
 * Added link to modified author's post archive
+* Added conditionals to only show website URL (with email) if the address is found in the user profile; and only show biography if it exists on 'author.php' output
 * Addressed call to deprecated function `get_userdatabylogin`
 * Addressed calls to deprecated function `get_theme_data`
 * Addressed call to deprecated function `add_custom_background`
