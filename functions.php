@@ -290,8 +290,13 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
      * If the post time and the last modified time are different display
      * modified date and time
      *
+     * @uses    (global) $post
+     * @uses    get_post_meta
+     * @uses    get_userdata
      * @uses    get_the_time
      * @uses    get_the_modified_time
+     * @uses    home_url
+     * @uses    get_the_modified_date
      *
      * Last revised April 20, 2012
      * @version 1.8
@@ -307,9 +312,9 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
             /** CSS wrapper for modified date details */
             echo '<h6 class="shades-modified-post">';
             printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'shades' ),
-                '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . get_the_modified_author() . '</a>',
+                '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
                 get_the_modified_date( get_option( 'date_format' ) ),
-                get_the_modified_time ( get_option( 'time_format' ) ) );
+                get_the_modified_time( get_option( 'time_format' ) ) );
             echo '</h6><!-- .shades-modified-post -->';
         }
     }
