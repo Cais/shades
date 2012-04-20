@@ -11,6 +11,10 @@
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
+ *
+ * Last revised April 20, 2012
+ * @version     1.8
+ * Changed namespace of *_dynamic_copyright and *_theme_version
  */
 ?>
     <div id="bottom">
