@@ -292,13 +292,22 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
      *
      * @uses    get_the_time
      * @uses    get_the_modified_time
+     *
+     * Last revised April 20, 2012
+     * @version 1.8
+     * Added link to modified author's post archive.
      */
     function shades_modified_post(){
+        global $post;
+        $last_user = '';
+        if ( $last_id = get_post_meta($post->ID, '_edit_last', true) ) {
+            $last_user = get_userdata($last_id);
+        }
         if ( get_the_time() <> get_the_modified_time() ) {
             /** CSS wrapper for modified date details */
             echo '<h6 class="shades-modified-post">';
             printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'shades' ),
-                get_the_modified_author(),
+                '<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . get_the_modified_author() . '</a>',
                 get_the_modified_date( get_option( 'date_format' ) ),
                 get_the_modified_time ( get_option( 'time_format' ) ) );
             echo '</h6><!-- .shades-modified-post -->';
