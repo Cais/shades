@@ -22,9 +22,9 @@ register_sidebars( 2, array(
     'after_title'   => '</h2>',
 ) );
 
-if ( ! function_exists( 'bns_dynamic_copyright' ) ) {
+if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
     /**
-     * BNS Dynamic Copyright
+     * Shades Dynamic Copyright
      *
      * Creates a dynamic Copyright by statement by reading the year of the first
      * published post and appending the current year as well as minimal boiler-
@@ -40,9 +40,11 @@ if ( ! function_exists( 'bns_dynamic_copyright' ) ) {
      * @uses    get_posts
      * @uses    wp_parse_args
      *
-     * @todo Rename to `shades_dynamic_copyright`
+     * Last revised April 20, 2012
+     * @version 1.8
+     * Renamed to `shades_dynamic_copyright`
      */
-    function bns_dynamic_copyright( $args = '' ) {
+    function shades_dynamic_copyright( $args = '' ) {
         $initialize_values = array( 'start' => '', 'copy_years' => '', 'url' => '', 'end' => '' );
         $args = wp_parse_args( $args, $initialize_values );
 
@@ -83,9 +85,9 @@ if ( ! function_exists( 'bns_dynamic_copyright' ) ) {
         empty( $args['end'] ) ? $output .= ' ' . sprintf( __( 'All rights reserved.', 'shades' ) ) : $output .= ' ' . $args['end'];
 
         /** Construct and sprintf the copyright notice */
-        $output = sprintf( __( '<span id="bns-dynamic-copyright"> %1$s </span><!-- #bns-dynamic-copyright -->', 'shades' ), $output );
+        $output = sprintf( __( '<span id="shades-dynamic-copyright"> %1$s </span><!-- #bns-dynamic-copyright -->', 'shades' ), $output );
 
-        echo apply_filters( 'bns_dynamic_copyright', $output, $args );
+        echo apply_filters( 'shades_dynamic_copyright', $output, $args );
     }
 }
 
@@ -306,7 +308,7 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
      * @uses    get_the_title
      * @uses    get_permalink
      *
-     * @return string
+     * @return  string text only|URL to post
      */
     function shades_use_posted() {
         $shades_no_title = get_the_title();

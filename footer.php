@@ -17,7 +17,7 @@
         <div id="bottom-container">
             <p>
                 <?php
-                bns_dynamic_copyright();
+                shades_dynamic_copyright();
                 bns_theme_version(); ?>
             </p>
             <div id="footer"></div>
