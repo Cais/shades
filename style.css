@@ -639,6 +639,8 @@ pre {
 .widget ul li a img, .widget ol li a img { border: none; }
 .widget ul li a:hover, .widget ol li a:hover { color: #635537; text-decoration: none; }
 
+.widget_tag_cloud { margin: 0 10px; }
+
 .textwidget { padding:0 8px 0 8px; }
 .textwidget form { text-align: center; }
 
@@ -666,16 +668,17 @@ pre {
 
 .gallery-caption { font-size: 11px; /* = wp-caption size */ }
 
-/* Gallery columns up to four (4) are handled by default in the theme.
- * Five (5) or more columns requires a maximum width be set for the image
+/* Gallery columns up to three (3) are handled by default in the theme.
+ * Four (4) or more columns requires a maximum width be set for the image
  * thumbnail; also note the height is set to 'auto' to maintain a square shape. 
  **/
-.gallery-columns-5 img { height: auto; max-width: 116px; }
-.gallery-columns-6 img { height: auto; max-width: 95px; }
-.gallery-columns-7 img { height: auto; max-width: 80px; }
-.gallery-columns-8 img { height: auto; max-width: 68.75px; }
-.gallery-columns-9 img { height: auto; max-width: 60px; }
-.gallery-columns-10 img { height: auto; max-width: 53px; }
+.gallery-columns-4 img { height: auto; max-width: 142px; }
+.gallery-columns-5 img { height: auto; max-width: 112px; }
+.gallery-columns-6 img { height: auto; max-width: 86px; }
+.gallery-columns-7 img { height: auto; max-width: 72px; }
+.gallery-columns-8 img { height: auto; max-width: 64px; }
+.gallery-columns-9 img { height: auto; max-width: 56px; }
+.gallery-columns-10 img { height: auto; max-width: 48px; }
 
 p img {
     height: auto;

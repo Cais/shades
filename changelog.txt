@@ -1,5 +1,5 @@
 === Shades ===
-Changelog as of April 18, 2012
+Changelog as of April 20, 2012
 == Version 1.8 ==
 = CODE =
 * Added doc blocks and improved overall code quality and structure
@@ -13,7 +13,9 @@ Changelog as of April 18, 2012
 = CSS =
 * Added "commenter classes" as defined in 'author.php'
 * Added 'no-title' class to post classes if `get_the_title` is empty
+* Added 'widget_tag_cloud' element
 * Adjusted 'sticky' post related styles
+* Adjusted `gallery` `max-width` for better aesthetics
 
 = Miscellaneous =
 * Adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
