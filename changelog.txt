@@ -10,6 +10,8 @@ Changelog as of April 18, 2012
 
 = CSS =
 * Added "commenter classes" as defined in 'author.php'
+* Added 'no-title' class to post classes if `get_the_title` is empty
+* Adjusted 'sticky' post related styles
 
 = Miscellaneous =
 * Adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)

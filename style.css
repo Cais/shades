@@ -411,6 +411,10 @@ span.no-title { font-weight: bold; }
 .sticky p strong + a,
 .sticky p a + a { font-size: 90%; }
 
+.sticky .postdata { padding-right: 3px; }
+
+.sticky p { padding: 5px 3px; }
+
 .post { margin-bottom: 30px; }
 
 .post p, .page p { margin:0; }
@@ -907,39 +911,69 @@ textarea {
 textarea#text_area { width: 98%; }
 #text_field { width: 98%; }
 
-/* --- Post Formats --- */
+/* --- Post Formats - Aside --- */
 .format-aside {
     margin: 0 0 0 60px;
     padding: 0 0 30px;
 }
+.sticky.format-aside {
+    margin: 0 0 30px;
+    padding: 0;
+}
+.sticky.no-title.format-aside { margin: 0; }
+
 .format-aside .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
+.sticky.format-aside .glyph,
+.sticky.no-title.format-aside .glyph { margin: 55px 0 0 0; }
+
 .format-aside h1, .format-aside .postdata { text-align: right; }
 
+/* --- Post Formats - Quote --- */
 .format-quote {
     margin: 0 0 0 60px;
     padding: 0 0 30px;
 }
+.sticky.format-quote {
+    margin: 0 0 30px;
+    padding: 0;
+}
+.sticky.no-title.format-quote { margin: 0; }
+
 .format-quote .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
+.sticky.format-quote .glyph,
+.sticky.no-title.format-quote .glyph { margin: 55px 0 0 0; }
+
 .format-quote h1, .format-quote .postdata { text-align: right; }
 
+/* --- Post Formats - Status --- */
 .format-status {
     margin: 0 0 0 60px;
     padding: 0 0 30px;
 }
+.sticky.format-status {
+    margin: 0 0 30px;
+    padding: 0;
+}
+.sticky.no-title.format-status { margin: 0; }
+
 .format-status .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
+.sticky.format-status .glyph,
+.sticky.no-title.format-status .glyph { margin: 25px 0 0 0; }
+
 .format-status h1, .format-status .postdata { text-align: right; }
 
+/* --- Post Formats - etc. --- */
 .transparent {
-    filter: alpha(opacity=25);
+    filter: alpha( opacity=25 );
     opacity: 0.25;
     zoom: 1;
 }

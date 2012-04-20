@@ -11,8 +11,15 @@
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
+ *
+ * Last revised April 20, 2012
+ * @version     1.8
+ * Added 'no-title' class to post classes if `get_the_title` is empty
  */ ?>
-<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<div <?php
+        $shades_post_title = get_the_title();
+        if ( empty( $shades_post_title ) ) post_class( 'no-title' );
+        post_class(); ?> id="post-<?php the_ID(); ?>">
     <div class="transparent glyph"><?php shades_glyph_aside(); ?></div>
     <h1>
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array('before' => 'Permalink to: ', 'after' => '')); ?>"><?php the_title(); ?></a>
