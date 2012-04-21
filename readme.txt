@@ -1,12 +1,11 @@
 ==== Readme.txt for Shades Theme ====
-* updated September 29, 2011
+* Last revised April 20, 2012
 
 === Topics ===
 * FAQ
 * TODO
 * Notes
 * Review Tickets
-
 
 == FAQ ==
 Q: How do you suggest I use the Aside, Quote, and Status post formats?
@@ -25,13 +24,11 @@ A: See core trac ticket: http://core.trac.wordpress.org/ticket/18632
 If you are using the default permalink structure; or if you do not have the 'JetPack' plugin, or 'WordPress Stats' (included with JetPack) plugin, installed you may experience problems with `the_shortcode` not behaving as expected.
 
 == TODO ==
-* [ ] Revisit the centered menu style
-* [ ] Review modified time in "status" post-format
-* [ ] Review how post formats are handled when displayed via `the_excerpt`
-* [ ] Review 'new' style of changelog
+* [x] Review modified time in "status" post-format
+* [x] Review 'new' style of changelog
 * [x] Review why `the_shortlink` is not working when the implementation has not changed
 * [x] Review all font-sizes to be percentage based where possible
-
+NB: Future TODO items will be written inline where appropriate as of version 1.8
 
 == Notes ==
 * The Shades Theme (as well as all future theme releases) will no longer directly support older browsers. Please use the most current stable version of your browser of choice.

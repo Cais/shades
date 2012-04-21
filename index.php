@@ -45,6 +45,9 @@
  * @version     1.8
  * Replaced navigation with call to get_template_part( 'shades-navigation' )
  * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
+ *
+ * @todo Review how post formats are handled when displayed via `the_excerpt`
+ * @todo Revisit the centered menu style
  */
 
 get_header(); ?>
