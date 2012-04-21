@@ -925,14 +925,14 @@ textarea#text_area { width: 98%; }
     margin: 0 0 30px;
     padding: 0;
 }
-.sticky.no-title.format-aside { margin: 0; }
+.sticky.no-title.format-aside { margin: 0 0 30px; }
 
 .format-aside .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
 .sticky.format-aside .glyph,
-.sticky.no-title.format-aside .glyph { margin: 55px 0 0 0; }
+.sticky.no-title.format-aside .glyph { margin: 55px 0 0; }
 
 .format-aside h1, .format-aside .postdata { text-align: right; }
 
@@ -945,14 +945,14 @@ textarea#text_area { width: 98%; }
     margin: 0 0 30px;
     padding: 0;
 }
-.sticky.no-title.format-quote { margin: 0; }
+.sticky.no-title.format-quote { margin: 0 0 30px; }
 
 .format-quote .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
 .sticky.format-quote .glyph,
-.sticky.no-title.format-quote .glyph { margin: 55px 0 0 0; }
+.sticky.no-title.format-quote .glyph { margin: 55px 0 0; }
 
 .format-quote h1, .format-quote .postdata { text-align: right; }
 
@@ -965,7 +965,7 @@ textarea#text_area { width: 98%; }
     margin: 0 0 30px;
     padding: 0;
 }
-.sticky.no-title.format-status { margin: 0; }
+.sticky.no-title.format-status { margin: 0 0 30px; }
 
 .format-status .glyph {
     float: left;
