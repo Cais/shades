@@ -35,3 +35,4 @@ NB: Future TODO items will be written inline where appropriate as of version 1.8
 
 == Review Ticket ==
 * http://themes.trac.wordpress.org/ticket/5224 - v1.7 - September 11, 2011
+* http://themes.trac.wordpress.org/ticket/7479 - v1.8 - April 20, 2012
