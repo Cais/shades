@@ -22,15 +22,14 @@ get_header(); ?>
         <div id="the-loop">
             <?php
             global $post;
-            echo "<a href='" . get_permalink($post->post_parent). "'>Go back to ". get_the_title($post->post_parent) ."</a><br />";
+            echo '<h1><a href="' . get_permalink($post->post_parent) . '">&laquo; Go back to ' . get_the_title($post->post_parent) . ' gallery post.</a></h1><br />';
 
-            echo previous_image_link(false,'Previous Photo');
-            echo ' - ';
-            echo next_image_link(false,'Next Photo');
+            echo previous_image_link( false, '<div class="left">' . __( 'Previous Photo', 'shades' ) . '</div>' );
+            echo next_image_link( false, '<div class="right">' . __( 'Next Photo', 'shades' ) . '</div>' );
 
             echo '<div class="clear"></div>';
 
-            echo '<a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, 'large' ) . '</a>';
+            echo '<div class="center"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, 'large' ) . '</a></div>';
 
             $imagemeta = wp_get_attachment_metadata();
 
@@ -40,7 +39,7 @@ get_header(); ?>
 
             if ($imagemeta['image_meta']['shutter_speed']) {
                 echo ' ';
-                echo 'Shutter: ';
+                echo '<br />Shutter: ';
 
                 // shutter speed handler
                 if ((1 / $imagemeta['image_meta']['shutter_speed']) > 1) {
@@ -55,7 +54,7 @@ get_header(); ?>
                 }
             }
 
-            echo '<br />This image template page is a work in progress ... look for more information in this space.';
+            echo '<br /><h6>This image template page is a work in progress ... look for more information in this space.</h6>';
 
             ?>
         </div><!-- #the-loop -->
