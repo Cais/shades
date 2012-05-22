@@ -1,5 +1,20 @@
 === Shades ===
-Changelog as of April 20, 2012
+Changelog as of May 22, 2012
+== Version 1.9 ==
+= CODE =
+* Added 'image.php' template
+
+= CSS =
+= Miscellaneous =
+
+= Internet Browsers Reviewed =
+* Apple Safari v5.1.5
+* Firefox v11.0
+* Google Chrome v18.0
+* Internet Explorer v9.0
+* Opera v11.62
+
+/** ------------------------------------------------------------------------- */
 == Version 1.8 ==
 = CODE =
 * Added doc blocks and improved overall code quality and structure
@@ -23,13 +38,6 @@ Changelog as of April 20, 2012
 = Miscellaneous =
 * Adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
 * Added Review Ticket section to 'readme.txt'
-
-= Internet Browsers Reviewed =
-* Apple Safari v5.1.5
-* Firefox v11.0
-* Google Chrome v18.0
-* Internet Explorer v9.0
-* Opera v11.62
 
 /** ------------------------------------------------------------------------- */
 === Version 1.7 ===
