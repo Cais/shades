@@ -22,7 +22,7 @@ get_header(); ?>
         <div id="the-loop">
             <?php
             global $post;
-            echo '<h1><a href="' . get_permalink($post->post_parent) . '">&laquo; Go back to ' . get_the_title($post->post_parent) . ' gallery post.</a></h1><br />';
+            echo '<h1><a href="' . get_permalink( $post->post_parent ) . '">&laquo; Go back to ' . get_the_title( $post->post_parent ) . ' gallery post.</a></h1><br />';
 
             echo previous_image_link( false, '<div class="left">' . __( 'Previous Photo', 'shades' ) . '</div>' );
             echo next_image_link( false, '<div class="right">' . __( 'Next Photo', 'shades' ) . '</div>' );
@@ -42,15 +42,15 @@ get_header(); ?>
                 echo '<br />Shutter: ';
 
                 // shutter speed handler
-                if ((1 / $imagemeta['image_meta']['shutter_speed']) > 1) {
+                if ( ( 1 / $imagemeta['image_meta']['shutter_speed'] ) > 1 ) {
                     echo "1/";
-                    if (number_format((1 / $imagemeta['image_meta']['shutter_speed']), 1) ==  number_format((1 / $imagemeta['image_meta']['shutter_speed']), 0)) {
-                        echo number_format((1 / $imagemeta['image_meta']['shutter_speed']), 0, '.', '') . ' sec';
+                    if ( number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 1 ) ==  number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 0 ) ) {
+                        echo number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' sec';
                     } else {
-                        echo number_format((1 / $imagemeta['image_meta']['shutter_speed']), 1, '.', '') . ' sec';
+                        echo number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' sec';
                     }
                 } else {
-                    echo $imagemeta['image_meta']['shutter_speed'].' sec';
+                    echo $imagemeta['image_meta']['shutter_speed'] . ' sec';
                 }
             }
 
