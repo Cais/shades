@@ -341,4 +341,4 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
 }
 
 /** Set the content width based on the theme's design and stylesheet, see #the-loop element in style.css */
-if ( ! isset( $content_width ) ) $content_width = 660; ?>
+if ( ! isset( $content_width ) ) $content_width = 630; ?>

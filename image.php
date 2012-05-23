@@ -14,6 +14,7 @@
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  *
  * @todo Complete and clean-up for proper end-use
+ * @todo Review $content_width hack
  */
 get_header(); ?>
 <div id="maintop"></div>
@@ -22,10 +23,13 @@ get_header(); ?>
         <div id="the-loop">
             <?php
             global $post;
+            if ( $post->post_parent ) {
+                $content_width = 660;
+            }
             echo '<h1><a href="' . get_permalink( $post->post_parent ) . '">&laquo; Go back to ' . get_the_title( $post->post_parent ) . ' gallery post.</a></h1><br />';
 
-            echo previous_image_link( false, '<div class="left">' . __( 'Previous Photo', 'shades' ) . '</div>' );
-            echo next_image_link( false, '<div class="right">' . __( 'Next Photo', 'shades' ) . '</div>' );
+            echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'shades' ) . '</span>' );
+            echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'shades' ) . '</span>' );
 
             echo '<div class="clear"></div>';
 
@@ -33,11 +37,27 @@ get_header(); ?>
 
             $imagemeta = wp_get_attachment_metadata();
 
-            if ($imagemeta['image_meta']['camera']) {
-                echo "Camera: " . $imagemeta['image_meta']['camera'];
+            if ( $imagemeta['width'] && $imagemeta['height']  ) {
+                echo '<div class="right"><a href="' . wp_get_attachment_url( $post->ID ) . '">Original image</a> (Size: ' . $imagemeta['width'] . 'px by ' . $imagemeta['height'] . 'px)</div>';
             }
 
-            if ($imagemeta['image_meta']['shutter_speed']) {
+            if ( $imagemeta['image_meta']['credit'] ) {
+                echo '<br />Credit: ' . $imagemeta['image_meta']['credit'];
+            }
+
+            if ( $imagemeta['image_meta']['copyright'] ) {
+                echo ' &copy; ' . get_the_time( 'Y' ) . ' ' . $imagemeta['image_meta']['copyright'];
+            }
+
+            if ( $imagemeta['image_meta']['created_timestamp'] ) {
+                echo '<br />Created (timestamp): ' . get_the_time( get_option( 'date_format' ), $imagemeta['image_meta']['created_timestamp'] ) . ' @ ' . get_the_time ( get_option( 'time_format' ), $imagemeta['image_meta']['created_timestamp'] );
+            }
+
+            if ( $imagemeta['image_meta']['camera'] ) {
+                echo '<br />Camera: ' . $imagemeta['image_meta']['camera'];
+            }
+
+            if ( $imagemeta['image_meta']['shutter_speed'] ) {
                 echo ' ';
                 echo '<br />Shutter: ';
 
@@ -54,7 +74,38 @@ get_header(); ?>
                 }
             }
 
+            if ( $imagemeta['image_meta']['aperture'] ) {
+                echo '<br />Aperture (F-stop): ' . $imagemeta['image_meta']['aperture'];
+            }
+
+            if ( $imagemeta['image_meta']['caption'] ) {
+                echo '<br />Caption: ' . $imagemeta['image_meta']['caption'];
+            }
+
+            if ( $imagemeta['image_meta']['focal_length'] ) {
+                echo '<br />Focal Length: ' . $imagemeta['image_meta']['focal_length'] . 'mm';
+            }
+
+            if ( $imagemeta['image_meta']['iso'] ) {
+                echo '<br />Speed: ISO ' . $imagemeta['image_meta']['iso'];
+            }
+
+            if ( $imagemeta['image_meta']['title'] ) {
+                echo '<br />Title: ' . $imagemeta['image_meta']['title'];
+            }
+
             echo '<br /><h6>This image template page is a work in progress ... look for more information in this space.</h6>';
+
+            /** Testing for available data points */
+            /**
+            if (version_compare( phpversion(), '5.3', '<' ) ) {
+                echo '<pre>';
+                    var_dump($imagemeta);
+                echo '</pre>';
+            } else {
+                var_dump($imagemeta);
+            }
+            */
 
             ?>
         </div><!-- #the-loop -->
