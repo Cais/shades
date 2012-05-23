@@ -23,9 +23,6 @@ get_header(); ?>
         <div id="the-loop">
             <?php
             global $post;
-            if ( $post->post_parent ) {
-                $content_width = 660;
-            }
             echo '<h1><a href="' . get_permalink( $post->post_parent ) . '">&laquo; Go back to ' . get_the_title( $post->post_parent ) . ' gallery post.</a></h1><br />';
 
             echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'shades' ) . '</span>' );
