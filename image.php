@@ -32,63 +32,63 @@ get_header(); ?>
 
             echo '<div class="center"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, 'large' ) . '</a></div>';
 
-            $imagemeta = wp_get_attachment_metadata();
+            $shades_image_meta = wp_get_attachment_metadata();
 
-            if ( $imagemeta['width'] && $imagemeta['height']  ) {
-                echo '<div class="right"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . __( 'Original image', 'shades' ) . '</a>' . ' ' . __( '(Size:', 'shades' ) . ' ' . $imagemeta['width'] . __( 'px by', 'shades' ) . ' ' . $imagemeta['height'] . _( 'px)', 'shades' ) . '</div>';
+            if ( $shades_image_meta['width'] && $shades_image_meta['height']  ) {
+                echo '<div class="right"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . __( 'Original image', 'shades' ) . '</a>' . ' ' . __( '(Size:', 'shades' ) . ' ' . $shades_image_meta['width'] . __( 'px by', 'shades' ) . ' ' . $shades_image_meta['height'] . __( 'px)', 'shades' ) . '</div>';
             }
 
-            if ( $imagemeta['image_meta']['credit'] ) {
-                echo '<br />' . __( 'Credit:', 'shades' ) . ' ' . $imagemeta['image_meta']['credit'];
+            if ( $shades_image_meta['image_meta']['credit'] ) {
+                echo '<br />' . __( 'Credit:', 'shades' ) . ' ' . $shades_image_meta['image_meta']['credit'];
             }
 
-            if ( $imagemeta['image_meta']['copyright'] ) {
-                echo ' &copy; ' . get_the_time( 'Y' ) . ' ' . $imagemeta['image_meta']['copyright'];
+            if ( $shades_image_meta['image_meta']['copyright'] ) {
+                echo ' &copy; ' . get_the_time( 'Y' ) . ' ' . $shades_image_meta['image_meta']['copyright'];
             }
 
-            if ( $imagemeta['image_meta']['created_timestamp'] ) {
-                echo '<br />' . __( 'Created (timestamp):', 'shades' ) . ' ' . get_the_time( get_option( 'date_format' ), $imagemeta['image_meta']['created_timestamp'] ) . ' @ ' . get_the_time ( get_option( 'time_format' ), $imagemeta['image_meta']['created_timestamp'] );
+            if ( $shades_image_meta['image_meta']['created_timestamp'] ) {
+                echo '<br />' . __( 'Created (timestamp):', 'shades' ) . ' ' . get_the_time( get_option( 'date_format' ), $shades_image_meta['image_meta']['created_timestamp'] ) . ' @ ' . get_the_time ( get_option( 'time_format' ), $shades_image_meta['image_meta']['created_timestamp'] );
             }
 
-            if ( $imagemeta['image_meta']['camera'] ) {
-                echo '<br />' . __( 'Camera:', 'shades' ) . ' ' . $imagemeta['image_meta']['camera'];
+            if ( $shades_image_meta['image_meta']['camera'] ) {
+                echo '<br />' . __( 'Camera:', 'shades' ) . ' ' . $shades_image_meta['image_meta']['camera'];
             }
 
-            if ( $imagemeta['image_meta']['shutter_speed'] ) {
+            if ( $shades_image_meta['image_meta']['shutter_speed'] ) {
                 echo ' ';
                 echo '<br />' . __( 'Shutter:', 'shades' ) . ' ';
 
                 // shutter speed handler
-                if ( ( 1 / $imagemeta['image_meta']['shutter_speed'] ) > 1 ) {
+                if ( ( 1 / $shades_image_meta['image_meta']['shutter_speed'] ) > 1 ) {
                     echo "1/";
-                    if ( number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 1 ) ==  number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 0 ) ) {
-                        echo number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' sec';
+                    if ( number_format( ( 1 / $shades_image_meta['image_meta']['shutter_speed'] ), 1 ) ==  number_format( ( 1 / $shades_image_meta['image_meta']['shutter_speed'] ), 0 ) ) {
+                        echo number_format( ( 1 / $shades_image_meta['image_meta']['shutter_speed'] ), 0, '.', '' ) . ' sec';
                     } else {
-                        echo number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' sec';
+                        echo number_format( ( 1 / $shades_image_meta['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' sec';
                     }
                 } else {
-                    echo $imagemeta['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'shades' );
+                    echo $shades_image_meta['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'shades' );
                 }
             }
 
-            if ( $imagemeta['image_meta']['aperture'] ) {
-                echo '<br />' . 'Aperture (F-stop): ' . $imagemeta['image_meta']['aperture'];
+            if ( $shades_image_meta['image_meta']['aperture'] ) {
+                echo '<br />' . 'Aperture (F-stop): ' . $shades_image_meta['image_meta']['aperture'];
             }
 
-            if ( $imagemeta['image_meta']['caption'] ) {
-                echo '<br />' . 'Caption: ' . $imagemeta['image_meta']['caption'];
+            if ( $shades_image_meta['image_meta']['caption'] ) {
+                echo '<br />' . 'Caption: ' . $shades_image_meta['image_meta']['caption'];
             }
 
-            if ( $imagemeta['image_meta']['focal_length'] ) {
-                echo '<br />' . 'Focal Length: ' . $imagemeta['image_meta']['focal_length'] . 'mm';
+            if ( $shades_image_meta['image_meta']['focal_length'] ) {
+                echo '<br />' . 'Focal Length: ' . $shades_image_meta['image_meta']['focal_length'] . 'mm';
             }
 
-            if ( $imagemeta['image_meta']['iso'] ) {
-                echo '<br />' . 'Speed: ISO ' . $imagemeta['image_meta']['iso'];
+            if ( $shades_image_meta['image_meta']['iso'] ) {
+                echo '<br />' . 'Speed: ISO ' . $shades_image_meta['image_meta']['iso'];
             }
 
-            if ( $imagemeta['image_meta']['title'] ) {
-                echo '<br />' . 'Title: ' . $imagemeta['image_meta']['title'];
+            if ( $shades_image_meta['image_meta']['title'] ) {
+                echo '<br />' . 'Title: ' . $shades_image_meta['image_meta']['title'];
             }
 
             echo '<br /><h6>' . 'This image template page is a work in progress ... look for more information in this space.' . '</h6>';
@@ -97,10 +97,10 @@ get_header(); ?>
             /**
             if (version_compare( phpversion(), '5.3', '<' ) ) {
                 echo '<pre>';
-                    var_dump($imagemeta);
+                    var_dump($shades_image_meta);
                 echo '</pre>';
             } else {
-                var_dump($imagemeta);
+                var_dump($shades_image_meta);
             }
             */
 
