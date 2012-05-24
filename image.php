@@ -23,7 +23,7 @@ get_header(); ?>
         <div id="the-loop">
             <?php
             global $post;
-            echo '<h1><a href="' . get_permalink( $post->post_parent ) . '">&laquo; Go back to ' . get_the_title( $post->post_parent ) . ' gallery post.</a></h1><br />';
+            echo '<a href="' . get_permalink( $post->post_parent ) . '">&laquo; Go back to the gallery post:' . '<h1>' . get_the_title( $post->post_parent ) . '</a></h1><br />';
 
             echo previous_image_link( false, '<span class="left">' . __( 'Previous Photo', 'shades' ) . '</span>' );
             echo next_image_link( false, '<span class="right">' . __( 'Next Photo', 'shades' ) . '</span>' );
