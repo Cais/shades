@@ -35,7 +35,7 @@ get_header(); ?>
             $imagemeta = wp_get_attachment_metadata();
 
             if ( $imagemeta['width'] && $imagemeta['height']  ) {
-                echo '<div class="right"><a href="' . wp_get_attachment_url( $post->ID ) . '">Original image</a> (Size: ' . $imagemeta['width'] . 'px by ' . $imagemeta['height'] . 'px)</div>';
+                echo '<div class="right"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . __( 'Original image', 'shades' ) . '</a>' . ' ' . __( '(Size:', 'shades' ) . ' ' . $imagemeta['width'] . __( 'px by', 'shades' ) . ' ' . $imagemeta['height'] . _( 'px)', 'shades' ) . '</div>';
             }
 
             if ( $imagemeta['image_meta']['credit'] ) {
