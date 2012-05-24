@@ -14,7 +14,7 @@
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  *
  * @todo Complete and clean-up for proper end-use
- * @todo Review $content_width hack
+ * @todo Update and review i18n strings
  */
 get_header(); ?>
 <div id="maintop"></div>
@@ -39,7 +39,7 @@ get_header(); ?>
             }
 
             if ( $imagemeta['image_meta']['credit'] ) {
-                echo '<br />Credit: ' . $imagemeta['image_meta']['credit'];
+                echo '<br />' . __( 'Credit:', 'shades' ) . ' ' . $imagemeta['image_meta']['credit'];
             }
 
             if ( $imagemeta['image_meta']['copyright'] ) {
@@ -47,16 +47,16 @@ get_header(); ?>
             }
 
             if ( $imagemeta['image_meta']['created_timestamp'] ) {
-                echo '<br />Created (timestamp): ' . get_the_time( get_option( 'date_format' ), $imagemeta['image_meta']['created_timestamp'] ) . ' @ ' . get_the_time ( get_option( 'time_format' ), $imagemeta['image_meta']['created_timestamp'] );
+                echo '<br />' . __( 'Created (timestamp):', 'shades' ) . ' ' . get_the_time( get_option( 'date_format' ), $imagemeta['image_meta']['created_timestamp'] ) . ' @ ' . get_the_time ( get_option( 'time_format' ), $imagemeta['image_meta']['created_timestamp'] );
             }
 
             if ( $imagemeta['image_meta']['camera'] ) {
-                echo '<br />Camera: ' . $imagemeta['image_meta']['camera'];
+                echo '<br />' . __( 'Camera:', 'shades' ) . ' ' . $imagemeta['image_meta']['camera'];
             }
 
             if ( $imagemeta['image_meta']['shutter_speed'] ) {
                 echo ' ';
-                echo '<br />Shutter: ';
+                echo '<br />' . __( 'Shutter:', 'shades' ) . ' ';
 
                 // shutter speed handler
                 if ( ( 1 / $imagemeta['image_meta']['shutter_speed'] ) > 1 ) {
@@ -67,31 +67,31 @@ get_header(); ?>
                         echo number_format( ( 1 / $imagemeta['image_meta']['shutter_speed'] ), 1, '.', '' ) . ' sec';
                     }
                 } else {
-                    echo $imagemeta['image_meta']['shutter_speed'] . ' sec';
+                    echo $imagemeta['image_meta']['shutter_speed'] . ' ' . __( 'sec', 'shades' );
                 }
             }
 
             if ( $imagemeta['image_meta']['aperture'] ) {
-                echo '<br />Aperture (F-stop): ' . $imagemeta['image_meta']['aperture'];
+                echo '<br />' . 'Aperture (F-stop): ' . $imagemeta['image_meta']['aperture'];
             }
 
             if ( $imagemeta['image_meta']['caption'] ) {
-                echo '<br />Caption: ' . $imagemeta['image_meta']['caption'];
+                echo '<br />' . 'Caption: ' . $imagemeta['image_meta']['caption'];
             }
 
             if ( $imagemeta['image_meta']['focal_length'] ) {
-                echo '<br />Focal Length: ' . $imagemeta['image_meta']['focal_length'] . 'mm';
+                echo '<br />' . 'Focal Length: ' . $imagemeta['image_meta']['focal_length'] . 'mm';
             }
 
             if ( $imagemeta['image_meta']['iso'] ) {
-                echo '<br />Speed: ISO ' . $imagemeta['image_meta']['iso'];
+                echo '<br />' . 'Speed: ISO ' . $imagemeta['image_meta']['iso'];
             }
 
             if ( $imagemeta['image_meta']['title'] ) {
-                echo '<br />Title: ' . $imagemeta['image_meta']['title'];
+                echo '<br />' . 'Title: ' . $imagemeta['image_meta']['title'];
             }
 
-            echo '<br /><h6>This image template page is a work in progress ... look for more information in this space.</h6>';
+            echo '<br /><h6>' . 'This image template page is a work in progress ... look for more information in this space.' . '</h6>';
 
             /** Testing for available data points */
             /**
