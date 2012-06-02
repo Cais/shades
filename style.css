@@ -678,6 +678,8 @@ p img {
     max-width: 100%;
 }
 
+div.attached-image { text-align: center; }
+
 /*= Footer =*/
 #bottom {
     border-top: solid 1px #e3dccb;

@@ -34,7 +34,7 @@ get_header(); ?>
             echo '<div class="clear"></div>';
 
             /** Show the image with link to original */
-            echo '<div class="center"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, 'large' ) . '</a></div>';
+            echo '<div class="attached-image"><a href="' . wp_get_attachment_url( $post->ID ) . '">' . wp_get_attachment_image( $post->ID, 'large' ) . '</a></div>';
 
             /** @var $shades_image_meta - EXIF information from image */
             $shades_image_meta = wp_get_attachment_metadata();
