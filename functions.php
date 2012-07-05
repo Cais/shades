@@ -85,7 +85,7 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
         empty( $args['end'] ) ? $output .= ' ' . sprintf( __( 'All rights reserved.', 'shades' ) ) : $output .= ' ' . $args['end'];
 
         /** Construct and sprintf the copyright notice */
-        $output = sprintf( __( '<span id="shades-dynamic-copyright"> %1$s </span><!-- #bns-dynamic-copyright -->', 'shades' ), $output );
+        $output = sprintf( __( '<span id="shades-dynamic-copyright"> %1$s </span><!-- #shades-dynamic-copyright -->', 'shades' ), $output );
 
         echo apply_filters( 'shades_dynamic_copyright', $output, $args );
     }
@@ -97,49 +97,26 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
      *
      * Displays the theme name and version; also accounts for a Child-Theme if present
      *
-     * @uses    get_stylesheet_directory
-     * @uses    get_theme_data (deprecated)
-     * @uses    get_template_directory
      * @uses    is_child_theme
      * @uses    wp_get_theme
      * @uses    parent
      *
-     * Last revised April 18, 2012
-     * @version 1.8
-     * Addressed deprecated calls to `get_theme_data`
-     * Renamed to `shades_theme_version`
-     *
-     * @todo Remove deprecated calls to `get_theme_data` after the stable release of WordPress 3.4
+     * @version 1.9.1
+     * Removed deprecated function call
      */
     function shades_theme_version () {
-        global $wp_version;
-        /** Check WordPress version before using `wp_get_theme` for collecting theme data */
-        if ( version_compare( $wp_version, "3.4-alpha", "<" ) ) {
-            /** Get details of the theme / child theme */
-            $blog_css_url = get_stylesheet_directory() . '/style.css';
-            $my_theme_data = get_theme_data( $blog_css_url );
-            $parent_blog_css_url = get_template_directory() . '/style.css';
-            $parent_theme_data = get_theme_data( $parent_blog_css_url );
-
-            if ( is_child_theme() ) {
-                printf( __( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by <a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], $parent_theme_data['Name'], $parent_theme_data['Version'] );
-            } else {
-                printf( __( '<br /><span id="shades-theme-version">The %1$s theme, version %2$s, is a %3$s creation.</span>', 'shades' ), $my_theme_data['Name'], $my_theme_data['Version'], '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
-            }
-        } else {
-            /** @var $active_theme_data - array object containing the current theme's data */
-            $active_theme_data = wp_get_theme();
-            if ( is_child_theme() ) {
-                /** @var $parent_theme_data - array object containing the Parent Theme's data */
-                $parent_theme_data = $active_theme_data->parent();
-                /** @noinspection PhpUndefinedMethodInspection - IDE commentary */
-                printf( __( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
-                    $active_theme_data['Name'],
-                    $active_theme_data['Version'],
-                    $parent_theme_data['Name'],
-                    $parent_theme_data['Version'],
-                    '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
-            }
+        /** @var $active_theme_data - array object containing the current theme's data */
+        $active_theme_data = wp_get_theme();
+        if ( is_child_theme() ) {
+            /** @var $parent_theme_data - array object containing the Parent Theme's data */
+            $parent_theme_data = $active_theme_data->parent();
+            /** @noinspection PhpUndefinedMethodInspection - IDE commentary */
+            printf( __( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
+                $active_theme_data['Name'],
+                $active_theme_data['Version'],
+                $parent_theme_data['Name'],
+                $parent_theme_data['Version'],
+                '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
         }
     }
 }
@@ -405,4 +382,4 @@ if ( ! function_exists( 'shades_enqueue_comment_reply' ) ) {
 add_action( 'comment_form_before', 'shades_enqueue_comment_reply' );
 
 /** Set the content width based on the theme's design and stylesheet, see #the-loop element in style.css */
-if ( ! isset( $content_width ) ) $content_width = 630; ?>
+if ( ! isset( $content_width ) ) $content_width = 630;

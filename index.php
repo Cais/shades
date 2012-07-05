@@ -17,7 +17,7 @@
  * @internal    REQUIRES WordPress version 3.1.0
  * @internal    Tested up to WordPress version 3.4
  *
- * @version     1.9
+ * @version     1.9.1
  * @date        July 5, 2012
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
@@ -49,6 +49,7 @@
  *
  * @todo Review how post formats are handled when displayed via `the_excerpt`
  * @todo Revisit the centered menu style
+ * @todo Add 'editor-style.css' ... or remove theme support for the functionality
  */
 
 get_header(); ?>
@@ -68,4 +69,4 @@ get_header(); ?>
         <?php get_sidebar(); ?>
     </div><!--end content-->
 </div><!--end wrapper-->
-<?php get_footer(); ?>
+<?php get_footer();
