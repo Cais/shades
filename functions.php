@@ -162,6 +162,11 @@ if ( ! function_exists( 'shades_setup' ) ):
         add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
         /** Add default posts and comments RSS feed links to head */
         add_theme_support( 'automatic-feed-links' );
+        /** Add Custom Background Support */
+        add_theme_support( 'custom-background' , array(
+            'default-color' => 'fff',
+            'default-image' => ''
+        ) );
 
         /** Add post-formats support */
         add_theme_support( 'post-formats', array( 'aside', 'quote', 'status' ) );
@@ -205,19 +210,6 @@ if ( ! function_exists( 'shades_setup' ) ):
 
         /** Add theme support for editor-style */
         add_editor_style();
-
-        /**
-         * This theme allows users to set a custom background
-         * @todo Remove backward compatibility code after WordPress 3.4 stable release is public
-         */
-        if ( version_compare( $wp_version, "3.4-alpha", "<" ) ) {
-            add_custom_background();
-        } else {
-            add_theme_support( 'custom-background' /*, array(
-                'default-color' => '848484',
-                'default-image' => get_stylesheet_directory_uri() . '/images/marble-bg.png'
-            )*/ );
-        }
 
         if ( ! function_exists( 'shades_nav_menu' ) ) {
             /**
@@ -283,6 +275,52 @@ if ( ! function_exists( 'shades_setup' ) ):
     }
 endif;
 
+
+if ( ! function_exists( 'shades_wp_title' ) ) {
+    /**
+     * Shades WP Title
+     *
+     * Utilizes the `wp_title` filter to add text to the default output
+     *
+     * @package Shades
+     * @since   1.9
+     *
+     * @link    http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_title
+     * @link    https://gist.github.com/1410493
+     *
+     * @param   string $old_title - default title text
+     * @param   string $sep - separator character
+     * @param   string $sep_location - left|right - separator placement in relationship to title
+     *
+     * @uses    (global) $page
+     * @uses    (global) $paged
+     * @uses    get_bloginfo
+     * @uses    is_front_page
+     * @uses    is_home
+     *
+     * @return  string - new title text
+     */
+    function shades_wp_title( $old_title, $sep, $sep_location ) {
+        global $page, $paged;
+        /** Set initial title text */
+        $shades_title_text = $old_title . get_bloginfo( 'name' );
+        /** Add wrapping spaces to separator character */
+        $sep = ' ' . $sep . ' ';
+
+        /** Add the blog description (tagline) for the home/front page */
+        $site_tagline = get_bloginfo( 'description', 'display' );
+        if ( $site_tagline && ( is_home() || is_front_page() ) )
+            $shades_title_text .= "$sep$site_tagline";
+
+        /** Add a page number if necessary */
+        if ( $paged >= 2 || $page >= 2 )
+            $shades_title_text .= $sep . sprintf( __( 'Page %s', 'shades' ), max( $paged, $page ) );
+
+        return $shades_title_text;
+    }
+}
+add_filter( 'wp_title', 'shades_wp_title', 10, 3 );
+
 if ( ! function_exists( 'shades_modified_post' ) ) {
     /**
      * Shades Modified Post
@@ -339,6 +377,32 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
         return $shades_no_title;
     }
 }
+
+/**
+ * Enqueue Comment Reply Script
+ *
+ * If the page being viewed is a single post/page; and, comments are open; and,
+ * threaded comments are turned on then enqueue the built-in comment-reply
+ * script.
+ *
+ * @package Shades
+ * @since   1.9
+ *
+ * @uses    comments_open
+ * @uses    get_option
+ * @uses    is_singular
+ * @uses    wp_enqueue_script
+ *
+ * @todo Review comments_open conditional ... what if there are threaded comments and the comments are closed?
+ */
+if ( ! function_exists( 'shades_enqueue_comment_reply' ) ) {
+    function shades_enqueue_comment_reply() {
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
+        }
+    }
+}
+add_action( 'comment_form_before', 'shades_enqueue_comment_reply' );
 
 /** Set the content width based on the theme's design and stylesheet, see #the-loop element in style.css */
 if ( ! isset( $content_width ) ) $content_width = 630; ?>

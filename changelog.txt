@@ -1,18 +1,22 @@
 === Shades ===
-Changelog as of May 22, 2012
+Changelog as of July 5, 2012
 == Version 1.9 ==
 = CODE =
 * Added 'image.php' template
+* Added "custom background" support
+* Enqueue threaded comments script in 'functions.php'
+* Update usage of `wp_title`
 
 = CSS =
 = Miscellaneous =
+* With the addition of the custom background support, the theme now requires WordPress 3.4 to work correctly
 
 = Internet Browsers Reviewed =
-* Apple Safari v5.1.5
-* Firefox v11.0
-* Google Chrome v18.0
+* Apple Safari v5.1.7
+* Firefox v13.0.1
+* Google Chrome v20.0
 * Internet Explorer v9.0
-* Opera v11.62
+* Opera v12.0
 
 /** ------------------------------------------------------------------------- */
 == Version 1.8 ==
