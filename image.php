@@ -63,9 +63,8 @@ get_header(); ?>
             /** Creation timestamp in end-user settings format */
             if ( $shades_image_meta['image_meta']['created_timestamp'] ) {
                 echo '<br />'
-                    . sprintf( __( 'Created (timestamp): %1$s @ %2$s', 'shades' ),
-                        get_the_time( get_option( 'date_format' ), $shades_image_meta['image_meta']['created_timestamp'] ),
-                        get_the_time ( get_option( 'time_format' ), $shades_image_meta['image_meta']['created_timestamp'] )
+                    . sprintf( __( 'Created (timestamp): %1$s', 'shades' ),
+                        get_the_time( get_option( 'date_format' ), $shades_image_meta['image_meta']['created_timestamp'] )
                     );
             }
 
