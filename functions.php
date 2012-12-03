@@ -11,6 +11,9 @@
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
+ *
+ * @version     2.0
+ * @date        December 3, 2012
  */
 
 /** Widget definition */
@@ -25,7 +28,6 @@ register_sidebars( 2, array(
 if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
     /**
      * Shades Dynamic Copyright
-     *
      * Creates a dynamic Copyright by statement by reading the year of the first
      * published post and appending the current year as well as minimal boiler-
      * plate text. Output is then echoed via an apply_filters call.
@@ -94,7 +96,6 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 if ( ! function_exists( 'shades_theme_version' ) ) {
     /**
      * BNS Theme Version
-     *
      * Displays the theme name and version; also accounts for a Child-Theme if present
      *
      * @uses    is_child_theme
@@ -136,7 +137,7 @@ if ( ! function_exists( 'shades_setup' ) ):
      * @date    December 3, 2012
      * Added classes to inline glyph span styles and moved to style.css
      */
-    function shades_setup(){
+    function shades_setup() {
         /** This theme uses post thumbnails */
         add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
         /** Add default posts and comments RSS feed links to head */
@@ -193,7 +194,6 @@ if ( ! function_exists( 'shades_setup' ) ):
         if ( ! function_exists( 'shades_nav_menu' ) ) {
             /**
              * Shades Navigation Menu
-             *
              * Adds custom menu support
              *
              * @uses    shades_list_pages
@@ -210,10 +210,10 @@ if ( ! function_exists( 'shades_setup' ) ):
                     shades_list_pages();
             }
         }
+
         if ( ! function_exists( 'shades_list_pages' ) ) {
             /**
              * Shades List Pages
-             *
              * Fallback for Shades Navigation Menu
              *
              * @uses    wp_list_pages
@@ -230,6 +230,7 @@ if ( ! function_exists( 'shades_setup' ) ):
                 }
             }
         }
+
         if (! function_exists( 'register_shades_menu' ) ) {
             /**
              * Register Shades Menu
@@ -258,7 +259,6 @@ endif;
 if ( ! function_exists( 'shades_wp_title' ) ) {
     /**
      * Shades WP Title
-     *
      * Utilizes the `wp_title` filter to add text to the default output
      *
      * @package Shades
@@ -303,7 +303,6 @@ add_filter( 'wp_title', 'shades_wp_title', 10, 3 );
 if ( ! function_exists( 'shades_modified_post' ) ) {
     /**
      * Shades Modified Post
-     *
      * If the post time and the last modified time are different display
      * modified date and time
      *
@@ -340,7 +339,6 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
 if ( ! function_exists( 'shades_use_posted' ) ) {
     /**
      * Shades Use Posted
-     *
      * For posts without titles
      *
      * @uses    get_the_title
@@ -359,7 +357,6 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
 
 /**
  * Enqueue Comment Reply Script
- *
  * If the page being viewed is a single post/page; and, comments are open; and,
  * threaded comments are turned on then enqueue the built-in comment-reply
  * script.
