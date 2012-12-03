@@ -126,15 +126,17 @@ add_action( 'after_setup_theme', 'shades_setup' );
 if ( ! function_exists( 'shades_setup' ) ):
     /**
      * Shades Setup
-     *
      * Defines for core functionality supported by theme
      *
-     * Last revised April 18, 2012
      * @version 1.8
+     * @date    April 18, 2012
      * Addressed call to deprecated function `add_custom_background`
+     *
+     * @version 2.0
+     * @date    December 3, 2012
+     * Added classes to inline glyph span styles and moved to style.css
      */
     function shades_setup(){
-        global $wp_version;
         /** This theme uses post thumbnails */
         add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
         /** Add default posts and comments RSS feed links to head */
@@ -153,7 +155,7 @@ if ( ! function_exists( 'shades_setup' ) ):
              * Shades Glyph - Aside
              */
             function shades_glyph_aside() {
-                $aside_glyph = "<span style='font-family: \"Times New Roman\", Arial, sans-serif; font-size: 1000%'>";
+                $aside_glyph = '<span class="aside-glyph">';
                 /** default: exclamation mark */
                 $aside_glyph .= __( '!', 'shades' );
                 $aside_glyph .= '</span>';
@@ -165,7 +167,7 @@ if ( ! function_exists( 'shades_setup' ) ):
              * Shades Glyph - Quote
              */
             function shades_glyph_quote() {
-                $quote_glyph = "<span style='font-family: \"Times New Roman\", Arial, sans-serif; font-size: 1000%'>";
+                $quote_glyph = '<span class="quote-glyph">';
                 /** default: double-quote */
                 $quote_glyph .= __( '"', 'shades' );
                 $quote_glyph .= '</span>';
@@ -177,7 +179,7 @@ if ( ! function_exists( 'shades_setup' ) ):
              * Shades Glyph - Status
              */
             function shades_glyph_status() {
-                $status_glyph = "<span style='font-family: \"Times New Roman\", Arial, sans-serif; font-size: 500%'>";
+                $status_glyph = '<span class="status-glyph">';
                 /** default: amphere (at sign) */
                 $status_glyph .= __( '@', 'shades' );
                 $status_glyph .= '</span>';

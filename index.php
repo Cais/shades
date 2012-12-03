@@ -14,11 +14,10 @@
  * @link        https://github.com/Cais/shades/
  * @link        http://wordpress.org/extend/themes/shades/
  *
- * @internal    REQUIRES WordPress version 3.1.0
- * @internal    Tested up to WordPress version 3.4
+ * @internal    REQUIRES WordPress version 3.4
+ * @internal    Tested up to WordPress version 3.5
  *
- * @version     1.9.1
- * @date        July 5, 2012
+ * @version     2.0
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  *
@@ -42,10 +41,13 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Last modified April 18, 2012
  * @version     1.8
+ * @date        April 18, 2012
  * Replaced navigation with call to get_template_part( 'shades-navigation' )
  * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
+ *
+ * @version     2.0
+ * @date        December 3, 2012
  *
  * @todo Review how post formats are handled when displayed via `the_excerpt`
  * @todo Revisit the centered menu style

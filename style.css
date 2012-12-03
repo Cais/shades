@@ -2,12 +2,12 @@
 Theme Name: Shades
 Theme URI: http://buynowshop.com/themes/shades/
 Description: A simple clean theme framework to work from, designed ideally for light colored backgrounds and easily adapted to darker layouts. Now with Threaded Comments and sticky post support!<em>Please read the included changelog.txt file for the latest change details.</em> The child theme Shades of Darkness is no longer included but is available for download at the theme homepage: http://buynowshop.com/themes/shades/.
-Version: 1.9.1-alpha
+Version: 2.0
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
 Tags: black, white, silver, red, light, two-columns, right-sidebar, fixed-width, sticky-post, threaded-comments, translation-ready, custom-menu, custom-background
 WordPress Required Version: 3.4
-Tested Up To: 3.4
+Tested Up To: 3.5
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
@@ -983,6 +983,15 @@ textarea#text_area { width: 98%; }
     filter: alpha( opacity=25 );
     opacity: 0.25;
     zoom: 1;
+}
+span.aside-glyph,
+span.quote-glyph {
+    font-family: "Times New Roman", Arial, sans-serif;
+    font-size: 1000%;
+}
+span.status-glyph {
+    font-family: "Times New Roman", Arial, sans-serif;
+    font-size: 500%;
 }
 /* --- End: Post Formats --- */
 

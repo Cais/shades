@@ -1,20 +1,21 @@
 === Shades ===
-Changelog as of July 5, 2012
-== Version 1.9.1 ==
+Changelog as of December 3, 2012
+== Version 2.0 ==
 = CODE =
 * Removed deprecated call to `get_theme_data`
 
 = CSS =
+* Added classes to inline glyph span styles and moved to style.css
 
 = Miscellaneous =
 * General code clean-up (typos, etc.)
 
-= Internet Browsers Reviewed =
-* Apple Safari v5.1.7
-* Firefox v13.0.1
-* Google Chrome v20.0
-* Internet Explorer v9.0
-* Opera v12.0
+= Current Internet Browsers Reviewed =
+* Apple Safari
+* Firefox
+* Google Chrome
+* Internet Explorer
+* Opera
 
 /** ------------------------------------------------------------------------- */
 == Version 1.9 ==
