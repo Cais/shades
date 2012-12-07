@@ -53,4 +53,4 @@ get_header(); ?>
         <?php get_sidebar(); ?>
     </div><!--end content-->
 </div><!--end wrapper-->
-<?php get_footer(); ?>
+<?php get_footer();

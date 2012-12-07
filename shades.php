@@ -72,4 +72,4 @@ if ( is_page() ) { ?>
         <?php } ?>
         <p class="tags"><?php the_tags(); ?></p>
     </div> <!-- .post #post-ID -->
-<?php } ?>
+<?php }
