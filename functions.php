@@ -369,11 +369,13 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
  * @uses    is_singular
  * @uses    wp_enqueue_script
  *
- * @todo Review comments_open conditional ... what if there are threaded comments and the comments are closed?
+ * @version 2.0
+ * @date    December 7, 2012
+ * Change conditional to show "Threaded Comments" if they are open of closed.
  */
 if ( ! function_exists( 'shades_enqueue_comment_reply' ) ) {
     function shades_enqueue_comment_reply() {
-        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        if ( is_singular() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
         }
     }
