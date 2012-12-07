@@ -371,7 +371,7 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
  *
  * @version 2.0
  * @date    December 7, 2012
- * Change conditional to show "Threaded Comments" if they are open of closed.
+ * Change conditional to show "Threaded Comments" if they are open or closed.
  */
 if ( ! function_exists( 'shades_enqueue_comment_reply' ) ) {
     function shades_enqueue_comment_reply() {

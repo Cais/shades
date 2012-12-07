@@ -13,7 +13,9 @@
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2012, Edward Caissie
  *
- * @todo Review conditional checks for "author credits with copyright details" when only one is available
+ * @version     2.0
+ * @date        December 7, 2012
+ * Refactored conditional checks for "author credits with copyright details"
  */
 get_header(); ?>
 <div id="maintop"></div>
@@ -52,9 +54,9 @@ get_header(); ?>
             /** Author Credit with Copyright details */
             if ( $shades_image_meta['image_meta']['credit'] ) {
                 echo '<br />' . sprintf( __( 'Credit: %1$s', 'shades' ), $shades_image_meta['image_meta']['credit'] );
-            }
-            if ( $shades_image_meta['image_meta']['credit'] && $shades_image_meta['image_meta']['copyright'] ) {
-                echo ' ';
+                if ( $shades_image_meta['image_meta']['copyright'] ) {
+                    echo ' ';
+                }
             }
             if ( $shades_image_meta['image_meta']['copyright'] ) {
                 printf( '&copy; %1$s %2$s', get_the_time( 'Y' ), $shades_image_meta['image_meta']['copyright'] );
