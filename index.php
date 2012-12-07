@@ -47,11 +47,9 @@
  * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
  *
  * @version     2.0
- * @date        December 3, 2012
+ * @date        December 7, 2012
  *
  * @todo Review how post formats are handled when displayed via `the_excerpt`
- * @todo Revisit the centered menu style
- * @todo Add 'editor-style.css' ... or remove theme support for the functionality
  */
 
 get_header(); ?>

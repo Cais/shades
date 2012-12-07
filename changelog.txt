@@ -6,6 +6,7 @@ Changelog as of December 3, 2012
 
 = CSS =
 * Added classes to inline glyph span styles and moved to style.css
+* Added 'editor-style.css' file
 
 = Miscellaneous =
 * General code clean-up (typos, etc.)
