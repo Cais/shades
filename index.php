@@ -1,11 +1,10 @@
 <?php
 /**
  * Shades
- *
- * Theme Description: A simple clean theme framework to work from, designed
- * ideally for light colored backgrounds and easily adapted to darker layouts.
- * Now with Threaded Comments and sticky post support!<em>Please read the
- * included changelog.txt file for the latest change details.
+ * A simple clean theme framework to work from, designed ideally for light
+ * colored backgrounds and easily adapted to darker layouts. Now with Threaded
+ * Comments and sticky post support!<em>Please read the included changelog.txt
+ * file for the latest change details.
  *
  * @package     Shades
  * @since       1.0
@@ -48,8 +47,6 @@
  *
  * @version     2.0
  * @date        December 7, 2012
- *
- * @todo Review how post formats are handled when displayed via `the_excerpt`
  */
 
 get_header(); ?>
