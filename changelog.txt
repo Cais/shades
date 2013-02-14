@@ -1,5 +1,17 @@
 === Shades ===
-Changelog as of December 7, 2012
+Changelog as of February 14, 2013
+== 2.0.1 ==
+= Miscellaneous =
+* Change 'style.css' header texts to reflect core trac ticket #16868
+
+= Current Internet Browsers Reviewed =
+* Apple Safari
+* Firefox
+* Google Chrome
+* Internet Explorer
+* Opera
+
+/** ------------------------------------------------------------------------- */
 == Version 2.0 ==
 = CODE =
 * Change conditional to show "Threaded Comments" if they are open of closed.
@@ -12,13 +24,6 @@ Changelog as of December 7, 2012
 
 = Miscellaneous =
 * General code clean-up (typos, etc.)
-
-= Current Internet Browsers Reviewed =
-* Apple Safari
-* Firefox
-* Google Chrome
-* Internet Explorer
-* Opera
 
 /** ------------------------------------------------------------------------- */
 == Version 1.9 ==
