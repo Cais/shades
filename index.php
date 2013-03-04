@@ -16,9 +16,9 @@
  * @internal    REQUIRES WordPress version 3.4
  * @internal    Tested up to WordPress version 3.5
  *
- * @version     2.0
+ * @version     2.1
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2012, Edward Caissie
+ * @copyright   Copyright (c) 2009-2013, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -40,13 +40,12 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     1.8
- * @date        April 18, 2012
- * Replaced navigation with call to get_template_part( 'shades-navigation' )
- * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
- *
  * @version     2.0
  * @date        December 7, 2012
+ *
+ * @version     2.1
+ * @date        March 2013
+ * Remove 'searchform.php' in favor of using WordPress core version
  */
 
 get_header(); ?>
