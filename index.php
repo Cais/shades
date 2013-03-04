@@ -46,23 +46,41 @@
  * @version     2.1
  * @date        March 2013
  * Remove 'searchform.php' in favor of using WordPress core version
+ * Refactored code formatting and code block termination comments
  */
 
 get_header(); ?>
+
 <div id="maintop"></div>
+
 <div id="wrapper">
+
     <div id="content">
+
         <div id="the-loop">
+
             <?php
-            if ( have_posts() ) : while ( have_posts() ) : the_post();
-                get_template_part( 'shades', get_post_format() );
-            endwhile;
+            if ( have_posts() ) {
+
+                while ( have_posts() ) {
+                    the_post();
+                    get_template_part( 'shades', get_post_format() );
+                } /** End while - have posts */
+
                 get_template_part( 'shades-navigation' );
-            else :
+
+            } else {
+
                 get_template_part( 'shades-no-posts' );
-            endif; ?>
+
+            } /** End if - have posts */ ?>
+
         </div><!-- #the-loop -->
+
         <?php get_sidebar(); ?>
+
     </div><!--end content-->
+
 </div><!--end wrapper-->
+
 <?php get_footer();
