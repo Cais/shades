@@ -32,7 +32,9 @@
         <div id="header">
             <div id="header-left"></div>
             <div id="header-center">
-                <h2><a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h2><!-- added URL code -->
+                <h2>
+                    <a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
+                </h2>
                 <p><?php bloginfo( 'description' ); ?></p>
             </div><!-- #header-center -->
             <div id="header-right"></div>
@@ -40,5 +42,5 @@
         <div class="clear"></div>
         <div id="top-navigation-menu">
             <?php shades_nav_menu(); ?>
-        </div>
+        </div><!-- top-navigation-menu -->
     </div><!-- #header-container -->
