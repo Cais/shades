@@ -24,7 +24,7 @@
     $shades_post_title = get_the_title();
     if ( empty( $shades_post_title ) ) {
         post_class( 'no-title' );
-    }
+    } /** End if - empty post title */
     post_class(); ?> id="post-<?php the_ID(); ?>">
 
     <div class="transparent glyph"><?php shades_glyph_quote(); ?></div>
