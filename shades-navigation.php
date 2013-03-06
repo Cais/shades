@@ -12,7 +12,7 @@
  * @link        http://wordpress.org/extend/themes/shades/
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2012, Edward Caissie
+ * @copyright   Copyright (c) 2009-2013, Edward Caissie
  */
 ?>
 <div id="nav-global" class="navigation">
