@@ -1,9 +1,12 @@
 === Shades ===
-Changelog as of March 4, 2013
+Changelog as of March 8, 2013
 == 2.1 ==
 = Code =
 * Refactored code formatting and code block termination comments
 * Refactored post meta to be more i18n compatible
+
+= CSS =
+* Added additional styles for default widgets
 
 = Miscellaneous =
 * Change 'style.css' header texts to reflect core trac ticket #16868
