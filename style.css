@@ -650,6 +650,11 @@ pre {
 }
 /** Tag Cloud */
 .widget_tag_cloud { margin: 0 10px; }
+
+/** Archive Dropdown Lists */
+.widget select {
+    width: 100%;
+}
 /** End: Default Widgets ---------------------------------------------------- */
 
 
@@ -671,7 +676,7 @@ table#wp-calendar {
     width: 98%;
 }
 table#wp-calendar tbody tr { text-align: center; }
-table#wp-calendar tbody tr td#today { outline: 1px solid; }
+table#wp-calendar tbody tr td#today { border: 1px solid; }
 table#wp-calendar tbody tr td a { font-weight: bold; }
 table#wp-calendar tfoot tr td#next { text-align: right; }
 
