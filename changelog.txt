@@ -1,5 +1,17 @@
 === Shades ===
-Changelog as of March 8, 2013
+Changelog as of April 22, 2013
+== 2.1.1 ==
+= Code =
+* Added 'SHADES_HOME_URL' constant in place of the hardcoded domain URL
+
+= Current Internet Browsers Reviewed =
+* Apple Safari
+* Firefox
+* Google Chrome
+* Internet Explorer
+* Opera
+
+/** ------------------------------------------------------------------------- */
 == 2.1 ==
 = Code =
 * Added 'search.php' template file
@@ -11,13 +23,6 @@ Changelog as of March 8, 2013
 
 = Miscellaneous =
 * Change 'style.css' header texts to reflect core trac ticket #16868
-
-= Current Internet Browsers Reviewed =
-* Apple Safari
-* Firefox
-* Google Chrome
-* Internet Explorer
-* Opera
 
 /** ------------------------------------------------------------------------- */
 == Version 2.0 ==

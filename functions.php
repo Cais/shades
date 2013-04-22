@@ -18,7 +18,14 @@
  * @version     2.1
  * @date        March 4, 2013
  * Refactored code formatting and code block termination comments
+ *
+ * @version     2.1.1
+ * @date        April 22, 2013
+ * Added 'SHADES_HOME_URL' constant
  */
+
+/** Define constant for easier updating */
+define( 'SHADES_HOME_URL', 'BuyNowShop.com' );
 
 /** Widget definition */
 register_sidebars( 2, array(
@@ -114,6 +121,10 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
      *
      * @version 1.9.1
      * Removed deprecated function call
+     *
+     * @version 2.1.1
+     * @date    April 22, 2013
+     * Added 'SHADES_HOME_URL' constant in place of the hardcoded domain URL
      */
     function shades_theme_version () {
         /** @var $active_theme_data - array object containing the current theme's data */
@@ -128,7 +139,7 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
                 $active_theme_data['Version'],
                 $parent_theme_data['Name'],
                 $parent_theme_data['Version'],
-                '<a href="http://buynowshop.com/" title="BuyNowShop.com">BuyNowShop.com</a>' );
+                '<a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>' );
         } /** End if - is child theme */
 
     } /** End function - theme version */
