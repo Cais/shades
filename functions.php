@@ -125,12 +125,14 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
      * @version 2.1.1
      * @date    April 22, 2013
      * Added 'SHADES_HOME_URL' constant in place of the hardcoded domain URL
+     * Re-Added Theme Version output for Parent-Theme usage
      */
     function shades_theme_version () {
         /** @var $active_theme_data - array object containing the current theme's data */
         $active_theme_data = wp_get_theme();
 
         if ( is_child_theme() ) {
+
             /** @var $parent_theme_data - array object containing the Parent Theme's data */
             $parent_theme_data = $active_theme_data->parent();
             /** @noinspection PhpUndefinedMethodInspection - IDE commentary */
@@ -139,8 +141,17 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
                 $active_theme_data['Version'],
                 $parent_theme_data['Name'],
                 $parent_theme_data['Version'],
-                '<a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>' );
+                '<a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>'
+            );
+
+        } else {
+
+            printf( __( '<br /><span id="shades-theme-version">This site is using the %1$s theme, v%2$s, from <a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>.</span>', 'shades' ),
+                $active_theme_data->get( 'Name' ),
+                $active_theme_data->get( 'Version' ) );
+
         } /** End if - is child theme */
+
 
     } /** End function - theme version */
 
