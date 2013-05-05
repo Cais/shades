@@ -1,8 +1,9 @@
 === Shades ===
-Changelog as of April 22, 2013
+Changelog as of May 5, 2013
 == 2.1.1 ==
 = Code =
 * Added 'SHADES_HOME_URL' constant in place of the hardcoded domain URL
+* Fixed featured image being used in post overflowing content area
 * Re-Added Theme Version output for Parent-Theme usage
 
 = Current Internet Browsers Reviewed =

@@ -16,7 +16,7 @@
  * @internal    REQUIRES WordPress version 3.4
  * @internal    Tested up to WordPress version 3.5
  *
- * @version     2.1
+ * @version     2.1.1
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2013, Edward Caissie
  *
@@ -47,6 +47,9 @@
  * @date        March 2013
  * Remove 'searchform.php' in favor of using WordPress core version
  * Refactored code formatting and code block termination comments
+ *
+ * @version     2.1.1
+ * @date        May 5, 2013
  */
 
 get_header(); ?>
