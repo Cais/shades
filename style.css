@@ -7,7 +7,7 @@ Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
 Tags: black, white, silver, red, light, two-columns, right-sidebar, fixed-width, sticky-post, threaded-comments, translation-ready, custom-menu, custom-background
 WordPress Required Version: 3.4
-WordPress Tested Version: 3.5.1
+WordPress Tested Version: 3.6
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
@@ -60,7 +60,11 @@ div.aligncenter, .aligncenter, .center { margin: 0 auto; }
 img.aligncenter, img.center { display: block; }
 img.alignleft, img.left { display: inline; margin:0 8px 8px 0; }
 img.alignright, img.right { display: inline; margin:0 0 8px 8px; }
-.wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin: 10px;
+.wp-caption {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    padding-top: 4px;
+    text-align: center;
     /* optional rounded corners for browsers that support it */
     -moz-border-radius: 3px;
     -khtml-border-radius: 3px;
@@ -681,6 +685,12 @@ table#wp-calendar tbody tr td a { font-weight: bold; }
 table#wp-calendar tfoot tr td#next { text-align: right; }
 
 /*= Images =*/
+/** Keeps Featured Images to width of container */
+img.wp-post-image {
+    height: auto;
+    width: 100%;
+}
+
 .wp-caption img.size-full {
     height: auto;
     max-width: 620px;
@@ -691,7 +701,22 @@ img.size-full {
     display: inline-block;
 }
 
-.wp-caption { max-width: 628px; /* =$content_width - borders */ }
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption.alignleft {
+    margin-right: 10px;
+}
+
+.wp-caption.alignright {
+    margin-left: 10px;
+}
+
+.wp-caption img {
+    height: auto;
+    max-width: 99%;
+}
 
 .gallery-caption { font-size: 11px; /* = wp-caption size */ }
 
