@@ -23,6 +23,10 @@
  * @date        March 8, 2013
  * Refactored code formatting and code block termination comments
  * Refactored post meta to be more i18n compatible
+ *
+ * @version     2.1.1
+ * @date        July 18, 2013
+ * Changed Featured Image code to use `shades_show_featured_image( 'full' )`
  */
 
 get_header();

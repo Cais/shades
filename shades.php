@@ -17,6 +17,10 @@
  * @version     2.1
  * @date        March 6, 2013
  * Refactored code, formatting, and code block termination comments
+ *
+ * @version     2.1.1
+ * @date        July 18, 2013
+ * Changed Featured Image code to use `shades_show_featured_image( 'full' )`
  */
 
 /** Check if the content is being displayed on a "page" */

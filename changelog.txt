@@ -1,5 +1,5 @@
 === Shades ===
-Changelog as of May 5, 2013
+Changelog as of July 18, 2013
 == 2.1.1 ==
 = Code =
 * Added `SHADES_HOME_URL` constant in place of the hardcoded domain URL
