@@ -85,9 +85,7 @@ if ( is_page() ) { ?>
         </div><!-- .postdata -->
 
         <?php
-        if ( is_home() || is_front_page() && has_post_thumbnail() ) {
-            the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
-        } /** End if - is home */
+        shades_show_featured_image( 'full' );
 
         if ( is_home() || is_front_page() || is_single() ) {
 

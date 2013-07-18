@@ -3,6 +3,7 @@ Changelog as of May 5, 2013
 == 2.1.1 ==
 = Code =
 * Added `SHADES_HOME_URL` constant in place of the hardcoded domain URL
+* Added `shades_show_featured_image( $size )` for DRY purposes
 * Fixed featured image being used in post overflowing content area
 * Re-Added Theme Version output for Parent-Theme usage
 

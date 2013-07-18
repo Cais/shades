@@ -105,9 +105,7 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
                             </div><!-- .postdata -->
 
                             <?php
-                            if ( is_home() || is_front_page() && has_post_thumbnail() ) {
-                                the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
-                            } /** End if - is home */
+                            shades_show_featured_image( 'full' );
                             the_excerpt(); ?>
 
                             <div class="clear"></div><!-- For inserted media at the end of the post -->

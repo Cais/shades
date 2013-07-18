@@ -447,6 +447,25 @@ if ( ! function_exists( 'shades_enqueue_comment_reply' ) ) {
 add_action( 'comment_form_before', 'shades_enqueue_comment_reply' );
 
 
+/**
+ * Show Featured Image
+ * Displays the Featured Image allowing the size to be set
+ *
+ * @package Shades
+ * @since   2.1.1
+ *
+ * @param   $size
+ *
+ * @uses    has_post_thumbnail
+ * @uses    the_post_thumbnail
+ */
+function shades_show_featured_image( $size ) {
+    if ( is_home() || is_front_page() && has_post_thumbnail() ) {
+        the_post_thumbnail( $size, array( 'class' => 'aligncenter' ) );
+    } /** End if - is home */
+} /** End function - show featured image */
+
+
 /** Set the content width based on the theme's design and stylesheet, see #the-loop element in style.css */
 if ( ! isset( $content_width ) ) {
     $content_width = 630;
