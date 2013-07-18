@@ -1,5 +1,5 @@
 ==== Readme.txt for Shades Theme ====
-* Last revised March 8, 2013
+* Last revised July 18, 2013
 
 === Topics ===
 * FAQ
@@ -39,3 +39,4 @@ NB: Future TODO items will be written inline where appropriate as of version 1.8
 * http://themes.trac.wordpress.org/ticket/8503 - v1.9 - July 5, 2012
 * http://themes.trac.wordpress.org/ticket/10265 - v2.0 - December 7, 2012
 * http://themes.trac.wordpress.org/ticket/11587 - v2.1 - March 8, 2013
+* http://themes.trac.wordpress.org/ticket/13451 - v2.1.1 - July 18, 2013
