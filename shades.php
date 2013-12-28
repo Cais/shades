@@ -21,6 +21,10 @@
  * @version     2.1.1
  * @date        July 18, 2013
  * Changed Featured Image code to use `shades_show_featured_image( 'full' )`
+ *
+ * @version		2.1.2
+ * @date		December 28, 2013
+ * i18n update for `Permalink to: ` phrase
  */
 
 /** Check if the content is being displayed on a "page" */
@@ -31,7 +35,7 @@ if ( is_page() ) {
 
 		<h1>
 			<a href="<?php the_permalink(); ?>"
-			   title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+			   title="<?php the_title_attribute( array( 'before' => __( 'Permalink to:', 'shades' ) . ' ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
 		</h1>
 
 		<div class="postdata">
