@@ -1,12 +1,13 @@
 === Shades ===
 Changelog as of December 28, 2013
-== 2.1.2 ==
+== 2.2 ==
 = Code =
 * Code reformatting to better reflect WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
 * Removed default `Search` from sidebar
 
 = CSS =
 * Clean up `border-radius` property usages
+* Removed the `zoom: 1` property usage
 
 = Miscellaneous
 * i18n update for `Permalink to: ` phrases
