@@ -12,13 +12,6 @@
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2013, Edward Caissie
  *
- * Last revised April 18, 2012
- * @version     1.8
- * Addressed deprecated function call to `get_userdatabylogin`
- * Replace navigation with call to `get_template_part( 'shades-navigation' )`
- * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
- * Added conditionals to only show website URL (with email) if the address is found in the user profile; and only show biography if it exists.
- *
  * @version     2.1
  * @date        March 8, 2013
  * Refactored code formatting and code block termination comments
@@ -27,6 +20,10 @@
  * @version     2.1.1
  * @date        July 18, 2013
  * Changed Featured Image code to use `shades_show_featured_image( 'full' )`
+ *
+ * @version		2.1.2
+ * @date		December 28, 2013
+ * i18n update for `Permalink to: ` phrase
  */
 
 get_header();

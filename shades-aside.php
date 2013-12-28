@@ -12,10 +12,6 @@
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2013, Edward Caissie
  *
- * Last revised April 20, 2012
- * @version     1.8
- * Added 'no-title' class to post classes if `get_the_title` is empty
- *
  * @version     2.1
  * @date        March 6, 2013
  * Refactored code, formatting, and code block termination comments
@@ -23,6 +19,10 @@
  * @version     2.1.1
  * @date        July 18, 2013
  * Changed Featured Image code to use `shades_show_featured_image( 'full' )`
+ *
+ * @version		2.1.2
+ * @date		December 28, 2013
+ * i18n update for `Permalink to: ` phrase
  */
 ?>
 
@@ -38,7 +38,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<h1>
 		<a href="<?php the_permalink(); ?>"
-		   title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+		   title="<?php the_title_attribute( array( 'before' => __( 'Permalink to:', 'shades' ) . ' ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
 	</h1>
 
 	<div class="postdata">
