@@ -118,10 +118,6 @@ img.alignright, img.right {
 	border: 1px solid #ddd;
 	padding-top: 4px;
 	text-align: center;
-	/* optional rounded corners for browsers that support it */
-	-moz-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 }
 
@@ -496,9 +492,6 @@ ul.nav-menu ul.children li {
 /* -- Rounded Corners for Menu -- */
 .nav-menu a, .nav-menu a:visited, .nav-menu a:hover, .nav-menu a:active,
 ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-menu ul ul {
-	-moz-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 }
 

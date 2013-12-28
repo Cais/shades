@@ -5,6 +5,9 @@ Changelog as of December 28, 2013
 * Code reformatting to better reflect WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
 * Removed default `Search` from sidebar
 
+= CSS =
+* Clean up `border-radius` property usages
+
 = Miscellaneous
 * i18n update for `Permalink to: ` phrases
 
