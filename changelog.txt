@@ -13,6 +13,7 @@ Changelog as of December 28, 2013
 
 = Miscellaneous
 * i18n update for `Permalink to: ` phrases
+* Added to `readme.txt` - Q: Why did my theme stop working in older browsers?
 
 /** ------------------------------------------------------------------------- */
 == 2.1.1 ==

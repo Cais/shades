@@ -1,5 +1,5 @@
 ==== Readme.txt for Shades Theme ====
-* Last revised July 18, 2013
+* Last revised December 28, 2013
 
 === Topics ===
 * FAQ
@@ -8,6 +8,9 @@
 * Review Tickets
 
 == FAQ ==
+Q: Why did my theme stop working in older browsers?
+A: I chose to move to more consistent current browser only support (with an expected minimum IE9+ as the benchmark as of the end of 2013). Older browsers should be updated or replaced.
+
 Q: How do you suggest I use the Aside, Quote, and Status post formats?
 A: The Aside post format will display with an exclamation mark (!) on its left side. The Quote post format will have a a double-quote ("). The Status post format will use an amphere (at sign). These post format will also have their titles and postmeta data right aligned as well. This will set these posts apart from standard posts and other post formats not currently supported.
 
