@@ -15,6 +15,10 @@
  * @version     2.1
  * @date        March 6, 2013
  * Refactored code, formatting, and code block termination comments
+ *
+ * @version		2.1.2
+ * @date		December 28, 2013
+ * Removed default `Search` from sidebar
  */
 ?>
 
@@ -25,13 +29,6 @@
 	<div id="sidebar-content">
 
 		<div id="subcolumn">
-
-			<div class="widget">
-				<div id="search">
-					<?php get_search_form(); ?>
-				</div>
-				<!-- #search -->
-			</div>
 
 			<ul>
 				<li>
