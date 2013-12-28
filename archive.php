@@ -21,6 +21,10 @@
  * @date        March 4, 2013
  * Refactored code formatting and code block termination comments
  * Refactored post meta to be more i18n compatible
+ *
+ * @version		2.1.2
+ * @date		December 28, 2013
+ * i18n update for `Permalink to: ` phrase
  */
 
 get_header(); ?>
@@ -50,7 +54,7 @@ get_header(); ?>
 
 								<h1>
 									<a href="<?php the_permalink(); ?>"
-									   title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+									   title="<?php the_title_attribute( array( 'before' => __( 'Permalink to:', 'shades' ) . ' ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
 								</h1>
 
 								<div class="post-comments">

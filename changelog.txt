@@ -4,6 +4,9 @@ Changelog as of December 28, 2013
 = Code =
 * Code reformatting to better reflect WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
 
+= Miscellaneous
+* i18n update for `Permalink to: ` phrase
+
 /** ------------------------------------------------------------------------- */
 == 2.1.1 ==
 = Code =
