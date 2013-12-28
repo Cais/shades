@@ -19,16 +19,16 @@
 ?>
 
 <div id="bottom">
-    <div id="bottom-container">
-        <p>
-            <?php
-            shades_dynamic_copyright();
-            shades_theme_version(); ?>
-        </p>
+	<div id="bottom-container">
+		<p>
+			<?php
+			shades_dynamic_copyright();
+			shades_theme_version(); ?>
+		</p>
 
-        <div id="footer"></div>
-    </div>
-    <!-- #bottom-container -->
+		<div id="footer"></div>
+	</div>
+	<!-- #bottom-container -->
 </div><!-- #bottom -->
 </div><!-- #mainwrap -->
 <?php wp_footer(); ?>

@@ -14,9 +14,9 @@
  * @link        http://wordpress.org/extend/themes/shades/
  *
  * @internal    REQUIRES WordPress version 3.4
- * @internal    Tested up to WordPress version 3.5
+ * @internal    Tested up to WordPress version 3.8.1
  *
- * @version     2.1.1
+ * @version     2.1.2
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2013, Edward Caissie
  *
@@ -40,54 +40,49 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     2.0
- * @date        December 7, 2012
- *
- * @version     2.1
- * @date        March 2013
- * Remove 'searchform.php' in favor of using WordPress core version
- * Refactored code formatting and code block termination comments
- *
  * @version     2.1.1
  * @date        May 5, 2013
+ *
+ * @version		2.1.2
+ * @date		December 2013
  */
 
 get_header(); ?>
 
-    <div id="maintop"></div>
+	<div id="maintop"></div>
 
-    <div id="wrapper">
+	<div id="wrapper">
 
-        <div id="content">
+		<div id="content">
 
-            <div id="the-loop">
+			<div id="the-loop">
 
-                <?php
-                if (have_posts()) {
+				<?php
+				if ( have_posts() ) {
 
-                    while (have_posts()) {
-                        the_post();
-                        get_template_part('shades', get_post_format());
-                    }
-                    /** End while - have posts */
+					while ( have_posts() ) {
+						the_post();
+						get_template_part( 'shades', get_post_format() );
+					}
+					/** End while - have posts */
 
-                    get_template_part('shades-navigation');
+					get_template_part( 'shades-navigation' );
 
-                } else {
+				} else {
 
-                    get_template_part('shades-no-posts');
+					get_template_part( 'shades-no-posts' );
 
-                } /** End if - have posts */
-                ?>
+				} /** End if - have posts */
+				?>
 
-            </div>
-            <!-- #the-loop -->
+			</div>
+			<!-- #the-loop -->
 
-            <?php get_sidebar(); ?>
+			<?php get_sidebar(); ?>
 
-        </div>
-        <!--end content-->
+		</div>
+		<!--end content-->
 
-    </div><!--end wrapper-->
+	</div><!--end wrapper-->
 
 <?php get_footer();

@@ -39,48 +39,48 @@
 
 get_header(); ?>
 
-    <div id="maintop"></div>
+	<div id="maintop"></div>
 
-    <div id="wrapper">
+	<div id="wrapper">
 
-        <div id="content">
+		<div id="content">
 
-            <div id="the-loop">
+			<div id="the-loop">
 
-                <?php
-                if (have_posts()) {
+				<?php
+				if ( have_posts() ) {
 
-                    printf(sprintf('<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-                        apply_filters('shades_search_found_pre_text', __('We found it!<br />It looks like you searched for ...', 'shades')),
-                        get_search_query()
-                    ));
-                    _e(apply_filters('shades_search_found_post_text',
-                            __('<div class="shades-search-found-post-text">Here are the results:</div>', 'shades'))
-                    );
+					printf( sprintf( '<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
+						apply_filters( 'shades_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'shades' ) ),
+						get_search_query()
+					) );
+					_e( apply_filters( 'shades_search_found_post_text',
+							__( '<div class="shades-search-found-post-text">Here are the results:</div>', 'shades' ) )
+					);
 
-                    while (have_posts()) {
-                        the_post();
-                        get_template_part('shades', get_post_format());
-                    }
-                    /** End while - have posts */
+					while ( have_posts() ) {
+						the_post();
+						get_template_part( 'shades', get_post_format() );
+					}
+					/** End while - have posts */
 
-                    get_template_part('shades-navigation');
+					get_template_part( 'shades-navigation' );
 
-                } else {
+				} else {
 
-                    get_template_part('shades-no-posts');
+					get_template_part( 'shades-no-posts' );
 
-                } /** End if - have posts */
-                ?>
+				} /** End if - have posts */
+				?>
 
-            </div>
-            <!-- #the-loop -->
+			</div>
+			<!-- #the-loop -->
 
-            <?php get_sidebar(); ?>
+			<?php get_sidebar(); ?>
 
-        </div>
-        <!--end content-->
+		</div>
+		<!--end content-->
 
-    </div><!--end wrapper-->
+	</div><!--end wrapper-->
 
 <?php get_footer();

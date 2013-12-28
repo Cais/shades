@@ -16,10 +16,10 @@
  */
 ?>
 <div id="nav-global" class="navigation">
-    <div class="left">
-        <?php next_posts_link(__('&laquo; Older posts', 'shades')); ?>
-    </div>
-    <div class="right">
-        <?php previous_posts_link(__('Newer posts &raquo;', 'shades')); ?>
-    </div>
+	<div class="left">
+		<?php next_posts_link( __( '&laquo; Older posts', 'shades' ) ); ?>
+	</div>
+	<div class="right">
+		<?php previous_posts_link( __( 'Newer posts &raquo;', 'shades' ) ); ?>
+	</div>
 </div>

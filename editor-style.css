@@ -38,100 +38,100 @@
 
 /*-- YUI Reset: Start --*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 fieldset, img {
-    border: 0;
+	border: 0;
 }
 
 address, caption, cite, code, dfn, em, strong, th, var {
-    font-style: normal;
-    font-weight: normal;
+	font-style: normal;
+	font-weight: normal;
 }
 
 ol, ul {
-    list-style: none;
+	list-style: none;
 }
 
 caption, th {
-    text-align: left;
+	text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-    font-weight: normal;
+	font-size: 100%;
+	font-weight: normal;
 }
 
 q:before, q:after {
-    content: '';
+	content: '';
 }
 
 abbr, acronym {
-    border: 0;
+	border: 0;
 }
 
 /*-- YUI Reset: End --*/
 
 /*-- WordPress Rules --*/
 div.aligncenter, .aligncenter, .center {
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 .alignleft, .left {
-    float: left;
-    text-align: left;
+	float: left;
+	text-align: left;
 }
 
 .alignright, .right {
-    float: right;
-    text-align: right;
+	float: right;
+	text-align: right;
 }
 
 img.aligncenter, img.center {
-    display: block;
+	display: block;
 }
 
 img.alignleft, img.left {
-    display: inline;
-    margin: 0 8px 8px 0;
+	display: inline;
+	margin: 0 8px 8px 0;
 }
 
 img.alignright, img.right {
-    display: inline;
-    margin: 0 0 8px 8px;
+	display: inline;
+	margin: 0 0 8px 8px;
 }
 
 .wp-caption {
-    border: 1px solid #ddd;
-    text-align: center;
-    background-color: #f3f3f3;
-    padding-top: 4px;
-    margin: 10px;
-    /* optional rounded corners for browsers that support it */
-    -moz-border-radius: 3px;
-    -khtml-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	/* optional rounded corners for browsers that support it */
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 }
 
 .wp-caption img {
-    margin: 0;
-    padding: 0;
-    border: 0 none;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
 }
 
 .wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    padding: 0 4px 5px;
-    margin: 0;
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
 }
 
 /*-- End WordPress Rules --*/
@@ -140,7 +140,7 @@ img.alignright, img.right {
 }
 
 .gallery {
-    clear: both;
+	clear: both;
 }
 
 .gallery-caption {
@@ -150,303 +150,303 @@ img.alignright, img.right {
 
 /*-- Begin TinyMCE --*/
 html .mceContentBody {
-    max-width: 630px;
-    margin: 0;
-    padding: 0;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-    font-size: 100%;
-    line-height: 21px;
+	max-width: 630px;
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size: 100%;
+	line-height: 21px;
 }
 
 /*-- Basic Elements --*/
 *:focus {
-    outline: none;
+	outline: none;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a:link, a:visited {
-    color: #d21600;
+	color: #d21600;
 }
 
 a:hover {
-    color: #635537;
+	color: #635537;
 }
 
 a:active {
-    color: #d21600;
+	color: #d21600;
 }
 
 abbr {
-    cursor: help;
+	cursor: help;
 }
 
 acronym {
-    cursor: help;
+	cursor: help;
 }
 
 cite {
-    font-weight: bold;
-    font-style: italic;
-    padding-left: 8px;
+	font-weight: bold;
+	font-style: italic;
+	padding-left: 8px;
 }
 
 em {
-    font-style: italic;
+	font-style: italic;
 }
 
 em strong {
-    font-style: italic;
-    font-weight: bold;
+	font-style: italic;
+	font-weight: bold;
 }
 
 /*= "H" tags =*/
 h1, h2, h3, h4, h5, h6 {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    line-height: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: normal;
 }
 
 h1 {
-    font-size: 200%;
-    padding-bottom: 2px;
-    padding-top: 0;
+	font-size: 200%;
+	padding-bottom: 2px;
+	padding-top: 0;
 }
 
 h2 {
-    font-size: 167%;
-    padding-bottom: 11px;
-    padding-top: 15px;
+	font-size: 167%;
+	padding-bottom: 11px;
+	padding-top: 15px;
 }
 
 h3 {
-    font-size: 142%;
-    padding-bottom: 10px;
-    padding-top: 14px;
+	font-size: 142%;
+	padding-bottom: 10px;
+	padding-top: 14px;
 }
 
 h4 {
-    font-size: 117%;
-    padding-bottom: 8px;
-    padding-top: 12px;
+	font-size: 117%;
+	padding-bottom: 8px;
+	padding-top: 12px;
 }
 
 h5 {
-    padding-bottom: 8px;
-    padding-top: 12px;
+	padding-bottom: 8px;
+	padding-top: 12px;
 }
 
 h6 {
-    font-size: 83%;
-    padding-bottom: 8px;
-    padding-top: 12px;
+	font-size: 83%;
+	padding-bottom: 8px;
+	padding-top: 12px;
 }
 
 /*= "H" tags: End =*/
 
 hr {
-    background: #e3dccb;
-    height: 5px;
-    margin: 2px auto;
-    width: 560px;
+	background: #e3dccb;
+	height: 5px;
+	margin: 2px auto;
+	width: 560px;
 }
 
 .hr, .shades {
-    background-image: url(images/hr-img.gif);
-    height: 56px;
-    margin: 0 auto;
-    width: 560px;
+	background-image: url(images/hr-img.gif);
+	height: 56px;
+	margin: 0 auto;
+	width: 560px;
 }
 
 p {
-    padding: 5px 0;
+	padding: 5px 0;
 }
 
 q:before, q:after {
-    content: '"';
+	content: '"';
 }
 
 ol {
-    list-style: decimal inside;
+	list-style: decimal inside;
 }
 
 ul {
-    list-style: disc inside;
+	list-style: disc inside;
 }
 
 li {
-    padding-left: 10px;
+	padding-left: 10px;
 }
 
 /*-- Tables: Start --*/
 table {
-    margin: 0 auto;
-    width: 90%;
+	margin: 0 auto;
+	width: 90%;
 }
 
 table caption {
-    text-align: center;
+	text-align: center;
 }
 
 tr.even {
-    border-style: solid;
-    border-top: 1px #b2b0a4;
-    border-right-style: none;
-    border-bottom: 1px #b2b0a4;
-    border-left-style: none;
+	border-style: solid;
+	border-top: 1px #b2b0a4;
+	border-right-style: none;
+	border-bottom: 1px #b2b0a4;
+	border-left-style: none;
 }
 
 th {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 td {
-    padding-left: 5px;
+	padding-left: 5px;
 }
 
 /*-- Tables: End --*/
 
 strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 strong em {
-    font-style: italic;
-    font-weight: bold;
+	font-style: italic;
+	font-weight: bold;
 }
 
 sub {
-    font-size: 75%;
+	font-size: 75%;
 }
 
 sup {
-    font-size: 75%;
+	font-size: 75%;
 }
 
 .clear {
-    clear: both;
+	clear: both;
 }
 
 /*-- End Basic Elements --*/
 
 /*= Main Blog =*/
 .post p, .page p {
-    margin: 0;
+	margin: 0;
 }
 
 .page ol, .page ul {
-    list-style: inside none;
+	list-style: inside none;
 }
 
 .page li, .post li {
-    padding-left: 10px;
+	padding-left: 10px;
 }
 
 .post ol, .post ul {
-    margin-bottom: 15px;
-    margin-left: 35px;
+	margin-bottom: 15px;
+	margin-left: 35px;
 }
 
 .post dl {
-    border-bottom: 1px inset;
-    border-right: 1px inset;
-    /* counter border-right size */
-    margin-right: -1px;
+	border-bottom: 1px inset;
+	border-right: 1px inset;
+	/* counter border-right size */
+	margin-right: -1px;
 }
 
 .post dl dt {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .post dl dd {
-    margin: 0 5px 0 10px;
+	margin: 0 5px 0 10px;
 }
 
 .post code {
-    font-style: italic;
-    margin: 0;
+	font-style: italic;
+	margin: 0;
 }
 
 .post pre code {
-    font-style: italic;
-    margin: 0;
-    overflow: auto;
-    padding: 1px;
-    text-align: left;
-    /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-    overflow-x: auto;
-    white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	font-style: italic;
+	margin: 0;
+	overflow: auto;
+	padding: 1px;
+	text-align: left;
+	/* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+	overflow-x: auto;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
 }
 
 #the-loop h1 .post-comments a {
-    border: none;
+	border: none;
 }
 
 blockquote {
-    background: url(images/small-quotes.png) no-repeat left 2px;
-    color: #606060;
-    clear: both;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 117%;
-    font-style: italic;
-    padding-left: 28px;
+	background: url(images/small-quotes.png) no-repeat left 2px;
+	color: #606060;
+	clear: both;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 117%;
+	font-style: italic;
+	padding-left: 28px;
 }
 
 blockquote p {
-    padding: 8px 0;
+	padding: 8px 0;
 }
 
 blockquote cite {
-    font-weight: bold;
-    padding-left: 10px;
+	font-weight: bold;
+	padding-left: 10px;
 }
 
 pre {
-    /* Use for formatted text styling */
-    border: 1px inset;
-    font-size: 117%;
-    font-style: italic;
-    margin: 0;
-    overflow: auto;
-    padding: 5px;
-    text-align: left;
-    width: auto;
-    /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-    overflow-x: auto;
-    white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	/* Use for formatted text styling */
+	border: 1px inset;
+	font-size: 117%;
+	font-style: italic;
+	margin: 0;
+	overflow: auto;
+	padding: 5px;
+	text-align: left;
+	width: auto;
+	/* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+	overflow-x: auto;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
 }
 
 .form-input {
-    background: #faf6f6;
-    border: 1px solid #e3dccb;
-    color: #666;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px 35px;
-    padding: 2px 2px;
-    width: 200px;
+	background: #faf6f6;
+	border: 1px solid #e3dccb;
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 10px 35px;
+	padding: 2px 2px;
+	width: 200px;
 }
 
 .form-input:focus {
-    background: #f2f0f0;
-    border: 1px solid #b5b4b2;
+	background: #f2f0f0;
+	border: 1px solid #b5b4b2;
 }
 
 /*= Images =*/
 .wp-caption img.size-full {
-    height: auto;
-    max-width: 620px;
-    /* =$content_width - borders - wp-caption padding */
+	height: auto;
+	max-width: 620px;
+	/* =$content_width - borders - wp-caption padding */
 }
 
 .wp-caption {
-    max-width: 628px; /* =$content_width - borders */
+	max-width: 628px; /* =$content_width - borders */
 }
 
 .gallery-caption {
-    font-size: 11px; /* = wp-caption size */
+	font-size: 11px; /* = wp-caption size */
 }
 
 /* Gallery columns up to three (3) are handled by default in the theme.
@@ -454,160 +454,160 @@ pre {
  * thumbnail; also note the height is set to 'auto' to maintain a square shape.
  **/
 .gallery-columns-4 img {
-    height: auto;
-    max-width: 142px;
+	height: auto;
+	max-width: 142px;
 }
 
 .gallery-columns-5 img {
-    height: auto;
-    max-width: 112px;
+	height: auto;
+	max-width: 112px;
 }
 
 .gallery-columns-6 img {
-    height: auto;
-    max-width: 86px;
+	height: auto;
+	max-width: 86px;
 }
 
 .gallery-columns-7 img {
-    height: auto;
-    max-width: 72px;
+	height: auto;
+	max-width: 72px;
 }
 
 .gallery-columns-8 img {
-    height: auto;
-    max-width: 64px;
+	height: auto;
+	max-width: 64px;
 }
 
 .gallery-columns-9 img {
-    height: auto;
-    max-width: 56px;
+	height: auto;
+	max-width: 56px;
 }
 
 .gallery-columns-10 img {
-    height: auto;
-    max-width: 48px;
+	height: auto;
+	max-width: 48px;
 }
 
 p img {
-    height: auto;
-    padding: 0;
-    max-width: 100%;
+	height: auto;
+	padding: 0;
+	max-width: 100%;
 }
 
 div.attached-image {
-    text-align: center;
+	text-align: center;
 }
 
 /*= Forms =*/
 fieldset {
-    border: 1px solid #b2b0a4;
-    margin: 0 auto;
-    padding: 15px;
-    width: 570px;
+	border: 1px solid #b2b0a4;
+	margin: 0 auto;
+	padding: 15px;
+	width: 570px;
 }
 
 legend {
-    color: #635537;
-    font-size: 110%;
-    font-weight: normal;
+	color: #635537;
+	font-size: 110%;
+	font-weight: normal;
 }
 
 label {
-    color: #635537;
-    font-weight: normal;
-    line-height: normal;
-    padding-top: 4px;
+	color: #635537;
+	font-weight: normal;
+	line-height: normal;
+	padding-top: 4px;
 }
 
 input, textarea {
-    border: 1px solid #b2b0a4;
+	border: 1px solid #b2b0a4;
 }
 
 input:focus, textarea:focus {
-    border: 1px solid #000;
-    padding: 1px 0;
+	border: 1px solid #000;
+	padding: 1px 0;
 }
 
 input#s {
-    padding: 1px;
-    width: 70%;
+	padding: 1px;
+	width: 70%;
 }
 
 textarea {
-    margin-bottom: 10px;
-    min-height: 84px;
-    width: 98%;
+	margin-bottom: 10px;
+	min-height: 84px;
+	width: 98%;
 }
 
 textarea#text_area {
-    width: 98%;
+	width: 98%;
 }
 
 #text_field {
-    width: 98%;
+	width: 98%;
 }
 
 /* --- Post Formats - Aside --- */
 .format-aside {
-    margin: 0 0 0 60px;
-    padding: 0 0 30px;
+	margin: 0 0 0 60px;
+	padding: 0 0 30px;
 }
 
 .format-aside .glyph {
-    float: left;
-    margin: 50px 0 0 -60px;
+	float: left;
+	margin: 50px 0 0 -60px;
 }
 
 .format-aside h1, .format-aside .postdata {
-    text-align: right;
+	text-align: right;
 }
 
 /* --- Post Formats - Quote --- */
 .format-quote {
-    margin: 0 0 0 60px;
-    padding: 0 0 30px;
+	margin: 0 0 0 60px;
+	padding: 0 0 30px;
 }
 
 .format-quote .glyph {
-    float: left;
-    margin: 50px 0 0 -60px;
+	float: left;
+	margin: 50px 0 0 -60px;
 }
 
 .format-quote h1, .format-quote .postdata {
-    text-align: right;
+	text-align: right;
 }
 
 /* --- Post Formats - Status --- */
 .format-status {
-    margin: 0 0 0 60px;
-    padding: 0 0 30px;
+	margin: 0 0 0 60px;
+	padding: 0 0 30px;
 }
 
 .format-status .glyph {
-    float: left;
-    margin: 50px 0 0 -60px;
+	float: left;
+	margin: 50px 0 0 -60px;
 }
 
 .format-status h1, .format-status .postdata {
-    text-align: right;
+	text-align: right;
 }
 
 /* --- Post Formats - etc. --- */
 .transparent {
-    filter: alpha(opacity=25);
-    opacity: 0.25;
-    zoom: 1;
+	filter: alpha(opacity=25);
+	opacity: 0.25;
+	zoom: 1;
 }
 
 span.aside-glyph,
 span.quote-glyph {
-    font-family: "Times New Roman", Arial, sans-serif;
-    font-size: 1000%;
+	font-family: "Times New Roman", Arial, sans-serif;
+	font-size: 1000%;
 }
 
 span.status-glyph {
-    font-family: "Times New Roman", Arial, sans-serif;
-    font-size: 500%;
+	font-family: "Times New Roman", Arial, sans-serif;
+	font-size: 500%;
 }
 
 /* --- End: Post Formats --- */

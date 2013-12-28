@@ -28,69 +28,69 @@
 
 <div <?php
 $shades_post_title = get_the_title();
-if (empty($shades_post_title)) {
-    post_class('no-title');
+if ( empty( $shades_post_title ) ) {
+	post_class( 'no-title' );
 }
 /** End if - empty shades title */
 post_class(); ?> id="post-<?php the_ID(); ?>">
 
-    <div class="transparent glyph"><?php shades_glyph_status(); ?></div>
+	<div class="transparent glyph"><?php shades_glyph_status(); ?></div>
 
-    <h1>
-        <a href="<?php the_permalink(); ?>"
-           title="<?php the_title_attribute(array('before' => 'Permalink to: ', 'after' => '')); ?>"><?php the_title(); ?></a>
-    </h1>
+	<h1>
+		<a href="<?php the_permalink(); ?>"
+		   title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+	</h1>
 
-    <div class="postdata">
+	<div class="postdata">
 
-        <?php
-        if (is_home() || is_front_page()) {
+		<?php
+		if ( is_home() || is_front_page() ) {
 
-            printf(__('%1$s by %2$s on %3$s in %4$s', 'shades'),
-                shades_use_posted(),
-                get_the_author(),
-                get_the_time(get_option('date_format')),
-                get_the_category_list(', ')
-            ); ?>
+			printf( __( '%1$s by %2$s on %3$s in %4$s', 'shades' ),
+				shades_use_posted(),
+				get_the_author(),
+				get_the_time( get_option( 'date_format' ) ),
+				get_the_category_list( ', ' )
+			); ?>
 
-            <br/><?php comments_popup_link(__(' with No Comments', 'shades'), __(' with 1 Comment', 'shades'), __(' with % Comments', 'shades'), '', __(' with Comments closed', 'shades'));
+			<br /><?php comments_popup_link( __( ' with No Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( ' with Comments closed', 'shades' ) );
 
-        } else {
+		} else {
 
-            printf(__('Posted by %1$s on %2$s @ %3$s in %4$s', 'shades'),
-                get_the_author(),
-                get_the_time(get_option('date_format')),
-                get_the_time(get_option('time_format')),
-                get_the_category_list(', ')
-            );
+			printf( __( 'Posted by %1$s on %2$s @ %3$s in %4$s', 'shades' ),
+				get_the_author(),
+				get_the_time( get_option( 'date_format' ) ),
+				get_the_time( get_option( 'time_format' ) ),
+				get_the_category_list( ', ' )
+			);
 
-        }
-        /** End if - is home */
+		}
+		/** End if - is home */
 
-        the_shortlink(__('Short Link', 'shades'), '', ' &#124; ', '');
-        edit_post_link(__('Edit', 'shades'), __(' &#124; ', 'shades'), __('', 'shades')); ?>
+		the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
+		edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
 
-    </div>
-    <!-- postdata -->
+	</div>
+	<!-- postdata -->
 
-    <?php
-    shades_show_featured_image('full');
-    the_content(__('Read more... ', 'shades')); ?>
+	<?php
+	shades_show_featured_image( 'full' );
+	the_content( __( 'Read more... ', 'shades' ) ); ?>
 
-    <div class="clear"></div>
-    <!-- For inserted media at the end of the post -->
+	<div class="clear"></div>
+	<!-- For inserted media at the end of the post -->
 
-    <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number'));
+	<?php wp_link_pages( array( 'before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number' ) );
 
-    if (is_single()) {
-        ?>
-        <div
-            id="author_link"><?php _e('... other posts by ', 'shades'); ?><?php the_author_posts_link(); ?></div>
-        <?php
-        shades_modified_post();
-    } /** End if - is single */
-    ?>
+	if ( is_single() ) {
+		?>
+		<div
+			id="author_link"><?php _e( '... other posts by ', 'shades' ); ?><?php the_author_posts_link(); ?></div>
+		<?php
+		shades_modified_post();
+	} /** End if - is single */
+	?>
 
-    <p class="tags"><?php the_tags(); ?></p>
+	<p class="tags"><?php the_tags(); ?></p>
 
 </div><!-- .post #post-ID -->
