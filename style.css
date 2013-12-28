@@ -34,6 +34,10 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version	2.2
+ * @date	December 28, 2013
+ * Moved to more complete current browser only support (expect minimum IE9+)
  */
 
 /**
@@ -1365,7 +1369,6 @@ textarea#text_area {
 
 /* --- Post Formats - etc. --- */
 .transparent {
-	filter: alpha(opacity=25);
 	opacity: 0.25;
 }
 
