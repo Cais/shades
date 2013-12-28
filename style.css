@@ -621,10 +621,7 @@ span.no-title {
 	overflow: auto;
 	padding: 1px;
 	text-align: left;
-	/* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-	overflow-x: auto;
-	white-space: pre-wrap; /* css-3 */
-	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: pre-wrap;
 }
 
 .sticky p.tags {
@@ -720,10 +717,7 @@ pre {
 	padding: 5px;
 	text-align: left;
 	width: auto;
-	/* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-	overflow-x: auto;
-	white-space: pre-wrap; /* css-3 */
-	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: pre-wrap;
 }
 
 /* Navigation */
@@ -1210,10 +1204,7 @@ textarea#comment {
 	overflow: auto;
 	padding: 0 5px;
 	text-align: left;
-	/* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-	overflow-x: auto;
-	white-space: pre-wrap; /* css-3 */
-	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: pre-wrap;
 }
 
 #comment-header {
@@ -1376,7 +1367,6 @@ textarea#text_area {
 .transparent {
 	filter: alpha(opacity=25);
 	opacity: 0.25;
-	zoom: 1;
 }
 
 span.aside-glyph,

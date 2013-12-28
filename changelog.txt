@@ -8,6 +8,7 @@ Changelog as of December 28, 2013
 = CSS =
 * Clean up `border-radius` property usages
 * Removed the `zoom: 1` property usage
+* Removed rule over-writing themselves in elements
 
 = Miscellaneous
 * i18n update for `Permalink to: ` phrases
