@@ -1,5 +1,10 @@
 === Shades ===
-Changelog as of July 18, 2013
+Changelog as of December 28, 2013
+== 2.1.2 ==
+= Code =
+* Code reformatting to better reflect WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
+
+/** ------------------------------------------------------------------------- */
 == 2.1.1 ==
 = Code =
 * Added `SHADES_HOME_URL` constant in place of the hardcoded domain URL

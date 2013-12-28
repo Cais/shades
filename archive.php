@@ -25,72 +25,83 @@
 
 get_header(); ?>
 
-<div id="maintop"></div>
+    <div id="maintop"></div>
 
-<div id="wrapper">
+    <div id="wrapper">
 
-    <div id="content">
+        <div id="content">
 
-        <div id="the-loop">
+            <div id="the-loop">
 
-            <?php
-            if ( have_posts() ) {
-                while ( have_posts() ) {
+                <?php
+                if (have_posts()) {
+                    while (have_posts()) {
 
-                    the_post();
-                    if ( get_post_format() !== ( 'aside' || 'quote' || 'status' ) ) {
+                        the_post();
+                        if (get_post_format() !== ('aside' || 'quote' || 'status')) {
 
-                        get_template_part( 'shades', get_post_format() );
+                            get_template_part('shades', get_post_format());
 
-                    } else { ?>
+                        } else {
+                            ?>
 
-                        <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                            <div <?php post_class(); ?>
+                                id="post-<?php the_ID(); ?>">
 
-                            <h1>
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array('before' => 'Permalink to: ', 'after' => '')); ?>"><?php the_title(); ?></a>
-                            </h1>
+                                <h1>
+                                    <a href="<?php the_permalink(); ?>"
+                                       title="<?php the_title_attribute(array('before' => 'Permalink to: ', 'after' => '')); ?>"><?php the_title(); ?></a>
+                                </h1>
 
-                            <div class="post-comments">
-                                <?php comments_popup_link( __( 'No Comments', 'shades' ), __( '1 Comment', 'shades' ), __( '% Comments', 'shades' ), '', __( 'Comments closed', 'shades' ) ); ?>
-                            </div><!-- post-comments -->
+                                <div class="post-comments">
+                                    <?php comments_popup_link(__('No Comments', 'shades'), __('1 Comment', 'shades'), __('% Comments', 'shades'), '', __('Comments closed', 'shades')); ?>
+                                </div>
+                                <!-- post-comments -->
 
-                            <div class="postdata">
-                                <?php
-                                printf( __( '%1$s by %2$s on %3$s in ', 'shades' ),
-                                    shades_use_posted(),
-                                    get_the_author(),
-                                    get_the_time( get_option( 'date_format' ) ),
-                                    get_the_category_list( ', ' )
-                                );
-                                edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
-                            </div><!-- .postdata -->
+                                <div class="postdata">
+                                    <?php
+                                    printf(__('%1$s by %2$s on %3$s in ', 'shades'),
+                                        shades_use_posted(),
+                                        get_the_author(),
+                                        get_the_time(get_option('date_format')),
+                                        get_the_category_list(', ')
+                                    );
+                                    edit_post_link(__('Edit', 'shades'), __(' &#124; ', 'shades'), __('', 'shades')); ?>
+                                </div>
+                                <!-- .postdata -->
 
-                            <?php the_excerpt( __( 'Read more... ', 'shades' ) ); ?>
+                                <?php the_excerpt(__('Read more... ', 'shades')); ?>
 
-                            <div class="clear"></div><!-- For inserted media at the end of the post -->
+                                <div class="clear"></div>
+                                <!-- For inserted media at the end of the post -->
 
-                            <p class="tags"><?php the_tags(); ?></p>
+                                <p class="tags"><?php the_tags(); ?></p>
 
-                        </div><!-- .post #post-ID -->
+                            </div><!-- .post #post-ID -->
 
-                    <?php } /** End if - post format */
+                        <?php
+                        }
+                        /** End if - post format */
 
-                } /** End while - have posts */
+                    }
+                    /** End while - have posts */
 
-                    get_template_part( 'shades-navigation' );
+                    get_template_part('shades-navigation');
 
-            } else {
+                } else {
 
-                get_template_part( 'shades-no-posts' );
+                    get_template_part('shades-no-posts');
 
-            } ?>
+                } ?>
 
-        </div><!-- #the-loop -->
+            </div>
+            <!-- #the-loop -->
 
-        <?php get_sidebar(); ?>
+            <?php get_sidebar(); ?>
 
-    </div><!--end content-->
+        </div>
+        <!--end content-->
 
-</div><!--end wrapper-->
+    </div><!--end wrapper-->
 
 <?php get_footer();

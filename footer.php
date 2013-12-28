@@ -15,18 +15,21 @@
  * Last revised April 20, 2012
  * @version     1.8
  * Changed namespace of *_dynamic_copyright and *_theme_version
- */ ?>
+ */
+?>
 
-    <div id="bottom">
-        <div id="bottom-container">
-            <p>
-                <?php
-                shades_dynamic_copyright();
-                shades_theme_version(); ?>
-            </p>
-            <div id="footer"></div>
-        </div><!-- #bottom-container -->
-    </div><!-- #bottom -->
+<div id="bottom">
+    <div id="bottom-container">
+        <p>
+            <?php
+            shades_dynamic_copyright();
+            shades_theme_version(); ?>
+        </p>
+
+        <div id="footer"></div>
+    </div>
+    <!-- #bottom-container -->
+</div><!-- #bottom -->
 </div><!-- #mainwrap -->
 <?php wp_footer(); ?>
 </body>

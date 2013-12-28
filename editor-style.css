@@ -37,38 +37,115 @@
  */
 
 /*-- YUI Reset: Start --*/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin: 0; padding: 0; }
-table { border-collapse: collapse; border-spacing: 0; }
-fieldset,img { border: 0; }
-address,caption,cite,code,dfn,em,strong,th,var { font-style: normal; font-weight: normal; }
-ol,ul { list-style: none; }
-caption,th { text-align: left; }
-h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; }
-q:before,q:after { content: ''; }
-abbr,acronym { border: 0; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
 /*-- YUI Reset: End --*/
 
 /*-- WordPress Rules --*/
-div.aligncenter, .aligncenter, .center { margin: 0 auto; }
-.alignleft, .left { float: left; text-align: left; }
-.alignright, .right { float: right; text-align: right; }
-img.aligncenter, img.center { display: block; }
-img.alignleft, img.left { display: inline; margin:0 8px 8px 0; }
-img.alignright, img.right { display: inline; margin:0 0 8px 8px; }
-.wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin: 10px;
+div.aligncenter, .aligncenter, .center {
+    margin: 0 auto;
+}
+
+.alignleft, .left {
+    float: left;
+    text-align: left;
+}
+
+.alignright, .right {
+    float: right;
+    text-align: right;
+}
+
+img.aligncenter, img.center {
+    display: block;
+}
+
+img.alignleft, img.left {
+    display: inline;
+    margin: 0 8px 8px 0;
+}
+
+img.alignright, img.right {
+    display: inline;
+    margin: 0 0 8px 8px;
+}
+
+.wp-caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 4px;
+    margin: 10px;
     /* optional rounded corners for browsers that support it */
     -moz-border-radius: 3px;
     -khtml-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-.wp-caption img { margin: 0; padding: 0; border: 0 none; }
-.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0; }
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
 /*-- End WordPress Rules --*/
 /*-- Secondary WordPress Rules --*/
-.bypostauthor {}
-.gallery { clear: both; }
-.gallery-caption {}
+.bypostauthor {
+}
+
+.gallery {
+    clear: both;
+}
+
+.gallery-caption {
+}
+
 /*-- End Secondary WordPress Rules --*/
 
 /*-- Begin TinyMCE --*/
@@ -82,15 +159,33 @@ html .mceContentBody {
 }
 
 /*-- Basic Elements --*/
-*:focus { outline: none; }
+*:focus {
+    outline: none;
+}
 
-a { text-decoration: none; }
-a:link, a:visited { color: #d21600; }
-a:hover { color: #635537; }
-a:active { color: #d21600; }
+a {
+    text-decoration: none;
+}
 
-abbr { cursor: help; }
-acronym { cursor: help; }
+a:link, a:visited {
+    color: #d21600;
+}
+
+a:hover {
+    color: #635537;
+}
+
+a:active {
+    color: #d21600;
+}
+
+abbr {
+    cursor: help;
+}
+
+acronym {
+    cursor: help;
+}
 
 cite {
     font-weight: bold;
@@ -98,7 +193,10 @@ cite {
     padding-left: 8px;
 }
 
-em { font-style: italic; }
+em {
+    font-style: italic;
+}
+
 em strong {
     font-style: italic;
     font-weight: bold;
@@ -107,37 +205,44 @@ em strong {
 /*= "H" tags =*/
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, "Times New Roman", Times, serif;
-    line-height:normal;
+    line-height: normal;
 }
+
 h1 {
     font-size: 200%;
     padding-bottom: 2px;
     padding-top: 0;
 }
+
 h2 {
     font-size: 167%;
     padding-bottom: 11px;
     padding-top: 15px;
 }
+
 h3 {
     font-size: 142%;
     padding-bottom: 10px;
     padding-top: 14px;
 }
+
 h4 {
     font-size: 117%;
     padding-bottom: 8px;
     padding-top: 12px;
 }
+
 h5 {
     padding-bottom: 8px;
     padding-top: 12px;
 }
+
 h6 {
     font-size: 83%;
     padding-bottom: 8px;
     padding-top: 12px;
 }
+
 /*= "H" tags: End =*/
 
 hr {
@@ -148,23 +253,42 @@ hr {
 }
 
 .hr, .shades {
-    background-image: url( images/hr-img.gif );
+    background-image: url(images/hr-img.gif);
     height: 56px;
     margin: 0 auto;
     width: 560px;
 }
 
-p { padding: 5px 0; }
+p {
+    padding: 5px 0;
+}
 
-q:before, q:after { content: '"'; }
+q:before, q:after {
+    content: '"';
+}
 
-ol { list-style: decimal inside; }
-ul { list-style: disc inside; }
-li { padding-left: 10px; }
+ol {
+    list-style: decimal inside;
+}
+
+ul {
+    list-style: disc inside;
+}
+
+li {
+    padding-left: 10px;
+}
 
 /*-- Tables: Start --*/
-table { margin: 0 auto; width: 90%; }
-table caption { text-align: center; }
+table {
+    margin: 0 auto;
+    width: 90%;
+}
+
+table caption {
+    text-align: center;
+}
+
 tr.even {
     border-style: solid;
     border-top: 1px #b2b0a4;
@@ -172,29 +296,52 @@ tr.even {
     border-bottom: 1px #b2b0a4;
     border-left-style: none;
 }
-th { font-weight: bold; }
-td { padding-left: 5px; }
+
+th {
+    font-weight: bold;
+}
+
+td {
+    padding-left: 5px;
+}
+
 /*-- Tables: End --*/
 
-strong { font-weight: bold; }
+strong {
+    font-weight: bold;
+}
+
 strong em {
     font-style: italic;
     font-weight: bold;
 }
-sub { font-size: 75%; }
-sup { font-size: 75%; }
 
-.clear { clear: both; }
+sub {
+    font-size: 75%;
+}
+
+sup {
+    font-size: 75%;
+}
+
+.clear {
+    clear: both;
+}
+
 /*-- End Basic Elements --*/
 
 /*= Main Blog =*/
-.post p, .page p { margin:0; }
+.post p, .page p {
+    margin: 0;
+}
 
 .page ol, .page ul {
     list-style: inside none;
 }
 
-.page li, .post li { padding-left: 10px; }
+.page li, .post li {
+    padding-left: 10px;
+}
 
 .post ol, .post ul {
     margin-bottom: 15px;
@@ -208,8 +355,13 @@ sup { font-size: 75%; }
     margin-right: -1px;
 }
 
-.post dl dt { font-weight: bold; }
-.post dl dd { margin: 0 5px 0 10px; }
+.post dl dt {
+    font-weight: bold;
+}
+
+.post dl dd {
+    margin: 0 5px 0 10px;
+}
 
 .post code {
     font-style: italic;
@@ -228,7 +380,9 @@ sup { font-size: 75%; }
     white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
 }
 
-#the-loop h1 .post-comments a { border: none; }
+#the-loop h1 .post-comments a {
+    border: none;
+}
 
 blockquote {
     background: url(images/small-quotes.png) no-repeat left 2px;
@@ -240,7 +394,9 @@ blockquote {
     padding-left: 28px;
 }
 
-blockquote p { padding: 8px 0; }
+blockquote p {
+    padding: 8px 0;
+}
 
 blockquote cite {
     font-weight: bold;
@@ -285,21 +441,52 @@ pre {
     /* =$content_width - borders - wp-caption padding */
 }
 
-.wp-caption { max-width: 628px; /* =$content_width - borders */ }
+.wp-caption {
+    max-width: 628px; /* =$content_width - borders */
+}
 
-.gallery-caption { font-size: 11px; /* = wp-caption size */ }
+.gallery-caption {
+    font-size: 11px; /* = wp-caption size */
+}
 
 /* Gallery columns up to three (3) are handled by default in the theme.
  * Four (4) or more columns requires a maximum width be set for the image
  * thumbnail; also note the height is set to 'auto' to maintain a square shape.
  **/
-.gallery-columns-4 img { height: auto; max-width: 142px; }
-.gallery-columns-5 img { height: auto; max-width: 112px; }
-.gallery-columns-6 img { height: auto; max-width: 86px; }
-.gallery-columns-7 img { height: auto; max-width: 72px; }
-.gallery-columns-8 img { height: auto; max-width: 64px; }
-.gallery-columns-9 img { height: auto; max-width: 56px; }
-.gallery-columns-10 img { height: auto; max-width: 48px; }
+.gallery-columns-4 img {
+    height: auto;
+    max-width: 142px;
+}
+
+.gallery-columns-5 img {
+    height: auto;
+    max-width: 112px;
+}
+
+.gallery-columns-6 img {
+    height: auto;
+    max-width: 86px;
+}
+
+.gallery-columns-7 img {
+    height: auto;
+    max-width: 72px;
+}
+
+.gallery-columns-8 img {
+    height: auto;
+    max-width: 64px;
+}
+
+.gallery-columns-9 img {
+    height: auto;
+    max-width: 56px;
+}
+
+.gallery-columns-10 img {
+    height: auto;
+    max-width: 48px;
+}
 
 p img {
     height: auto;
@@ -307,7 +494,9 @@ p img {
     max-width: 100%;
 }
 
-div.attached-image { text-align: center; }
+div.attached-image {
+    text-align: center;
+}
 
 /*= Forms =*/
 fieldset {
@@ -330,11 +519,15 @@ label {
     padding-top: 4px;
 }
 
-input, textarea { border: 1px solid #b2b0a4; }
+input, textarea {
+    border: 1px solid #b2b0a4;
+}
+
 input:focus, textarea:focus {
     border: 1px solid #000;
     padding: 1px 0;
 }
+
 input#s {
     padding: 1px;
     width: 70%;
@@ -346,8 +539,13 @@ textarea {
     width: 98%;
 }
 
-textarea#text_area { width: 98%; }
-#text_field { width: 98%; }
+textarea#text_area {
+    width: 98%;
+}
+
+#text_field {
+    width: 98%;
+}
 
 /* --- Post Formats - Aside --- */
 .format-aside {
@@ -360,7 +558,9 @@ textarea#text_area { width: 98%; }
     margin: 50px 0 0 -60px;
 }
 
-.format-aside h1, .format-aside .postdata { text-align: right; }
+.format-aside h1, .format-aside .postdata {
+    text-align: right;
+}
 
 /* --- Post Formats - Quote --- */
 .format-quote {
@@ -373,7 +573,9 @@ textarea#text_area { width: 98%; }
     margin: 50px 0 0 -60px;
 }
 
-.format-quote h1, .format-quote .postdata { text-align: right; }
+.format-quote h1, .format-quote .postdata {
+    text-align: right;
+}
 
 /* --- Post Formats - Status --- */
 .format-status {
@@ -386,21 +588,26 @@ textarea#text_area { width: 98%; }
     margin: 50px 0 0 -60px;
 }
 
-.format-status h1, .format-status .postdata { text-align: right; }
+.format-status h1, .format-status .postdata {
+    text-align: right;
+}
 
 /* --- Post Formats - etc. --- */
 .transparent {
-    filter: alpha( opacity=25 );
+    filter: alpha(opacity=25);
     opacity: 0.25;
     zoom: 1;
 }
+
 span.aside-glyph,
 span.quote-glyph {
     font-family: "Times New Roman", Arial, sans-serif;
     font-size: 1000%;
 }
+
 span.status-glyph {
     font-family: "Times New Roman", Arial, sans-serif;
     font-size: 500%;
 }
+
 /* --- End: Post Formats --- */

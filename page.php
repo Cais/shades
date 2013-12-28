@@ -24,31 +24,35 @@
 
 get_header(); ?>
 
-<div id="maintop"></div>
-<div id="wrapper">
-    <div id="content">
-        <div id="the-loop">
+    <div id="maintop"></div>
+    <div id="wrapper">
+        <div id="content">
+            <div id="the-loop">
 
-            <?php
-            if ( have_posts() ) {
+                <?php
+                if (have_posts()) {
 
-                while ( have_posts() ) {
-                    the_post();
-                    get_template_part( 'shades', get_post_format() );
-                    comments_template();
-                } /** End while - have posts */
+                    while (have_posts()) {
+                        the_post();
+                        get_template_part('shades', get_post_format());
+                        comments_template();
+                    }
+                    /** End while - have posts */
 
-            } else {
+                } else {
 
-                get_template_part( 'shades-no-posts' );
+                    get_template_part('shades-no-posts');
 
-            } /** End if - have posts */ ?>
+                } /** End if - have posts */
+                ?>
 
-        </div><!-- #the-loop -->
+            </div>
+            <!-- #the-loop -->
 
-        <?php get_sidebar(); ?>
+            <?php get_sidebar(); ?>
 
-    </div><!-- #content -->
-</div><!-- #wrapper -->
+        </div>
+        <!-- #content -->
+    </div><!-- #wrapper -->
 
 <?php get_footer();

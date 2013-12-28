@@ -2,12 +2,12 @@
 Theme Name: Shades
 Theme URI: http://buynowshop.com/themes/shades/
 Description: A simple clean theme framework to work from, designed ideally for light colored backgrounds and easily adapted to darker layouts. Now with Threaded Comments and sticky post support!<em>Please read the included changelog.txt file for the latest change details.</em> The child theme Shades of Darkness is no longer included but is available for download at the theme homepage: http://buynowshop.com/themes/shades/.
-Version: 2.1.1
+Version: 2.1.2
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
 Tags: black, white, silver, red, light, two-columns, right-sidebar, fixed-width, sticky-post, threaded-comments, translation-ready, custom-menu, custom-background
 WordPress Required Version: 3.4
-WordPress Tested Version: 3.6
+WordPress Tested Version: 3.8.1
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
@@ -42,24 +42,77 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 /*-- YUI Reset: Start --*/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin: 0; padding: 0; }
-table { border-collapse: collapse; border-spacing: 0; }
-fieldset,img { border: 0; }
-address,caption,cite,code,dfn,em,strong,th,var { font-style: normal; font-weight: normal; }
-ol,ul { list-style: none; }
-caption,th { text-align: left; }
-h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; }
-q:before,q:after { content: ''; }
-abbr,acronym { border: 0; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
 /*-- YUI Reset: End --*/
 
 /*-- WordPress Rules --*/
-div.aligncenter, .aligncenter, .center { margin: 0 auto; }
-.alignleft, .left { float: left; text-align: left; }
-.alignright, .right { float: right; text-align: right; }
-img.aligncenter, img.center { display: block; }
-img.alignleft, img.left { display: inline; margin:0 8px 8px 0; }
-img.alignright, img.right { display: inline; margin:0 0 8px 8px; }
+div.aligncenter, .aligncenter, .center {
+    margin: 0 auto;
+}
+
+.alignleft, .left {
+    float: left;
+    text-align: left;
+}
+
+.alignright, .right {
+    float: right;
+    text-align: right;
+}
+
+img.aligncenter, img.center {
+    display: block;
+}
+
+img.alignleft, img.left {
+    display: inline;
+    margin: 0 8px 8px 0;
+}
+
+img.alignright, img.right {
+    display: inline;
+    margin: 0 0 8px 8px;
+}
+
 .wp-caption {
     background-color: #f3f3f3;
     border: 1px solid #ddd;
@@ -71,39 +124,80 @@ img.alignright, img.right { display: inline; margin:0 0 8px 8px; }
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-.wp-caption img { margin: 0; padding: 0; border: 0 none; }
-.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0; }
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
 /*-- End WordPress Rules --*/
 /*-- Secondary WordPress Rules --*/
-.bypostauthor {}
-.gallery { clear: both; }
-.gallery-caption {}       
+.bypostauthor {
+}
+
+.gallery {
+    clear: both;
+}
+
+.gallery-caption {
+}
+
 /*-- End Secondary WordPress Rules --*/
 
 /*-- Basic Elements --*/
-*:focus { outline: none; }
-body {
-    color: #635537;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-	font-size: 100%;
-	line-height: 21px;
+*:focus {
+    outline: none;
 }
 
-a { text-decoration: none; }
-a:link, a:visited { color: #d21600; }
-a:hover { color: #635537; }
-a:active { color: #d21600; }
+body {
+    color: #635537;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    font-size: 100%;
+    line-height: 21px;
+}
 
-abbr { cursor: help; }
-acronym { cursor: help; }
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #d21600;
+}
+
+a:hover {
+    color: #635537;
+}
+
+a:active {
+    color: #d21600;
+}
+
+abbr {
+    cursor: help;
+}
+
+acronym {
+    cursor: help;
+}
 
 cite {
     font-weight: bold;
-	font-style: italic;
-	padding-left: 8px;
+    font-style: italic;
+    padding-left: 8px;
 }
 
-em { font-style: italic; }
+em {
+    font-style: italic;
+}
+
 em strong {
     font-style: italic;
     font-weight: bold;
@@ -112,37 +206,44 @@ em strong {
 /*= "H" tags =*/
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, "Times New Roman", Times, serif;
-    line-height:normal;
+    line-height: normal;
 }
+
 h1 {
     font-size: 200%;
     padding-bottom: 2px;
-	padding-top: 0;
+    padding-top: 0;
 }
+
 h2 {
-	font-size: 167%;
+    font-size: 167%;
     padding-bottom: 11px;
     padding-top: 15px;
 }
+
 h3 {
     font-size: 142%;
     padding-bottom: 10px;
     padding-top: 14px;
 }
+
 h4 {
     font-size: 117%;
     padding-bottom: 8px;
     padding-top: 12px;
 }
+
 h5 {
     padding-bottom: 8px;
     padding-top: 12px;
 }
+
 h6 {
     font-size: 83%;
     padding-bottom: 8px;
     padding-top: 12px;
 }
+
 /*= "H" tags: End =*/
 
 hr {
@@ -153,23 +254,42 @@ hr {
 }
 
 .hr, .shades {
-    background-image: url( images/hr-img.gif );
-	height: 56px;
+    background-image: url(images/hr-img.gif);
+    height: 56px;
     margin: 0 auto;
-	width: 560px;
+    width: 560px;
 }
 
-p { padding: 5px 0; }
+p {
+    padding: 5px 0;
+}
 
-q:before, q:after { content: '"'; }
+q:before, q:after {
+    content: '"';
+}
 
-ol { list-style: decimal inside; }
-ul { list-style: disc inside; }
-li { padding-left: 10px; }
+ol {
+    list-style: decimal inside;
+}
+
+ul {
+    list-style: disc inside;
+}
+
+li {
+    padding-left: 10px;
+}
 
 /*-- Tables: Start --*/
-table { margin: 0 auto; width: 90%; }
-table caption { text-align: center; }
+table {
+    margin: 0 auto;
+    width: 90%;
+}
+
+table caption {
+    text-align: center;
+}
+
 tr.even {
     border-style: solid;
     border-top: 1px #b2b0a4;
@@ -177,19 +297,38 @@ tr.even {
     border-bottom: 1px #b2b0a4;
     border-left-style: none;
 }
-th { font-weight: bold; }
-td { padding-left: 5px; }
+
+th {
+    font-weight: bold;
+}
+
+td {
+    padding-left: 5px;
+}
+
 /*-- Tables: End --*/
 
-strong { font-weight: bold; }
+strong {
+    font-weight: bold;
+}
+
 strong em {
     font-style: italic;
     font-weight: bold;
 }
-sub { font-size: 75%; }
-sup { font-size: 75%; }
 
-.clear { clear: both; }
+sub {
+    font-size: 75%;
+}
+
+sup {
+    font-size: 75%;
+}
+
+.clear {
+    clear: both;
+}
+
 /*-- End Basic Elements --*/
 
 /*-- Start Blog --*/
@@ -202,7 +341,8 @@ sup { font-size: 75%; }
 #header-container {
     margin: 0 auto;
     padding: 0;
-    width: 990px; }
+    width: 990px;
+}
 
 #header a:link,
 #header a:visited,
@@ -212,8 +352,13 @@ sup { font-size: 75%; }
     text-decoration: none;
 }
 
-#header-left { float: left; }
-#header-center { margin: 0 auto; }
+#header-left {
+    float: left;
+}
+
+#header-center {
+    margin: 0 auto;
+}
 
 /* Blog Title */
 #header-center h2 {
@@ -226,11 +371,13 @@ sup { font-size: 75%; }
 /* Tagline */
 #header-center p {
     color: #000;
-	font-size: 150%;
-	text-align: center;
+    font-size: 150%;
+    text-align: center;
 }
 
-#header-right { float: right; }
+#header-right {
+    float: right;
+}
 
 /* === MENU === */
 div#top-navigation-menu {
@@ -240,7 +387,9 @@ div#top-navigation-menu {
     width: 970px;
 }
 
-.page ul.nav-menu { padding-left: 0; }
+.page ul.nav-menu {
+    padding-left: 0;
+}
 
 .nav-menu {
     margin: 0;
@@ -257,7 +406,7 @@ div#top-navigation-menu {
 }
 
 .nav-menu li {
-	float: left;
+    float: left;
     list-style: none outside none;
     margin-left: 2px;
     margin-right: 2px;
@@ -272,10 +421,11 @@ div#top-navigation-menu {
     font-weight: bold;
     padding: 8px 12px;
 }
+
 .nav-menu a:hover, .nav-menu a:active {
     background: #eee;
-	color: #000;
-	text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 
 /**
@@ -322,7 +472,9 @@ ul.nav-menu ul {
     z-index: 1098;
 }
 
-ul.nav-menu ul li { float: none; }
+ul.nav-menu ul li {
+    float: none;
+}
 
 ul.nav-menu ul ul {
     left: 99%;
@@ -336,7 +488,10 @@ ul.nav-menu li:hover > ul {
 }
 
 ul.nav-menu ul.sub-menu li,
-ul.nav-menu ul.children li { list-style: none; }
+ul.nav-menu ul.children li {
+    list-style: none;
+}
+
 /* End: Horizontal CSS Drop-Down Menu Module */
 
 /* -- Rounded Corners for Menu -- */
@@ -354,6 +509,7 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
     list-style: disc inside none;
     padding: 0 0 0 15px;
 }
+
 /* === End: Menu === */
 
 /*= Main Blog =*/
@@ -376,13 +532,13 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 
 #the-loop h1 {
     font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 183%;
-	font-weight: normal;
-	line-height: normal;
-	padding-bottom: 2px;
+    font-size: 183%;
+    font-weight: normal;
+    line-height: normal;
+    padding-bottom: 2px;
 }
 
-#the-loop h1 a:link, #the-loop h1 a:visited, #the-loop h1 a:active{
+#the-loop h1 a:link, #the-loop h1 a:visited, #the-loop h1 a:active {
     border-bottom: 1px solid #b2b0a4;
     color: #4a4131;
     text-decoration: none;
@@ -394,7 +550,9 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
     text-decoration: none;
 }
 
-span.no-title { font-weight: bold; }
+span.no-title {
+    font-weight: bold;
+}
 
 .postdata {
     color: #4a4131;
@@ -413,21 +571,33 @@ span.no-title { font-weight: bold; }
 .sticky .postdata,
 .sticky p strong,
 .sticky p strong + a,
-.sticky p a + a { font-size: 90%; }
+.sticky p a + a {
+    font-size: 90%;
+}
 
-.sticky .postdata { padding-right: 3px; }
+.sticky .postdata {
+    padding-right: 3px;
+}
 
-.sticky p { padding: 5px 3px; }
+.sticky p {
+    padding: 5px 3px;
+}
 
-.post { margin-bottom: 30px; }
+.post {
+    margin-bottom: 30px;
+}
 
-.post p, .page p { margin:0; }
+.post p, .page p {
+    margin: 0;
+}
 
 .page ol, .page ul {
     list-style: inside none;
 }
 
-.page li, .post li { padding-left: 10px; }
+.page li, .post li {
+    padding-left: 10px;
+}
 
 .post ol, .post ul {
     margin-bottom: 15px;
@@ -441,8 +611,13 @@ span.no-title { font-weight: bold; }
     margin-right: -1px;
 }
 
-.post dl dt { font-weight: bold; }
-.post dl dd { margin: 0 5px 0 10px; }
+.post dl dt {
+    font-weight: bold;
+}
+
+.post dl dd {
+    margin: 0 5px 0 10px;
+}
 
 .post code {
     font-style: italic;
@@ -456,9 +631,9 @@ span.no-title { font-weight: bold; }
     padding: 1px;
     text-align: left;
     /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-	overflow-x: auto;
-	white-space: pre-wrap; /* css-3 */
-	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+    overflow-x: auto;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
 }
 
 .sticky p.tags {
@@ -489,9 +664,13 @@ span.no-title { font-weight: bold; }
     text-align: left;
 }
 
-#author h2 { padding: 0; }
+#author h2 {
+    padding: 0;
+}
 
-#author ul { list-style: none none; }
+#author ul {
+    list-style: none none;
+}
 
 .post-comments {
     border-right: 2px inset;
@@ -517,19 +696,23 @@ span.no-title { font-weight: bold; }
     text-decoration: none;
 }
 
-#the-loop h1 .post-comments a { border: none; }
+#the-loop h1 .post-comments a {
+    border: none;
+}
 
 blockquote {
     background: url(images/small-quotes.png) no-repeat left 2px;
     color: #606060;
     clear: both;
-	font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 117%;
-	font-style: italic;
+    font-style: italic;
     padding-left: 28px;
 }
 
-blockquote p { padding: 8px 0; }
+blockquote p {
+    padding: 8px 0;
+}
 
 blockquote cite {
     font-weight: bold;
@@ -547,14 +730,16 @@ pre {
     text-align: left;
     width: auto;
     /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-	overflow-x: auto;
+    overflow-x: auto;
     white-space: pre-wrap; /* css-3 */
     white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
 }
 
 /* Navigation */
-.navigation{ margin: 0 20px; }
-  
+.navigation {
+    margin: 0 20px;
+}
+
 /* === SIDEBAR == */
 /* Organized by general layout of sidebar template */
 #sidebar {
@@ -562,14 +747,18 @@ pre {
     width: 330px;
 }
 
-#sidebar-top { margin: 0 auto; }
+#sidebar-top {
+    margin: 0 auto;
+}
 
 #sidebar-content {
     margin: 0 auto;
     padding: 0 10px 10px;
 }
 
-#subcolumn { width: 310px; }
+#subcolumn {
+    width: 310px;
+}
 
 #subcolumn ul {
     list-style: none none;
@@ -609,61 +798,98 @@ pre {
     padding-bottom: 10px;
 }
 
-.widget p { padding-left:5px; }
+.widget p {
+    padding-left: 5px;
+}
 
 .widget h2 {
     color: #4a4131;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 167%;
-	font-weight: normal;
-	line-height: normal;
+    font-weight: normal;
+    line-height: normal;
     margin: 0;
     text-align: center;
 }
 
 .widget ul, .widget ol {
-    border: none ;
+    border: none;
     list-style: none;
     margin: 0;
     padding: 5px 0;
 }
 
-.widget li { list-style-image: none; }
+.widget li {
+    list-style-image: none;
+}
 
-.widget ul li, .widget ol li { margin: 0; }
-.widget ul li a, .widget ol li a { color: #d21600; text-decoration: none; }
-.widget ul li a img, .widget ol li a img { border: none; }
-.widget ul li a:hover, .widget ol li a:hover { color: #635537; text-decoration: none; }
+.widget ul li, .widget ol li {
+    margin: 0;
+}
 
-.textwidget { padding:0 8px 0 8px; }
-.textwidget form { text-align: center; }
+.widget ul li a, .widget ol li a {
+    color: #d21600;
+    text-decoration: none;
+}
+
+.widget ul li a img, .widget ol li a img {
+    border: none;
+}
+
+.widget ul li a:hover, .widget ol li a:hover {
+    color: #635537;
+    text-decoration: none;
+}
+
+.textwidget {
+    padding: 0 8px 0 8px;
+}
+
+.textwidget form {
+    text-align: center;
+}
 
 /** === Default Widgets === ------------------------------------------------- */
 /** RSS */
-.widget_rss ul li cite { font-style: italic; }
-.widget_rss ul li cite:before { content: '~ '; }
+.widget_rss ul li cite {
+    font-style: italic;
+}
+
+.widget_rss ul li cite:before {
+    content: '~ ';
+}
+
 /** Text Widgets */
 .widget_text {
     margin: 0 3px;
     overflow: hidden;
 }
-.widget_text div.textwidget div.wp-caption { margin: 0; }
+
+.widget_text div.textwidget div.wp-caption {
+    margin: 0;
+}
+
 .widget_text div.textwidget div.wp-caption a img {
     height: auto;
     width: 98%;
 }
+
 /** Tag Cloud */
-.widget_tag_cloud { margin: 0 10px; }
+.widget_tag_cloud {
+    margin: 0 10px;
+}
 
 /** Archive Dropdown Lists */
 .widget select {
     width: 100%;
 }
+
 /** End: Default Widgets ---------------------------------------------------- */
 
-
 /*= Calendar =*/
-#calendar_wrap { margin-left: 55px; }
+#calendar_wrap {
+    margin-left: 55px;
+}
 
 #wp-calendar, .widget #wp-calendar {
     empty-cells: show;
@@ -672,17 +898,35 @@ pre {
     text-align: center;
     text-decoration: none;
 }
-.widget table#wp-calendar { margin: 0 auto 0 auto; }
-.widget #calendar_wrap { margin: 0 auto 0 auto; }
+
+.widget table#wp-calendar {
+    margin: 0 auto 0 auto;
+}
+
+.widget #calendar_wrap {
+    margin: 0 auto 0 auto;
+}
 
 table#wp-calendar {
     margin: 0 auto;
     width: 98%;
 }
-table#wp-calendar tbody tr { text-align: center; }
-table#wp-calendar tbody tr td#today { border: 1px solid; }
-table#wp-calendar tbody tr td a { font-weight: bold; }
-table#wp-calendar tfoot tr td#next { text-align: right; }
+
+table#wp-calendar tbody tr {
+    text-align: center;
+}
+
+table#wp-calendar tbody tr td#today {
+    border: 1px solid;
+}
+
+table#wp-calendar tbody tr td a {
+    font-weight: bold;
+}
+
+table#wp-calendar tfoot tr td#next {
+    text-align: right;
+}
 
 /*= Images =*/
 /** Keeps Featured Images to width of container */
@@ -718,19 +962,48 @@ img.size-full {
     max-width: 99%;
 }
 
-.gallery-caption { font-size: 11px; /* = wp-caption size */ }
+.gallery-caption {
+    font-size: 11px; /* = wp-caption size */
+}
 
 /* Gallery columns up to three (3) are handled by default in the theme.
  * Four (4) or more columns requires a maximum width be set for the image
  * thumbnail; also note the height is set to 'auto' to maintain a square shape. 
  **/
-.gallery-columns-4 img { height: auto; max-width: 142px; }
-.gallery-columns-5 img { height: auto; max-width: 112px; }
-.gallery-columns-6 img { height: auto; max-width: 86px; }
-.gallery-columns-7 img { height: auto; max-width: 72px; }
-.gallery-columns-8 img { height: auto; max-width: 64px; }
-.gallery-columns-9 img { height: auto; max-width: 56px; }
-.gallery-columns-10 img { height: auto; max-width: 48px; }
+.gallery-columns-4 img {
+    height: auto;
+    max-width: 142px;
+}
+
+.gallery-columns-5 img {
+    height: auto;
+    max-width: 112px;
+}
+
+.gallery-columns-6 img {
+    height: auto;
+    max-width: 86px;
+}
+
+.gallery-columns-7 img {
+    height: auto;
+    max-width: 72px;
+}
+
+.gallery-columns-8 img {
+    height: auto;
+    max-width: 64px;
+}
+
+.gallery-columns-9 img {
+    height: auto;
+    max-width: 56px;
+}
+
+.gallery-columns-10 img {
+    height: auto;
+    max-width: 48px;
+}
 
 p img {
     height: auto;
@@ -738,13 +1011,15 @@ p img {
     max-width: 100%;
 }
 
-div.attached-image { text-align: center; }
+div.attached-image {
+    text-align: center;
+}
 
 /*= Footer =*/
 #bottom {
     border-top: solid 1px #e3dccb;
     clear: both;
-	overflow: hidden;
+    overflow: hidden;
 }
 
 #bottom p {
@@ -752,10 +1027,14 @@ div.attached-image { text-align: center; }
     text-align: center;
 }
 
-#footer { text-align: center; }
+#footer {
+    text-align: center;
+}
 
 /*= Threaded Comments =*/
-h4#comments { font-weight: bold; }
+h4#comments {
+    font-weight: bold;
+}
 
 .commentlist {
     padding: 0;
@@ -764,8 +1043,8 @@ h4#comments { font-weight: bold; }
 
 ul#singlecomments.commentlist, ul.children {
     list-style: none none;
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ul#singlecomments.commentlist li {
@@ -774,7 +1053,9 @@ ul#singlecomments.commentlist li {
     padding-top: 10px;
 }
 
-.comment-body { padding-right: 10px; }
+.comment-body {
+    padding-right: 10px;
+}
 
 .avatar {
     display: inline;
@@ -793,11 +1074,14 @@ ul#singlecomments.commentlist li {
     padding: 0 0 5px 10px;
     width: 98%;
 }
-#respond h3 { font-weight: bold; }
+
+#respond h3 {
+    font-weight: bold;
+}
 
 #commentform p {
     padding: 6px 0;
-	width: 98%;
+    width: 98%;
 }
 
 #commentform input {
@@ -805,7 +1089,7 @@ ul#singlecomments.commentlist li {
     border: 1px solid #b2b0a4;
     font: 100% 'Trebuchet MS', Verdana, Sans-Serif;
     padding: 5px;
-	margin-top: 3px;
+    margin-top: 3px;
     width: 200px;
 }
 
@@ -819,9 +1103,13 @@ ul#singlecomments.commentlist li {
     margin-top: 3px;
 }
 
-#commentform #submit { cursor: pointer; }
+#commentform #submit {
+    cursor: pointer;
+}
 
-textarea#comment { width: 98%; }
+textarea#comment {
+    width: 98%;
+}
 
 .nocomments {
     margin: 0;
@@ -858,12 +1146,23 @@ textarea#comment { width: 98%; }
 }
 
 /* Comment author classes */
-.administrator-prime {}
-.administrator {}
-.editor {}
-.contributor {}
-.subscriber {}
-.guest {}
+.administrator-prime {
+}
+
+.administrator {
+}
+
+.editor {
+}
+
+.contributor {
+}
+
+.subscriber {
+}
+
+.guest {
+}
 
 .reply {
     font-size: 85%;
@@ -889,11 +1188,13 @@ textarea#comment { width: 98%; }
     color: #d21600;
     text-decoration: none;
 }
+
 .comment-author a:hover {
     border-bottom: 1px solid #b2b0a4;
     color: #635537;
-	text-decoration: none;
+    text-decoration: none;
 }
+
 .comment-author a:active {
     border-bottom: 1px solid #d21600;
     color: #d21600;
@@ -920,8 +1221,8 @@ textarea#comment { width: 98%; }
     text-align: left;
     /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
     overflow-x: auto;
-	white-space: pre-wrap; /* css-3 */
-	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
 }
 
 #comment-header {
@@ -932,18 +1233,24 @@ textarea#comment { width: 98%; }
     margin-bottom: 10px;
 }
 
-span.required { padding: 0 5px; }
+span.required {
+    padding: 0 5px;
+}
 
-p.comment-form-email label { padding: 0 3px 0 0; }
+p.comment-form-email label {
+    padding: 0 3px 0 0;
+}
 
-p.comment-form-url label { padding: 0 9px 0 0; }
+p.comment-form-url label {
+    padding: 0 9px 0 0;
+}
 
 /*= Forms =*/
 fieldset {
     border: 1px solid #b2b0a4;
     margin: 0 auto;
     padding: 15px;
-	width: 570px;
+    width: 570px;
 }
 
 legend {
@@ -959,11 +1266,15 @@ label {
     padding-top: 4px;
 }
 
-input, textarea { border: 1px solid #b2b0a4; }
+input, textarea {
+    border: 1px solid #b2b0a4;
+}
+
 input:focus, textarea:focus {
     border: 1px solid #000;
     padding: 1px 0;
 }
+
 input#s {
     padding: 1px;
     width: 70%;
@@ -975,89 +1286,130 @@ textarea {
     width: 98%;
 }
 
-textarea#text_area { width: 98%; }
-#text_field { width: 98%; }
+textarea#text_area {
+    width: 98%;
+}
+
+#text_field {
+    width: 98%;
+}
 
 /* --- Post Formats - Aside --- */
 .format-aside {
     margin: 0 0 0 60px;
     padding: 0 0 30px;
 }
+
 .sticky.format-aside {
     margin: 0 0 30px;
     padding: 0;
 }
-.sticky.no-title.format-aside { margin: 0 0 30px; }
+
+.sticky.no-title.format-aside {
+    margin: 0 0 30px;
+}
 
 .format-aside .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
-.sticky.format-aside .glyph,
-.sticky.no-title.format-aside .glyph { margin: 55px 0 0; }
 
-.format-aside h1, .format-aside .postdata { text-align: right; }
+.sticky.format-aside .glyph,
+.sticky.no-title.format-aside .glyph {
+    margin: 55px 0 0;
+}
+
+.format-aside h1, .format-aside .postdata {
+    text-align: right;
+}
 
 /* --- Post Formats - Quote --- */
 .format-quote {
     margin: 0 0 0 60px;
     padding: 0 0 30px;
 }
+
 .sticky.format-quote {
     margin: 0 0 30px;
     padding: 0;
 }
-.sticky.no-title.format-quote { margin: 0 0 30px; }
+
+.sticky.no-title.format-quote {
+    margin: 0 0 30px;
+}
 
 .format-quote .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
-.sticky.format-quote .glyph,
-.sticky.no-title.format-quote .glyph { margin: 55px 0 0; }
 
-.format-quote h1, .format-quote .postdata { text-align: right; }
+.sticky.format-quote .glyph,
+.sticky.no-title.format-quote .glyph {
+    margin: 55px 0 0;
+}
+
+.format-quote h1, .format-quote .postdata {
+    text-align: right;
+}
 
 /* --- Post Formats - Status --- */
 .format-status {
     margin: 0 0 0 60px;
     padding: 0 0 30px;
 }
+
 .sticky.format-status {
     margin: 0 0 30px;
     padding: 0;
 }
-.sticky.no-title.format-status { margin: 0 0 30px; }
+
+.sticky.no-title.format-status {
+    margin: 0 0 30px;
+}
 
 .format-status .glyph {
     float: left;
     margin: 50px 0 0 -60px;
 }
-.sticky.format-status .glyph,
-.sticky.no-title.format-status .glyph { margin: 25px 0 0 0; }
 
-.format-status h1, .format-status .postdata { text-align: right; }
+.sticky.format-status .glyph,
+.sticky.no-title.format-status .glyph {
+    margin: 25px 0 0 0;
+}
+
+.format-status h1, .format-status .postdata {
+    text-align: right;
+}
 
 /* --- Post Formats - etc. --- */
 .transparent {
-    filter: alpha( opacity=25 );
+    filter: alpha(opacity=25);
     opacity: 0.25;
     zoom: 1;
 }
+
 span.aside-glyph,
 span.quote-glyph {
     font-family: "Times New Roman", Arial, sans-serif;
     font-size: 1000%;
 }
+
 span.status-glyph {
     font-family: "Times New Roman", Arial, sans-serif;
     font-size: 500%;
 }
+
 /* --- End: Post Formats --- */
 
 /* WordPress specific plugins and other miscellaneous items */
-img#wpstats { display: none; }
-#akismetstats { margin: 0 auto; }
+img#wpstats {
+    display: none;
+}
+
+#akismetstats {
+    margin: 0 auto;
+}
+
 img.wp-smiley {
     background: transparent;
     border: none;
@@ -1066,7 +1418,10 @@ img.wp-smiley {
 }
 
 /* WordPress 3.0 Navigation Menu core widget */
-.widget_nav_menu .menu { margin: 0; }
+.widget_nav_menu .menu {
+    margin: 0;
+}
+
 .widget_nav_menu .menu li {
     display: block;
     float: none;
@@ -1078,8 +1433,17 @@ img.wp-smiley {
     font-style: italic;
     text-align: center;
 }
-#bns-logged-in { font-weight: bold; }
-#bns-logged-out { font-weight: lighter; }
+
+#bns-logged-in {
+    font-weight: bold;
+}
+
+#bns-logged-out {
+    font-weight: lighter;
+}
+
 /* bns-featured-category */
 /* bns-featured-tag */
-.widget .post { margin-bottom: 10px; }
+.widget .post {
+    margin-bottom: 10px;
+}

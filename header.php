@@ -14,16 +14,18 @@
  *
  * @version     2.1
  * Refactored to a cleaner HTML5 format
- */ ?>
+ */
+?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <meta charset="<?php bloginfo('charset'); ?>"/>
+    <title><?php wp_title('|', true, 'right'); ?></title>
+    <link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>"
+          type="text/css" media="screen"/>
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -33,14 +35,20 @@
             <div id="header-left"></div>
             <div id="header-center">
                 <h2>
-                    <a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
+                    <a href="<?php echo home_url(); ?>"
+                       title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
                 </h2>
-                <p><?php bloginfo( 'description' ); ?></p>
-            </div><!-- #header-center -->
+
+                <p><?php bloginfo('description'); ?></p>
+            </div>
+            <!-- #header-center -->
             <div id="header-right"></div>
-        </div><!-- #header -->
+        </div>
+        <!-- #header -->
         <div class="clear"></div>
         <div id="top-navigation-menu">
             <?php shades_nav_menu(); ?>
-        </div><!-- top-navigation-menu -->
-    </div><!-- #header-container -->
+        </div>
+        <!-- top-navigation-menu -->
+    </div>
+    <!-- #header-container -->
