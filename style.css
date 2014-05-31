@@ -43,6 +43,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @date	May 31, 2014
  * Corrected typos for `comment_text_1` and `comment_text_2`
  * Updated default Calendar Widget styles
+ * Updated default Search Widget styles
  */
 
 /**
@@ -758,12 +759,6 @@ pre {
 	list-style: none none;
 }
 
-#search {
-	margin: 0 auto;
-	padding: 20px 0;
-	width: 270px;
-}
-
 .form-input {
 	background: #faf6f6;
 	border: 1px solid #e3dccb;
@@ -1289,8 +1284,17 @@ input:focus, textarea:focus {
 }
 
 input#s {
+	line-height: 20px;
 	padding: 1px;
-	width: 70%;
+	width: 100%;
+}
+
+input#searchsubmit {
+	border-radius: 3px;
+	font-size: 13px;
+	line-height: 18px;
+	margin-top: 4px;
+	padding: 3px;
 }
 
 textarea {
