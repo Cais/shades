@@ -11,14 +11,14 @@
  *
  * @link           http://buynowshop.com/themes/shades/
  * @link           https://github.com/Cais/shades/
- * @link           http://wordpress.org/extend/themes/shades/
+ * @link           http://wordpress.org/themes/shades/
  *
  * @internal       REQUIRES WordPress version 3.4
  * @internal       Tested up to WordPress version 3.8.1
  *
  * @version        2.2
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2013, Edward Caissie
+ * @copyright      Copyright (c) 2009-2014, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -45,6 +45,9 @@
  *
  * @version        2.2
  * @date           December 2013
+ *
+ * @version        2.2.1
+ * @date           ...
  */
 
 get_header(); ?>

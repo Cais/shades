@@ -8,6 +8,7 @@ Changelog as of May 31, 2014
 * Corrected minor typos
 
 = Miscellaneous =
+* Fixed `@internal` link reference to the WordPress Theme repository
 * Update copyright years
 
 /** ------------------------------------------------------------------------- */

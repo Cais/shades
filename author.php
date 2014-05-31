@@ -7,10 +7,10 @@
  *
  * @link           http://buynowshop.com/themes/shades/
  * @link           https://github.com/Cais/shades/
- * @link           http://wordpress.org/extend/themes/shades/
+ * @link           http://wordpress.org/themes/shades/
  *
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2013, Edward Caissie
+ * @copyright      Copyright (c) 2009-2014, Edward Caissie
  *
  * @version        2.1
  * @date           March 8, 2013
