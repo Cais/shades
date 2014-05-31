@@ -7,6 +7,7 @@ Changelog as of May 31, 2014
 
 = CSS =
 * Corrected minor typos
+* Updated default Calendar Widget styles
 
 = Miscellaneous =
 * Fixed `@internal` link reference to the WordPress Theme repository

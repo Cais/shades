@@ -42,6 +42,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @version	2.2.1
  * @date	May 31, 2014
  * Corrected typos for `comment_text_1` and `comment_text_2`
+ * Updated default Calendar Widget styles
  */
 
 /**
@@ -879,46 +880,68 @@ pre {
 
 /** End: Default Widgets ---------------------------------------------------- */
 
-/*= Calendar =*/
-#calendar_wrap {
-	margin-left: 55px;
+/**
+ * Calendar Widget Styles
+ * As inspired by http://www.wpexplorer.com/wordpres-calendar-style/
+ */
+.widget_calendar {
 }
 
-#wp-calendar, .widget #wp-calendar {
-	empty-cells: show;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	text-decoration: none;
+#wp-calendar {
+	max-width: 300px;
+	width: 100%;
 }
 
-.widget table#wp-calendar {
-	margin: 0 auto 0 auto;
-}
-
-.widget #calendar_wrap {
-	margin: 0 auto 0 auto;
-}
-
-table#wp-calendar {
-	margin: 0 auto;
-	width: 98%;
-}
-
-table#wp-calendar tbody tr {
-	text-align: center;
-}
-
-table#wp-calendar tbody tr td#today {
-	border: 1px solid;
-}
-
-table#wp-calendar tbody tr td a {
-	font-weight: bold;
-}
-
-table#wp-calendar tfoot tr td#next {
+#wp-calendar caption {
 	text-align: right;
+	color: #333;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+#wp-calendar thead {
+	font-size: 10px;
+}
+
+#wp-calendar thead th {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#wp-calendar tbody {
+	color: #aaa;
+}
+
+#wp-calendar tbody td {
+	background: #f5f5f5;
+	border: 1px solid #fff;
+	text-align: center;
+	padding: 8px;
+}
+
+#wp-calendar tbody td:hover {
+	background: #fff;
+}
+
+#wp-calendar tbody .pad {
+	background: none;
+}
+
+#wp-calendar tfoot #next {
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+#wp-calendar tfoot #prev {
+	font-size: 10px;
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+
+#wp-calendar #today {
+	font-style: italic;
+	font-weight: bold;
 }
 
 /*= Images =*/
