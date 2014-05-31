@@ -2,27 +2,27 @@
 /**
  * Archive Template
  *
- * @package     Shades
- * @since       1.0
+ * @package        Shades
+ * @since          1.0
  *
- * @link        http://buynowshop.com/themes/shades/
- * @link        https://github.com/Cais/shades/
- * @link        http://wordpress.org/extend/themes/shades/
+ * @link           http://buynowshop.com/themes/shades/
+ * @link           https://github.com/Cais/shades/
+ * @link           http://wordpress.org/extend/themes/shades/
  *
- * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2013, Edward Caissie
+ * @author         Edward Caissie <edward.caissie@gmail.com>
+ * @copyright      Copyright (c) 2009-2013, Edward Caissie
  *
- * @version     2.1
- * @date        March 8, 2013
+ * @version        2.1
+ * @date           March 8, 2013
  * Refactored code formatting and code block termination comments
  * Refactored post meta to be more i18n compatible
  *
- * @version     2.1.1
- * @date        July 18, 2013
+ * @version        2.1.1
+ * @date           July 18, 2013
  * Changed Featured Image code to use `shades_show_featured_image( 'full' )`
  *
- * @version		2.1.2
- * @date		December 28, 2013
+ * @version        2.1.2
+ * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
  */
 
@@ -101,12 +101,18 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 
 								<h1>
 									<a href="<?php the_permalink(); ?>"
-									   title="<?php the_title_attribute( array( 'before' => __( 'Permalink to:', 'shades' ) . ' ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+									   title="<?php the_title_attribute(
+										   array(
+											   'before' => __( 'Permalink to:', 'shades' ) . ' ',
+											   'after'  => ''
+										   )
+									   ); ?>"><?php the_title(); ?></a>
 								</h1>
 
 								<div class="postdata">
 									<?php
-									printf( __( '%1$s on %2$s in %3$s', 'shades' ),
+									printf(
+										__( '%1$s on %2$s in %3$s', 'shades' ),
 										shades_use_posted(),
 										get_the_time( get_option( 'date_format' ) ),
 										get_the_category_list( ', ' )

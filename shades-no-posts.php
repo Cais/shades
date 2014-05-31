@@ -17,7 +17,8 @@
 ?>
 	<h2>
 		<?php
-		printf( __( 'Search Results for: %s', 'shades' ),
+		printf(
+			__( 'Search Results for: %s', 'shades' ),
 			'<span>' . esc_html( get_search_query() ) . '</span>'
 		); ?>
 	</h2>

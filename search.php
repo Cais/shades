@@ -50,12 +50,18 @@ get_header(); ?>
 				<?php
 				if ( have_posts() ) {
 
-					printf( sprintf( '<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-						apply_filters( 'shades_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'shades' ) ),
-						get_search_query()
-					) );
-					_e( apply_filters( 'shades_search_found_post_text',
-							__( '<div class="shades-search-found-post-text">Here are the results:</div>', 'shades' ) )
+					printf(
+						sprintf(
+							'<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
+							apply_filters( 'shades_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'shades' ) ),
+							get_search_query()
+						)
+					);
+					_e(
+						apply_filters(
+							'shades_search_found_post_text',
+							__( '<div class="shades-search-found-post-text">Here are the results:</div>', 'shades' )
+						)
 					);
 
 					while ( have_posts() ) {

@@ -49,7 +49,7 @@ function comment_add_microid( $classes ) {
 	$c_url   = get_comment_author_url();
 
 	if ( ! empty( $c_email ) && ! empty( $c_url ) ) {
-		$microid   = 'microid-mailto+http:sha1:' . sha1( sha1( 'mailto:' . $c_email ) . sha1( $c_url ) );
+		$microid = 'microid-mailto+http:sha1:' . sha1( sha1( 'mailto:' . $c_email ) . sha1( $c_url ) );
 		$classes[] = $microid;
 	}
 
@@ -106,7 +106,12 @@ add_filter( 'comment_class', 'comment_add_userid' ); ?>
 		</h4>
 
 		<ul class="commentlist" id="singlecomments">
-			<?php wp_list_comments( array( 'avatar_size' => 60, 'reply_text' => __( '&raquo; Reply to this Comment &laquo;', 'shades' ) ) ); ?>
+			<?php wp_list_comments(
+				array(
+					'avatar_size' => 60,
+					'reply_text'  => __( '&raquo; Reply to this Comment &laquo;', 'shades' )
+				)
+			); ?>
 		</ul><!-- commentlist -->
 
 		<div class="navigation">

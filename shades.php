@@ -4,26 +4,26 @@
  *
  * Standard loop for all non-supported post-formats
  *
- * @package     Shades
- * @since       1.7
+ * @package        Shades
+ * @since          1.7
  *
- * @link        http://buynowshop.com/themes/shades/
- * @link        https://github.com/Cais/shades/
- * @link        http://wordpress.org/extend/themes/shades/
+ * @link           http://buynowshop.com/themes/shades/
+ * @link           https://github.com/Cais/shades/
+ * @link           http://wordpress.org/extend/themes/shades/
  *
- * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2013, Edward Caissie
+ * @author         Edward Caissie <edward.caissie@gmail.com>
+ * @copyright      Copyright (c) 2009-2013, Edward Caissie
  *
- * @version     2.1
- * @date        March 6, 2013
+ * @version        2.1
+ * @date           March 6, 2013
  * Refactored code, formatting, and code block termination comments
  *
- * @version     2.1.1
- * @date        July 18, 2013
+ * @version        2.1.1
+ * @date           July 18, 2013
  * Changed Featured Image code to use `shades_show_featured_image( 'full' )`
  *
- * @version		2.1.2
- * @date		December 28, 2013
+ * @version        2.1.2
+ * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
  */
 
@@ -35,13 +35,19 @@ if ( is_page() ) {
 
 		<h1>
 			<a href="<?php the_permalink(); ?>"
-			   title="<?php the_title_attribute( array( 'before' => __( 'Permalink to:', 'shades' ) . ' ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+			   title="<?php the_title_attribute(
+				   array(
+					   'before' => __( 'Permalink to:', 'shades' ) . ' ',
+					   'after'  => ''
+				   )
+			   ); ?>"><?php the_title(); ?></a>
 		</h1>
 
 		<div class="postdata">
 
 			<?php
-			printf( __( 'Posted by %1$s on %2$s', 'shades' ),
+			printf(
+				__( 'Posted by %1$s on %2$s', 'shades' ),
 				get_the_author(),
 				get_the_time( get_option( 'date_format' ) )
 			);
@@ -57,7 +63,13 @@ if ( is_page() ) {
 		<div class="clear"></div>
 		<!-- For inserted media at the end of the post -->
 
-		<?php wp_link_pages( array( 'before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number' ) ); ?>
+		<?php wp_link_pages(
+			array(
+				'before'         => '<p><strong>Pages:</strong> ',
+				'after'          => '</p>',
+				'next_or_number' => 'number'
+			)
+		); ?>
 
 	</div><!-- .post #post-ID -->
 
@@ -69,7 +81,12 @@ if ( is_page() ) {
 
 		<h1>
 			<a href="<?php the_permalink(); ?>"
-			   title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+			   title="<?php the_title_attribute(
+				   array(
+					   'before' => 'Permalink to: ',
+					   'after'  => ''
+				   )
+			   ); ?>"><?php the_title(); ?></a>
 			<?php if ( ! is_single() ) { ?>
 				<div class="post-comments">
 					<?php comments_popup_link( __( 'No Comments', 'shades' ), __( '1 Comment', 'shades' ), __( '% Comments', 'shades' ), '', __( 'Comments closed', 'shades' ) ); ?>
@@ -81,12 +98,14 @@ if ( is_page() ) {
 
 			<?php
 			if ( is_page() ) {
-				printf( __( 'Posted by %1$s on %2$s', 'shades' ),
+				printf(
+					__( 'Posted by %1$s on %2$s', 'shades' ),
 					get_the_author(),
 					get_the_time( get_option( 'date_format' ) )
 				);
 			} else {
-				printf( __( '%1$s by %2$s on %3$s', 'shades' ),
+				printf(
+					__( '%1$s by %2$s on %3$s', 'shades' ),
 					shades_use_posted(),
 					get_the_author(),
 					get_the_time( get_option( 'date_format' ) ),
@@ -111,7 +130,13 @@ if ( is_page() ) {
 				class="clear"></div><!-- For inserted media at the end of the post -->
 
 			<?php
-			wp_link_pages( array( 'before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number' ) );
+			wp_link_pages(
+				array(
+					'before'         => '<p><strong>Pages:</strong> ',
+					'after'          => '</p>',
+					'next_or_number' => 'number'
+				)
+			);
 
 		} else {
 

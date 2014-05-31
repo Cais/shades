@@ -2,28 +2,28 @@
 /**
  * Archive Template
  *
- * @package     Shades
- * @since       1.0
+ * @package        Shades
+ * @since          1.0
  *
- * @link        http://buynowshop.com/themes/shades/
- * @link        https://github.com/Cais/shades/
- * @link        http://wordpress.org/extend/themes/shades/
+ * @link           http://buynowshop.com/themes/shades/
+ * @link           https://github.com/Cais/shades/
+ * @link           http://wordpress.org/extend/themes/shades/
  *
- * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2013, Edward Caissie
+ * @author         Edward Caissie <edward.caissie@gmail.com>
+ * @copyright      Copyright (c) 2009-2013, Edward Caissie
  *
  * Last revised April 18, 2012
- * @version     1.8
+ * @version        1.8
  * Replace navigation with call to `get_template_part( 'shades-navigation' )`
  * Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
  *
- * @version     2.1
- * @date        March 4, 2013
+ * @version        2.1
+ * @date           March 4, 2013
  * Refactored code formatting and code block termination comments
  * Refactored post meta to be more i18n compatible
  *
- * @version		2.1.2
- * @date		December 28, 2013
+ * @version        2.1.2
+ * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
  */
 
@@ -54,7 +54,12 @@ get_header(); ?>
 
 								<h1>
 									<a href="<?php the_permalink(); ?>"
-									   title="<?php the_title_attribute( array( 'before' => __( 'Permalink to:', 'shades' ) . ' ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
+									   title="<?php the_title_attribute(
+										   array(
+											   'before' => __( 'Permalink to:', 'shades' ) . ' ',
+											   'after'  => ''
+										   )
+									   ); ?>"><?php the_title(); ?></a>
 								</h1>
 
 								<div class="post-comments">
@@ -64,7 +69,8 @@ get_header(); ?>
 
 								<div class="postdata">
 									<?php
-									printf( __( '%1$s by %2$s on %3$s in ', 'shades' ),
+									printf(
+										__( '%1$s by %2$s on %3$s in ', 'shades' ),
 										shades_use_posted(),
 										get_the_author(),
 										get_the_time( get_option( 'date_format' ) ),

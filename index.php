@@ -6,19 +6,19 @@
  * Comments and sticky post support!<em>Please read the included changelog.txt
  * file for the latest change details.
  *
- * @package     Shades
- * @since       1.0
+ * @package        Shades
+ * @since          1.0
  *
- * @link        http://buynowshop.com/themes/shades/
- * @link        https://github.com/Cais/shades/
- * @link        http://wordpress.org/extend/themes/shades/
+ * @link           http://buynowshop.com/themes/shades/
+ * @link           https://github.com/Cais/shades/
+ * @link           http://wordpress.org/extend/themes/shades/
  *
- * @internal    REQUIRES WordPress version 3.4
- * @internal    Tested up to WordPress version 3.8.1
+ * @internal       REQUIRES WordPress version 3.4
+ * @internal       Tested up to WordPress version 3.8.1
  *
- * @version     2.2
- * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2013, Edward Caissie
+ * @version        2.2
+ * @author         Edward Caissie <edward.caissie@gmail.com>
+ * @copyright      Copyright (c) 2009-2013, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -40,11 +40,11 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     2.1.1
- * @date        May 5, 2013
+ * @version        2.1.1
+ * @date           May 5, 2013
  *
- * @version		2.2
- * @date		December 2013
+ * @version        2.2
+ * @date           December 2013
  */
 
 get_header(); ?>

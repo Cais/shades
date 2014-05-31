@@ -2,22 +2,22 @@
 /**
  * Sidebar Template
  *
- * @package     Shades
- * @since       1.0
+ * @package        Shades
+ * @since          1.0
  *
- * @link        http://buynowshop.com/themes/shades/
- * @link        https://github.com/Cais/shades/
- * @link        http://wordpress.org/extend/themes/shades/
+ * @link           http://buynowshop.com/themes/shades/
+ * @link           https://github.com/Cais/shades/
+ * @link           http://wordpress.org/extend/themes/shades/
  *
- * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2013, Edward Caissie
+ * @author         Edward Caissie <edward.caissie@gmail.com>
+ * @copyright      Copyright (c) 2009-2013, Edward Caissie
  *
- * @version     2.1
- * @date        March 6, 2013
+ * @version        2.1
+ * @date           March 6, 2013
  * Refactored code, formatting, and code block termination comments
  *
- * @version		2.1.2
- * @date		December 28, 2013
+ * @version        2.1.2
+ * @date           December 28, 2013
  * Removed default `Search` from sidebar
  */
 ?>

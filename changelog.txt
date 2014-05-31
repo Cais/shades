@@ -1,5 +1,16 @@
 === Shades ===
-Changelog as of December 28, 2013
+Changelog as of May 31, 2014
+== 2.2.1 ==
+= Code =
+* Additional code formatting
+
+= CSS =
+* Corrected minor typos
+
+= Miscellaneous =
+* Update copyright years
+
+/** ------------------------------------------------------------------------- */
 == 2.2 ==
 = Code =
 * Code reformatting to better reflect WordPress Coding Standards (see https://gist.github.com/Cais/8023722)

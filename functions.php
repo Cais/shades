@@ -28,13 +28,15 @@
 define( 'SHADES_HOME_URL', 'BuyNowShop.com' );
 
 /** Widget definition */
-register_sidebars( 2, array(
-	'description'   => __( 'This is a widget area in the Theme sidebar', 'shades' ),
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div><!-- .widget -->',
-	'before_title'  => '<h2 class="widget-title">',
-	'after_title'   => '</h2>',
-) );
+register_sidebars(
+	2, array(
+		'description'   => __( 'This is a widget area in the Theme sidebar', 'shades' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div><!-- .widget -->',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	)
+);
 
 if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 	/**
@@ -59,7 +61,12 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 	 * Renamed to `shades_dynamic_copyright`
 	 */
 	function shades_dynamic_copyright( $args = '' ) {
-		$initialize_values = array( 'start' => '', 'copy_years' => '', 'url' => '', 'end' => '' );
+		$initialize_values = array(
+			'start'      => '',
+			'copy_years' => '',
+			'url'        => '',
+			'end'        => ''
+		);
 		$args              = wp_parse_args( $args, $initialize_values );
 
 		/** Initialize the output variable to empty */
@@ -142,7 +149,8 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 			/** @var $parent_theme_data - array object containing the Parent Theme's data */
 			$parent_theme_data = $active_theme_data->parent();
 			/** @noinspection PhpUndefinedMethodInspection - IDE commentary */
-			printf( __( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
+			printf(
+				__( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
 				$active_theme_data['Name'],
 				$active_theme_data['Version'],
 				$parent_theme_data['Name'],
@@ -152,9 +160,11 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 
 		} else {
 
-			printf( __( '<br /><span id="shades-theme-version">This site is using the %1$s theme, v%2$s, from <a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>.</span>', 'shades' ),
+			printf(
+				__( '<br /><span id="shades-theme-version">This site is using the %1$s theme, v%2$s, from <a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>.</span>', 'shades' ),
 				$active_theme_data->get( 'Name' ),
-				$active_theme_data->get( 'Version' ) );
+				$active_theme_data->get( 'Version' )
+			);
 
 		}
 		/** End if - is child theme */
@@ -188,14 +198,22 @@ if ( ! function_exists( 'shades_setup' ) ) {
 		/** Add default posts and comments RSS feed links to head */
 		add_theme_support( 'automatic-feed-links' );
 		/** Add Custom Background Support */
-		add_theme_support( 'custom-background', array(
-			'default-color' => 'fff',
-			'default-image' => ''
-		) );
+		add_theme_support(
+			'custom-background', array(
+				'default-color' => 'fff',
+				'default-image' => ''
+			)
+		);
 
 
 		/** Add post-formats support */
-		add_theme_support( 'post-formats', array( 'aside', 'quote', 'status' ) );
+		add_theme_support(
+			'post-formats', array(
+				'aside',
+				'quote',
+				'status'
+			)
+		);
 
 
 		/** Assign glyphs via unique functions so they can be over-written in Child-Theme */
@@ -261,11 +279,13 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			 */
 			function shades_nav_menu() {
 				if ( function_exists( 'wp_nav_menu' ) ) {
-					wp_nav_menu( array(
-						'menu_class'     => 'nav-menu',
-						'theme_location' => 'top-menu',
-						'fallback_cb'    => 'shades_list_pages'
-					) );
+					wp_nav_menu(
+						array(
+							'menu_class'     => 'nav-menu',
+							'theme_location' => 'top-menu',
+							'fallback_cb'    => 'shades_list_pages'
+						)
+					);
 				} else {
 					shades_list_pages();
 				}
@@ -422,10 +442,12 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
 		if ( get_the_time() <> get_the_modified_time() ) {
 			/** CSS wrapper for modified date details */
 			echo '<h6 class="shades-modified-post">';
-			printf( __( 'Last modified by %1$s on %2$s @ %3$s.', 'shades' ),
+			printf(
+				__( 'Last modified by %1$s on %2$s @ %3$s.', 'shades' ),
 				'<a href="' . home_url( '?author=' . $last_user->ID ) . '">' . $last_user->display_name . '</a>',
 				get_the_modified_date( get_option( 'date_format' ) ),
-				get_the_modified_time( get_option( 'time_format' ) ) );
+				get_the_modified_time( get_option( 'time_format' ) )
+			);
 			echo '</h6><!-- .shades-modified-post -->';
 		}
 		/** End if - get the time */
@@ -449,7 +471,13 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
 	function shades_use_posted() {
 		$shades_no_title = get_the_title();
 		empty( $shades_no_title )
-			? $shades_no_title = '<a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '', 'echo' => '1' ) ) . '"><span class="no-title">' . __( 'Posted', 'shades' ) . '</span></a>'
+			? $shades_no_title = '<a href="' . get_permalink() . '" title="' . the_title_attribute(
+				array(
+					'before' => 'Permalink to: ',
+					'after'  => '',
+					'echo'   => '1'
+				)
+			) . '"><span class="no-title">' . __( 'Posted', 'shades' ) . '</span></a>'
 			: $shades_no_title = __( 'Posted', 'shades' );
 
 		return $shades_no_title;
