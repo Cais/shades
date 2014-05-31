@@ -3,6 +3,7 @@ Changelog as of May 31, 2014
 == 2.2.1 ==
 = Code =
 * Additional code formatting
+* Improve `shades_dynamic_copyright` performance impact by adding transient with one month refresh
 
 = CSS =
 * Corrected minor typos

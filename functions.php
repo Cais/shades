@@ -45,50 +45,82 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 	 * published post and appending the current year as well as minimal boiler-
 	 * plate text. Output is then echoed via an apply_filters call.
 	 *
+	 * @package     Shades
+	 * @since       1.3.3
+	 *
 	 * @param   string $args
 	 *
 	 * @internal    param string start - initial text
 	 * @internal    param string copy_years - (constructed) date text
 	 * @internal    param string url - url link
 	 * @internal    param string end - closing text
+	 * @internal    param int transient_refresh - refresh in seconds; default one (1) month
 	 *
+	 * @uses        __
 	 * @uses        apply_filters
+	 * @uses        esc_attr
+	 * @uses        get_bloginfo
 	 * @uses        get_posts
+	 * @uses        get_transient
+	 * @uses        home_url
+	 * @uses        set_transient
 	 * @uses        wp_parse_args
 	 *
-	 * Last revised April 20, 2012
 	 * @version     1.8
+	 * @date        April 20, 2012
 	 * Renamed to `shades_dynamic_copyright`
+	 *
+	 * @version     2.2.1
+	 * @date        May 31, 2014
+	 * Improve performance impact by adding transient with one month refresh
 	 */
 	function shades_dynamic_copyright( $args = '' ) {
-		$initialize_values = array(
-			'start'      => '',
-			'copy_years' => '',
-			'url'        => '',
-			'end'        => ''
+
+		$defaults = array(
+			'start'             => '',
+			'copy_years'        => '',
+			'url'               => '',
+			'end'               => '',
+			'transient_refresh' => 2592000
 		);
-		$args              = wp_parse_args( $args, $initialize_values );
+
+		$args = wp_parse_args( $args, $defaults );
 
 		/** Initialize the output variable to empty */
 		$output = '';
 
 		/** Start common copyright notice */
-		empty( $args['start'] ) ? $output .= sprintf( __( 'Copyright', 'shades' ) ) : $output .= $args['start'];
+		empty( $args['start'] )
+			? $output .= sprintf( __( 'Copyright', 'shades' ) )
+			: $output .= $args['start'];
 
 		/** Calculate Copyright Years; and, prefix with Copyright Symbol */
 		if ( empty( $args['copy_years'] ) ) {
-			/** Get all posts */
-			$all_posts = get_posts( 'post_status=publish&order=ASC' );
-			/** Get first post */
-			$first_post = $all_posts[0];
-			/** Get date of first post */
-			$first_date = $first_post->post_date_gmt;
+
+			/** Take some of the load off with a transient of the first post */
+			if ( ! get_transient( 'shades_copyright_first_post' ) ) {
+
+				/** @var $all_posts - retrieve all published posts in ascending order */
+				$all_posts = get_posts( 'post_status=publish&order=ASC' );
+				/** @var $first_post - get the first post */
+				$first_post = $all_posts[0];
+
+				/** Set the transient (default: one month) */
+				set_transient( 'shades_copyright_first_post', $first_post, $args['transient_refresh'] );
+
+			}
+			/** End if - no transient set */
+
+			/** @var $first_date - get the date in a standardized format */
+			$first_date = get_transient( 'shades_copyright_first_post' )->post_date_gmt;
+
 			/** First post year versus current year */
 			$first_year = substr( $first_date, 0, 4 );
 			if ( $first_year == '' ) {
 				$first_year = date( 'Y' );
 			}
 			/** End if - first year */
+
 			/** Add to output string */
 			if ( $first_year == date( 'Y' ) ) {
 				/** Only use current year if no posts in previous years */
@@ -97,8 +129,11 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 				$output .= ' &copy; ' . $first_year . "-" . date( 'Y' );
 			}
 			/** End if - first year */
+
 		} else {
+
 			$output .= ' &copy; ' . $args['copy_years'];
+
 		}
 		/** End if - empty copy years */
 
@@ -383,14 +418,18 @@ if ( ! function_exists( 'shades_wp_title' ) ) {
 	 * @return  string - new title text
 	 */
 	function shades_wp_title( $old_title, $sep, $sep_location ) {
+
 		global $page, $paged;
+
 		/** Set initial title text */
 		$shades_title_text = $old_title . get_bloginfo( 'name' );
+
 		/** Add wrapping spaces to separator character */
 		$sep = ' ' . $sep . ' ';
 
 		/** Add the blog description (tagline) for the home/front page */
 		$site_tagline = get_bloginfo( 'description', 'display' );
+
 		if ( $site_tagline && ( is_home() || is_front_page() ) ) {
 			$shades_title_text .= "$sep$site_tagline";
 		}
