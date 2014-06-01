@@ -1,5 +1,5 @@
 === Shades ===
-Changelog as of May 31, 2014
+Changelog as of June 1, 2014
 == 2.2.1 ==
 = Code =
 * Additional code formatting
@@ -9,6 +9,7 @@ Changelog as of May 31, 2014
 * Corrected minor typos
 * Updated default Calendar Widget styles
 * Updated default Search Widget styles
+* Updated `post-password-form` styles
 
 = Miscellaneous =
 * Fixed `@internal` link reference to the WordPress Theme repository

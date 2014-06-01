@@ -40,10 +40,11 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Moved to more complete current browser only support (expect minimum IE9+)
  *
  * @version	2.2.1
- * @date	May 31, 2014
+ * @date	June 1, 2014
  * Corrected typos for `comment_text_1` and `comment_text_2`
  * Updated default Calendar Widget styles
  * Updated default Search Widget styles
+ * Updated `post-password-form` styles
  */
 
 /**
@@ -935,6 +936,7 @@ pre {
 }
 
 #wp-calendar #today {
+	color: #000;
 	font-style: italic;
 	font-weight: bold;
 }
@@ -1309,6 +1311,12 @@ textarea#text_area {
 
 #text_field {
 	width: 98%;
+}
+
+form.post-password-form input {
+	line-height: 19px;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 /* --- Post Formats - Aside --- */
