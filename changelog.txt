@@ -14,6 +14,7 @@ Changelog as of June 1, 2014
 = Miscellaneous =
 * Fixed `@internal` link reference to the WordPress Theme repository
 * Update copyright years
+* Updated `screenshot.png` to current 880x660 standard
 
 /** ------------------------------------------------------------------------- */
 == 2.2 ==
