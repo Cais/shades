@@ -1,6 +1,6 @@
 === Shades ===
-Changelog as of June 1, 2014
-== 2.2.1 ==
+Changelog as of June 2, 2014
+== 2.2.1.1 ==
 = Code =
 * Additional code formatting
 * Improve `shades_dynamic_copyright` performance impact by adding transient with one month refresh
