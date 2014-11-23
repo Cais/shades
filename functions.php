@@ -12,9 +12,6 @@
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2014, Edward Caissie
  *
- * @version     2.0
- * @date        December 3, 2012
- *
  * @version     2.1
  * @date        March 4, 2013
  * Refactored code formatting and code block termination comments
@@ -22,21 +19,45 @@
  * @version     2.1.1
  * @date        April 22, 2013
  * Added 'SHADES_HOME_URL' constant
+ *
+ * @version     2.3
+ * @date        November 23, 2014
+ * Added function wrapper for widget area registration and hooked it into `widget_init` action
  */
 
 /** Define constant for easier updating */
 define( 'SHADES_HOME_URL', 'BuyNowShop.com' );
 
-/** Widget definition */
-register_sidebars(
-	2, array(
-		'description'   => __( 'This is a widget area in the Theme sidebar', 'shades' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div><!-- .widget -->',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	)
-);
+
+if ( ! function_exists( 'shades_widget_areas' ) ) {
+	/**
+	 * Widget Areas
+	 * Registers widget areas
+	 *
+	 * @package  Shades
+	 * @since    2.3
+	 *
+	 * @uses     register_sidebars
+	 *
+	 * @internal Hooked into the `widget_init` action
+	 */
+	function shades_widget_areas() {
+		/** Widget definition */
+		register_sidebars(
+			2, array(
+				'description'   => __( 'This is a widget area in the Theme sidebar', 'shades' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div><!-- .widget -->',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+	}
+	/** End functions - widget areas */
+}
+/** End if - function exists */
+add_action( 'widget_init', 'shades_widget_areas' );
+
 
 if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 	/**

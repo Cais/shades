@@ -3,6 +3,7 @@ Changelog as of November 23, 2014
 == 2.3 ==
 = Code =
 * Added filter to allow supported post-formats to be easily extended
+* Added function wrapper for widget area registration and hooked it into `widget_init` action
 * Changed `shades-<post-format>.php` templates to `content-<post-format>.php`
 * Removed unused parameter from `shades_wp_title`* Removed unused parameter from `shades_wp_title`
 
