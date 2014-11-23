@@ -49,7 +49,7 @@ function comment_add_microid( $classes ) {
 	$c_url   = get_comment_author_url();
 
 	if ( ! empty( $c_email ) && ! empty( $c_url ) ) {
-		$microid = 'microid-mailto+http:sha1:' . sha1( sha1( 'mailto:' . $c_email ) . sha1( $c_url ) );
+		$microid   = 'microid-mailto+http:sha1:' . sha1( sha1( 'mailto:' . $c_email ) . sha1( $c_url ) );
 		$classes[] = $microid;
 	}
 

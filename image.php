@@ -49,13 +49,13 @@ get_header(); ?>
 				/** Link to original image with size displayed */
 				if ( $shades_image_meta['width'] && $shades_image_meta['height'] ) {
 					echo '<div class="right">'
-						 . sprintf(
+					     . sprintf(
 							__( '%1$s (Size: %2$s by %3$s)', 'shades' ),
 							'<a href="' . wp_get_attachment_url( $post->ID ) . '">' . sprintf( __( 'Original image', 'shades' ) ) . '</a>',
 							$shades_image_meta['width'] . 'px',
 							$shades_image_meta['height'] . 'px'
 						)
-						 . '</div>';
+					     . '</div>';
 				}
 				/** End if - image meta - width / height */
 
@@ -76,7 +76,7 @@ get_header(); ?>
 				/** Creation timestamp in end-user settings format */
 				if ( $shades_image_meta['image_meta']['created_timestamp'] ) {
 					echo '<br />'
-						 . sprintf(
+					     . sprintf(
 							__( 'Created (timestamp): %1$s', 'shades' ),
 							get_the_time( get_option( 'date_format' ), $shades_image_meta['image_meta']['created_timestamp'] )
 						);
@@ -93,8 +93,8 @@ get_header(); ?>
 				if ( $shades_image_meta['image_meta']['shutter_speed'] ) {
 					echo ' ';
 					echo '<br />'
-						 . __( 'Shutter speed:', 'shades' )
-						 . ' ';
+					     . __( 'Shutter speed:', 'shades' )
+					     . ' ';
 					/** Shutter Speed Handler - "sec" is used as the short-form for time measured in seconds */
 					if ( ( 1 / $shades_image_meta['image_meta']['shutter_speed'] ) > 1 ) {
 						echo "1/";

@@ -409,8 +409,8 @@ if ( ! function_exists( 'shades_wp_title' ) ) {
 	 * @param   string $sep          - separator character
 	 * @param   string $sep_location - left|right - separator placement in relationship to title
 	 *
-	 * @uses    (global) $page
-	 * @uses    (global) $paged
+	 * @uses             (global) $page
+	 * @uses             (global) $paged
 	 * @uses             get_bloginfo
 	 * @uses             is_front_page
 	 * @uses             is_home
@@ -457,7 +457,7 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
 	 * If the post time and the last modified time are different display
 	 * modified date and time
 	 *
-	 * @uses    (global) $post
+	 * @uses             (global) $post
 	 * @uses             get_post_meta
 	 * @uses             get_userdata
 	 * @uses             get_the_time

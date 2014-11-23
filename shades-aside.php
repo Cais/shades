@@ -74,8 +74,8 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 	<?php
 	wp_link_pages(
 		array(
-			'before' => '<p><strong>Pages:</strong> ',
-			'after' => '</p>',
+			'before'         => '<p><strong>Pages:</strong> ',
+			'after'          => '</p>',
 			'next_or_number' => 'number'
 		)
 	);
