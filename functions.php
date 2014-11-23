@@ -22,7 +22,7 @@
  *
  * @version     2.3
  * @date        November 23, 2014
- * Added function wrapper for widget area registration and hooked it into `widget_init` action
+ * Added function wrapper for widget area registration and hooked it into `widgets_init` action
  */
 
 /** Define constant for easier updating */
@@ -56,7 +56,7 @@ if ( ! function_exists( 'shades_widget_areas' ) ) {
 	/** End functions - widget areas */
 }
 /** End if - function exists */
-add_action( 'widget_init', 'shades_widget_areas' );
+add_action( 'widgets_init', 'shades_widget_areas' );
 
 
 if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
