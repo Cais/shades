@@ -425,10 +425,11 @@ if ( ! function_exists( 'shades_wp_title' ) ) {
 	 * @link    https://gist.github.com/1410493
 	 *
 	 * @param   string $old_title - default title text
-	 * @param   string $sep - separator character
+	 * @param   string $sep       - separator character
 	 *
 	 * @uses    (GLOBAL) $page
 	 * @uses    (GLOBAL) $paged
+	 * @uses    __
 	 * @uses    get_bloginfo
 	 * @uses    is_front_page
 	 * @uses    is_home
@@ -470,7 +471,7 @@ if ( ! function_exists( 'shades_wp_title' ) ) {
 	/** End function - wp title */
 }
 /** End if - function exists */
-add_filter( 'wp_title', 'shades_wp_title', 10, 3 );
+add_filter( 'wp_title', 'shades_wp_title', 10, 2 );
 
 
 if ( ! function_exists( 'shades_modified_post' ) ) {
