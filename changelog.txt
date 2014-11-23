@@ -4,6 +4,7 @@ Changelog as of November 23, 2014
 = Code =
 * Added filter to allow supported post-formats to be easily extended
 * Changed `shades-<post-format>.php` templates to `content-<post-format>.php`
+* Removed unused parameter from `shades_wp_title`* Removed unused parameter from `shades_wp_title`
 
 = CSS =
 = Miscellaneous =

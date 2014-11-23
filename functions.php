@@ -418,25 +418,28 @@ if ( ! function_exists( 'shades_wp_title' ) ) {
 	 * Shades WP Title
 	 * Utilizes the `wp_title` filter to add text to the default output
 	 *
-	 * @package          Shades
-	 * @since            1.9
+	 * @package Shades
+	 * @since   1.9
 	 *
-	 * @link             http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_title
-	 * @link             https://gist.github.com/1410493
+	 * @link    http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_title
+	 * @link    https://gist.github.com/1410493
 	 *
-	 * @param   string $old_title    - default title text
-	 * @param   string $sep          - separator character
-	 * @param   string $sep_location - left|right - separator placement in relationship to title
+	 * @param   string $old_title - default title text
+	 * @param   string $sep - separator character
 	 *
-	 * @uses             (global) $page
-	 * @uses             (global) $paged
-	 * @uses             get_bloginfo
-	 * @uses             is_front_page
-	 * @uses             is_home
+	 * @uses    (GLOBAL) $page
+	 * @uses    (GLOBAL) $paged
+	 * @uses    get_bloginfo
+	 * @uses    is_front_page
+	 * @uses    is_home
 	 *
 	 * @return  string - new title text
+	 *
+	 * @version 2.3
+	 * @date    November 23, 2014
+	 * Removed unused parameter
 	 */
-	function shades_wp_title( $old_title, $sep, $sep_location ) {
+	function shades_wp_title( $old_title, $sep ) {
 
 		global $page, $paged;
 
