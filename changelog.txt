@@ -2,6 +2,7 @@
 Changelog as of November 23, 2014
 == 2.3 ==
 = Code =
+* Added filter to allow supported post-formats to be easily extended
 * Changed `shades-<post-format>.php` templates to `content-<post-format>.php`
 
 = CSS =

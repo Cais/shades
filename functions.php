@@ -219,6 +219,24 @@ if ( ! function_exists( 'shades_setup' ) ) {
 	 * Shades Setup
 	 * Defines for core functionality supported by theme
 	 *
+	 * @package Shades
+	 * @since   1.0
+	 *
+	 * @uses    __
+	 * @uses    add_action
+	 * @uses    add_editor_style
+	 * @uses    add_theme_support
+	 * @uses    apply_filters
+	 * @uses    apply_filters_ref_array
+	 * @uses    get_template_directory_uri
+	 * @uses    home_url
+	 * @uses    is_front_page
+	 * @uses    is_home
+	 * @uses    load_theme_textdomain
+	 * @uses    register_nav_menu
+	 * @uses    wp_list_pages
+	 * @uses    wp_nav_menu
+	 *
 	 * @version 1.8
 	 * @date    April 18, 2012
 	 * Addressed call to deprecated function `add_custom_background`
@@ -226,6 +244,10 @@ if ( ! function_exists( 'shades_setup' ) ) {
 	 * @version 2.0
 	 * @date    December 3, 2012
 	 * Added classes to inline glyph span styles and moved to style.css
+	 *
+	 * @version 2.3
+	 * @date    November 23, 2014
+	 * Added filter to allow supported post-formats to be easily extended
 	 */
 	function shades_setup() {
 		/** This theme uses post thumbnails */
@@ -240,16 +262,14 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			)
 		);
 
-
 		/** Add post-formats support */
 		add_theme_support(
-			'post-formats', array(
+			'post-formats', apply_filters_ref_array( 'shades-post-formats', array(
 				'aside',
 				'quote',
 				'status'
-			)
+			) )
 		);
-
 
 		/** Assign glyphs via unique functions so they can be over-written in Child-Theme */
 		if ( ! function_exists( 'shades_glyph_aside' ) ) {
