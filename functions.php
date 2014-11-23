@@ -213,7 +213,6 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 
 
 /** Tell WordPress to run shades_setup() when the 'after_setup_theme' hook is run. */
-add_action( 'after_setup_theme', 'shades_setup' );
 if ( ! function_exists( 'shades_setup' ) ) {
 	/**
 	 * Shades Setup
@@ -227,7 +226,6 @@ if ( ! function_exists( 'shades_setup' ) ) {
 	 * @uses    add_editor_style
 	 * @uses    add_theme_support
 	 * @uses    apply_filters
-	 * @uses    apply_filters_ref_array
 	 * @uses    get_template_directory_uri
 	 * @uses    home_url
 	 * @uses    is_front_page
@@ -264,7 +262,7 @@ if ( ! function_exists( 'shades_setup' ) ) {
 
 		/** Add post-formats support */
 		add_theme_support(
-			'post-formats', apply_filters_ref_array( 'shades-post-formats', array(
+			'post-formats', apply_filters( 'shades-post-formats', array(
 				'aside',
 				'quote',
 				'status'
@@ -412,6 +410,7 @@ if ( ! function_exists( 'shades_setup' ) ) {
 
 }
 /** End if - function exists */
+add_action( 'after_setup_theme', 'shades_setup' );
 
 
 if ( ! function_exists( 'shades_wp_title' ) ) {
