@@ -34,7 +34,7 @@ get_header(); ?>
 
 					while ( have_posts() ) {
 						the_post();
-						get_template_part( 'shades', get_post_format() );
+						get_template_part( 'content', get_post_format() );
 						comments_template();
 					}
 					/** End while - have posts */

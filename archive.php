@@ -44,7 +44,7 @@ get_header(); ?>
 						the_post();
 						if ( get_post_format() !== ( 'aside' || 'quote' || 'status' ) ) {
 
-							get_template_part( 'shades', get_post_format() );
+							get_template_part( 'content', get_post_format() );
 
 						} else {
 							?>

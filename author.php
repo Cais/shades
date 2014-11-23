@@ -93,7 +93,7 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 						the_post();
 						$count ++;
 						if ( $count == 1 ) {
-							get_template_part( 'shades', get_post_format() );
+							get_template_part( 'content', get_post_format() );
 						} else {
 							?>
 							<div <?php post_class(); ?>
