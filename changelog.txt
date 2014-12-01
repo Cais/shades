@@ -9,6 +9,8 @@ Changelog as of November 30, 2014
 * Use consistent code constructs in `shades_theme_version`
 
 = CSS =
+* Changed from YUI Reset to Normalize.css
+
 = Miscellaneous =
 * Added `Text Domain` to `style.css` header block
 
