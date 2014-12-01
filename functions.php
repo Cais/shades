@@ -195,6 +195,10 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 	 * @date    April 22, 2013
 	 * Added 'SHADES_HOME_URL' constant in place of the hardcoded domain URL
 	 * Re-Added Theme Version output for Parent-Theme usage
+	 *
+	 * @version 2.3
+	 * @date    November 30, 2014
+	 * Use consistent code constructs
 	 */
 	function shades_theme_version() {
 		/** @var $active_theme_data - array object containing the current theme's data */
@@ -204,13 +208,13 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 
 			/** @var $parent_theme_data - array object containing the Parent Theme's data */
 			$parent_theme_data = $active_theme_data->parent();
-			/** @noinspection PhpUndefinedMethodInspection - IDE commentary */
+
 			printf(
 				__( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
-				$active_theme_data['Name'],
-				$active_theme_data['Version'],
-				$parent_theme_data['Name'],
-				$parent_theme_data['Version'],
+				$active_theme_data->get( 'Name' ),
+				$active_theme_data->get( 'Version' ),
+				$parent_theme_data->get( 'Name' ),
+				$parent_theme_data->get( 'Version' ),
 				'<a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>'
 			);
 
