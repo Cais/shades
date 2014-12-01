@@ -668,11 +668,11 @@ q:before, q:after {
 }
 
 ol {
-	list-style: decimal inside;
+	/** list-style: decimal inside; */
 }
 
 ul {
-	list-style: disc inside;
+	/** list-style: disc inside; */
 }
 
 li {
@@ -929,6 +929,7 @@ ul.nav-menu ul.sub-menu li, ul.nav-menu ul.children li, ul.nav-menu ul, ul.nav-m
 	font-size: 183%;
 	font-weight: normal;
 	line-height: normal;
+	margin-top: 0;
 	padding-bottom: 2px;
 }
 
@@ -994,8 +995,8 @@ span.no-title {
 }
 
 .post ol, .post ul {
-	margin-bottom: 15px;
-	margin-left: 35px;
+	/** margin-bottom: 15px; */
+	/** margin-left: 35px; */
 }
 
 .post dl {
@@ -1150,6 +1151,7 @@ pre {
 
 #subcolumn ul {
 	list-style: none none;
+	padding: 0;
 }
 
 .form-input {
