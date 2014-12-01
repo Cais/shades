@@ -9,6 +9,7 @@ Changelog as of November 23, 2014
 
 = CSS =
 = Miscellaneous =
+* Added `Text Domain` to `style.css` header block
 
 /** ------------------------------------------------------------------------- */
 == 2.2.1.1 ==
