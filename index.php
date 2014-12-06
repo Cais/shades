@@ -9,7 +9,6 @@
  * Have you found its Easter egg?
  *
  * @package        Shades
- * @since          1.0
  *
  * @link           http://buynowshop.com/themes/shades/
  * @link           https://github.com/Cais/shades/
@@ -19,6 +18,7 @@
  * @internal       Tested up to WordPress version 4.1
  *
  * @version        2.3
+ * @date           December 2014
  * @author         Edward Caissie <edward.caissie@gmail.com>
  * @copyright      Copyright (c) 2009-2014, Edward Caissie
  *
@@ -41,18 +41,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @version        2.1.1
- * @date           May 5, 2013
- *
- * @version        2.2
- * @date           December 2013
- *
- * @version        2.2.1.1
- * @date           June 2014
- *
- * @version        2.3
- * @dare           ...
  */
 
 get_header(); ?>
