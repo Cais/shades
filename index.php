@@ -2,9 +2,11 @@
 /**
  * Shades
  * A simple clean theme framework to work from, designed ideally for light
- * colored backgrounds and easily adapted to darker layouts. Now with Threaded
- * Comments and sticky post support!<em>Please read the included changelog.txt
- * file for the latest change details.
+ * colored backgrounds and easily adapted to darker layouts. Shades has threaded
+ * comments, sticky post support, custom background and menus as well as built
+ * in support for the quotes, asides, and status post-formats. Enjoy!
+ *
+ * Have you found its Easter egg?
  *
  * @package        Shades
  * @since          1.0
