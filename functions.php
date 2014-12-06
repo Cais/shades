@@ -21,8 +21,9 @@
  * Added 'SHADES_HOME_URL' constant
  *
  * @version     2.3
- * @date        November 23, 2014
+ * @date        December 8, 2014
  * Added function wrapper for widget area registration and hooked it into `widgets_init` action
+ * Added BNS Login support for dashicons
  */
 
 /** Define constant for easier updating */
@@ -631,3 +632,7 @@ function shades_show_featured_image( $size ) {
 if ( ! isset( $content_width ) ) {
 	$content_width = 630;
 } /** End if - content width */
+
+
+/** Changes BNS Login to use Dashicons */
+add_filter( 'bns_login_dashed_set', '__return_true' );
