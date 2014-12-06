@@ -6,6 +6,7 @@ Changelog as of December 8, 2014
 * Added function wrapper for widget area registration and hooked it into `widgets_init` action
 * Added BNS Login support for dashicons
 * Changed `shades-<post-format>.php` templates to `content-<post-format>.php`
+* Fixed standard content not displaying post categories
 * Removed unused parameter from `shades_wp_title`
 * Use consistent code constructs in `shades_theme_version`
 
