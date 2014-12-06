@@ -48,8 +48,9 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Updated `post-password-form` styles
  *
  * @version	2.3
- * @date	November 30, 2014
- * Changed from YUI Reset to Normalize.css
+ * @date	December 6, 2014
+ * Changed from YUI Reset to normalize.css
+ * Minor tweaks to theme styles to adjust for normalize.css
  */
 
 /**
@@ -606,6 +607,8 @@ em strong {
 h1, h2, h3, h4, h5, h6 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	line-height: normal;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 h1 {
@@ -767,9 +770,10 @@ sup {
 }
 
 /* Tagline */
-#header-center p {
+#header-center > p {
 	color: #000;
 	font-size: 150%;
+	margin-top: 0;
 	text-align: center;
 }
 
@@ -1817,6 +1821,11 @@ span.status-glyph {
 }
 
 /* --- End: Post Formats --- */
+
+/** Make sure Twitter embeds are not fixed width */
+.post .twitter-tweet-rendered {
+	width: 100% !important;
+}
 
 /* WordPress specific plugins and other miscellaneous items */
 img#wpstats {
