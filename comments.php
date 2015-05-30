@@ -10,7 +10,7 @@
  * @link        http://wordpress.org/themes/shades/
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2014, Edward Caissie
+ * @copyright   Copyright (c) 2009-2015, Edward Caissie
  *
  * @version     2.1
  * @date        March 4, 2013
@@ -21,10 +21,8 @@
 if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
 	die ( __( 'Please do not load this page directly. Thanks!', 'shades' ) );
 }
-/** End if - no direct loading */
 
-if ( post_password_required() ) {
-	?>
+if ( post_password_required() ) { ?>
 
 	<p class="nocomments">
 		<?php _e( 'This post is password protected. Enter the password to view comments.', 'shades' ); ?>
@@ -33,7 +31,6 @@ if ( post_password_required() ) {
 	<?php return;
 
 }
-/** End if - post password required */
 
 /**
  * Comment Add microID
@@ -45,21 +42,21 @@ if ( post_password_required() ) {
  * @return  array - CSS classes plus microID as a class
  */
 function comment_add_microid( $classes ) {
+
 	$c_email = get_comment_author_email();
 	$c_url   = get_comment_author_url();
 
 	if ( ! empty( $c_email ) && ! empty( $c_url ) ) {
+
 		$microid   = 'microid-mailto+http:sha1:' . sha1( sha1( 'mailto:' . $c_email ) . sha1( $c_url ) );
 		$classes[] = $microid;
-	}
 
-	/** End if - not empty */
+	}
 
 	return $classes;
 
 }
 
-/** End function - comment add micro ID */
 add_filter( 'comment_class', 'comment_add_microid' );
 
 
@@ -73,16 +70,20 @@ add_filter( 'comment_class', 'comment_add_microid' );
  * @return  array - CSS classes plus generated class based on WordPress user ID
  */
 function comment_add_userid( $classes ) {
+
 	global $comment;
 
 	if ( $comment->user_id == 1 ) {
+
 		/** Super Administrator */
 		$userid = "administrator user-id-1";
+
 	} else {
+
 		/** All other users - NB: user-id-0 -> non-registered user */
 		$userid = "user-id-" . ( $comment->user_id );
+
 	}
-	/** End if - user ID */
 
 	$classes[] = $userid;
 
@@ -90,39 +91,40 @@ function comment_add_userid( $classes ) {
 
 }
 
-/** End function - comment add user ID */
 add_filter( 'comment_class', 'comment_add_userid' ); ?>
 
 
 <div id="comments-main">
 
-	<?php
-	/** Show the comments */
-	if ( have_comments() ) {
-		?>
+	<?php /** Show the comments */
+	if ( have_comments() ) { ?>
 
 		<h4 id="comments">
 			<?php comments_number( __( 'No Comments', 'shades' ), __( 'One Comment', 'shades' ), __( '% Comments', 'shades' ) ); ?>
 		</h4>
 
 		<ul class="commentlist" id="singlecomments">
+
 			<?php wp_list_comments(
 				array(
 					'avatar_size' => 60,
 					'reply_text'  => __( '&raquo; Reply to this Comment &laquo;', 'shades' )
 				)
 			); ?>
+
 		</ul><!-- commentlist -->
 
 		<div class="navigation">
+
 			<div class="alignleft"><?php previous_comments_link() ?></div>
 			<div class="alignright"><?php next_comments_link() ?></div>
+
 		</div><!-- navigation -->
 
-	<?php
-	} else {
+	<?php } else {
 
 		global $post;
+
 		/** This is displayed if there are no comments so far */
 		if ( 'open' == $post->comment_status ) {
 
@@ -133,10 +135,8 @@ add_filter( 'comment_class', 'comment_add_userid' ); ?>
 			/** Comments are closed */
 
 		}
-		/** End if - comments open */
 
 	}
-	/** End if - have comments */
 
 	comment_form(); ?>
 

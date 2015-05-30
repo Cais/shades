@@ -10,7 +10,7 @@
  * @link           http://wordpress.org/themes/shades/
  *
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2014, Edward Caissie
+ * @copyright      Copyright (c) 2009-2015, Edward Caissie
  *
  * @version        2.1
  * @date           March 6, 2013
@@ -23,15 +23,12 @@
  * @version        2.1.2
  * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
- */
-?>
+ */ ?>
 
-<div <?php
-$shades_post_title = get_the_title();
+<div <?php $shades_post_title = get_the_title();
 if ( empty( $shades_post_title ) ) {
 	post_class( 'no-title' );
 }
-/** End if - empty shades title */
 post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="transparent glyph"><?php shades_glyph_status(); ?></div>
@@ -48,8 +45,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="postdata">
 
-		<?php
-		if ( is_home() || is_front_page() ) {
+		<?php if ( is_home() || is_front_page() ) {
 
 			printf(
 				__( '%1$s by %2$s on %3$s in %4$s', 'shades' ),
@@ -63,8 +59,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 
 		} else {
 
-			printf(
-				__( 'Posted by %1$s on %2$s @ %3$s in %4$s', 'shades' ),
+			printf( __( 'Posted by %1$s on %2$s @ %3$s in %4$s', 'shades' ),
 				get_the_author(),
 				get_the_time( get_option( 'date_format' ) ),
 				get_the_time( get_option( 'time_format' ) ),
@@ -72,7 +67,6 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 			);
 
 		}
-		/** End if - is home */
 
 		the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
 		edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
@@ -89,7 +83,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php wp_link_pages(
 		array(
-			'before'         => '<p><strong>Pages:</strong> ',
+			'before'         => '<p><strong>' . __( 'Pages:', 'shades' ) . '</strong> ',
 			'after'          => '</p>',
 			'next_or_number' => 'number'
 		)

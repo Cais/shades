@@ -10,7 +10,7 @@
  * @link           http://wordpress.org/themes/shades/
  *
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2014, Edward Caissie
+ * @copyright      Copyright (c) 2009-2015, Edward Caissie
  *
  * @version        2.1
  * @date           March 6, 2013
@@ -23,15 +23,13 @@
  * @version        2.1.2
  * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
- */
-?>
+ */ ?>
 
-<div <?php
-$shades_post_title = get_the_title();
+<div <?php $shades_post_title = get_the_title();
 if ( empty( $shades_post_title ) ) {
 	post_class( 'no-title' );
 }
-/** End if - empty post title */
+
 post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="transparent glyph"><?php shades_glyph_quote(); ?></div>
@@ -48,8 +46,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="postdata">
 
-		<?php
-		printf(
+		<?php printf(
 			__( '%1$s by %2$s on %3$s in %4$s', 'shades' ),
 			shades_use_posted(),
 			get_the_author(),
@@ -57,11 +54,9 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 			get_the_category_list( ', ' )
 		);
 
-		if ( is_home() || is_front_page() ) {
-			?>
+		if ( is_home() || is_front_page() ) { ?>
 			<br /><?php comments_popup_link( __( ' with No Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( ' with Comments closed', 'shades' ) );
 		}
-		/** End if - is h ome */
 
 		the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
 		edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
@@ -69,26 +64,23 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 	</div>
 	<!-- postdata -->
 
-	<?php
-	shades_show_featured_image( 'full' );
+	<?php shades_show_featured_image( 'full' );
 	the_content( __( 'Read more... ', 'shades' ) ); ?>
 
 	<div class="clear"></div>
 	<!-- For inserted media at the end of the post -->
 
-	<?php
-	wp_link_pages(
+	<?php wp_link_pages(
 		array(
-			'before'         => '<p><strong>Pages:</strong> ',
+			'before'         => '<p><strong>' . __( 'Pages:', 'shades' ) . '</strong> ',
 			'after'          => '</p>',
 			'next_or_number' => 'number'
 		)
 	);
-	if ( is_single() ) {
-		?>
-		<div
-			id="author_link"><?php _e( '... other posts by ', 'shades' ); ?><?php the_author_posts_link(); ?></div>
-	<?php } /** End if - is single */ ?>
+
+	if ( is_single() ) { ?>
+		<div id="author_link"><?php _e( '... other posts by ', 'shades' ); ?><?php the_author_posts_link(); ?></div>
+	<?php } ?>
 
 	<p class="tags"><?php the_tags(); ?></p>
 
