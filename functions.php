@@ -631,7 +631,8 @@ function shades_show_featured_image( $size ) {
 /** Set the content width based on the theme's design and stylesheet, see #the-loop element in style.css */
 if ( ! isset( $content_width ) ) {
 	$content_width = 630;
-} /** End if - content width */
+}
+/** End if - content width */
 
 
 /** Changes BNS Login to use Dashicons */

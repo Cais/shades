@@ -1,12 +1,13 @@
 ==== Readme.txt for Shades Theme ====
-* Last revised November 30, 2014
+* Last revised May 30, 2015
 
-=== Topics ===
+=== Contents ===
 * FAQ
+* Changelog
 * Notes
 * Review Tickets
 
-== FAQ ==
+=== FAQ ===
 Q: Why did my theme stop working in older browsers?
 A: I chose to move to more consistent current browser only support (with an expected minimum IE9+ as the benchmark as of the end of 2013). Older browsers should be updated or replaced.
 
@@ -25,10 +26,308 @@ Q: Why does `the_shortcode` functionality appear to not work?
 A: See core trac ticket: http://core.trac.wordpress.org/ticket/18632
 If you are using the default permalink structure; or if you do not have the 'JetPack' plugin, or 'WordPress Stats' (included with JetPack) plugin, installed you may experience problems with `the_shortcode` not behaving as expected.
 
-== Notes ==
+=== Changelog ===
+Changelog as of May 30, 2015
+== 2.4 ==
+= Code =
+* Minor code formatting changes
+
+= CSS =
+
+= Miscellaneous =
+* Moved `changelog.txt` into `readme.txt`
+
+/** ------------------------------------------------------------------------- */
+== 2.3 ==
+= Code =
+* Added filter to allow supported post-formats to be easily extended
+* Added function wrapper for widget area registration and hooked it into `widgets_init` action
+* Added BNS Login support for dashicons
+* Changed `shades-<post-format>.php` templates to `content-<post-format>.php`
+* Fixed standard content not displaying post categories
+* Removed unused parameter from `shades_wp_title`
+* Use consistent code constructs in `shades_theme_version`
+
+= CSS =
+* Changed from YUI Reset to normalize.css version 3.0.2
+
+= Miscellaneous =
+* Added `Text Domain` to `style.css` header block
+* Updated the theme description
+
+/** ------------------------------------------------------------------------- */
+== 2.2.1.1 ==
+= Code =
+* Additional code formatting
+* Improve `shades_dynamic_copyright` performance impact by adding transient with one month refresh
+
+= CSS =
+* Corrected minor typos
+* Updated default Calendar Widget styles
+* Updated default Search Widget styles
+* Updated `post-password-form` styles
+
+= Miscellaneous =
+* Fixed `@internal` link reference to the WordPress Theme repository
+* Update copyright years
+* Updated `screenshot.png` to current 880x660 standard
+
+/** ------------------------------------------------------------------------- */
+== 2.2 ==
+= Code =
+* Code reformatting to better reflect WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
+* Removed default `Search` from sidebar
+
+= CSS =
+* Clean up `border-radius` property usages
+* Removed the `zoom: 1` property usage
+* Removed rule over-writing themselves in elements
+* Moved to more complete current browser only support (expect minimum IE9+)
+
+= Miscellaneous
+* i18n update for `Permalink to: ` phrases
+* Added to `readme.txt` - Q: Why did my theme stop working in older browsers?
+
+/** ------------------------------------------------------------------------- */
+== 2.1.1 ==
+= Code =
+* Added `SHADES_HOME_URL` constant in place of the hardcoded domain URL
+* Added `shades_show_featured_image( $size )` for DRY purposes
+* Fixed featured image being used in post overflowing content area
+* Re-Added Theme Version output for Parent-Theme usage
+
+= CSS =
+* Adjusted `img` and `caption` properties
+
+/** ------------------------------------------------------------------------- */
+== 2.1 ==
+= Code =
+* Added 'search.php' template file
+* Refactored code formatting and code block termination comments
+* Refactored post meta to be more i18n compatible
+
+= CSS =
+* Added additional styles for default widgets
+
+= Miscellaneous =
+* Change 'style.css' header texts to reflect core trac ticket #16868
+
+/** ------------------------------------------------------------------------- */
+== Version 2.0 ==
+= CODE =
+* Change conditional to show "Threaded Comments" if they are open of closed.
+* Refactored conditional checks for "author credits with copyright details"
+* Removed deprecated call to `get_theme_data`
+
+= CSS =
+* Added classes to inline glyph span styles and moved to style.css
+* Added 'editor-style.css' file
+
+= Miscellaneous =
+* General code clean-up (typos, etc.)
+
+/** ------------------------------------------------------------------------- */
+== Version 1.9 ==
+= CODE =
+* Added 'image.php' template
+* Added "custom background" support
+* Enqueue threaded comments script in 'functions.php'
+* Update usage of `wp_title`
+
+= Miscellaneous =
+* With the addition of the custom background support, the theme now requires WordPress 3.4 to work correctly
+
+/** ------------------------------------------------------------------------- */
+== Version 1.8 ==
+= CODE =
+* Added doc blocks and improved overall code quality and structure
+* Added link to modified author's post archive
+* Added conditionals to only show website URL (with email) if the address is found in the user profile; and only show biography if it exists on 'author.php' output
+* Addressed call to deprecated function `get_userdatabylogin`
+* Addressed calls to deprecated function `get_theme_data`
+* Addressed call to deprecated function `add_custom_background`
+* Renamed `bns_dynamic_copyright` to `shades_dynamic_copyright`
+* Renamed `bns_theme_version` to `shades_theme_version`
+* Replaced navigation with call to `get_template_part( 'shades-navigation' )`
+* Replaced output if no posts are returned by the_Loop with a call to get_template_part( 'shades-no-posts' )
+
+= CSS =
+* Added "commenter classes" as defined in 'author.php'
+* Added 'no-title' class to post classes if `get_the_title` is empty
+* Added 'widget_tag_cloud' element
+* Adjusted 'sticky' post related styles
+* Adjusted `gallery` `max-width` for better aesthetics
+
+= Miscellaneous =
+* Adoption of a 'markdown' / 'phpdoc' style in the changelog (this file)
+* Added Review Ticket section to 'readme.txt'
+
+/** ------------------------------------------------------------------------- */
+=== Version 1.7 ===
+== Public ==
+* released September 11, 2011
+* published September 13, 2011
+
+== CODE Changes ==
+* added support for post formats: aside, quote, status
+* added the `shades` loop template
+* added theme page for support and a contextual-help readme
+* NB: adding the loop template and support for post formats affected the following template files: archive, author, index, page, single
+* added `shades_used_posted` function to provide a link to the single view of posts without titles
+* updated `BNS_Dynamic_Copyright` function
+* updated `BNS_Theme_Version` function
+* updated WordPress Required Version to 3.1 to implement post-formats (NB: Theme may still function correctly down to version 3.0)
+* removed featured image thumbnail from the single view
+* removed direct IE6 support
+* removed `show_avatar` function
+* removed `shades_page_number` function
+
+== CSS Changes ==
+* reduced vertical distance between posts by half
+* modified style for tag elements; add bottom-right border to help define the post they are attached to
+* set base font-size to 100%; updated most other font-sizes to use percentages creating an over-all easier to read text
+* addressed image thumbnail sizes used by gallery shortcode to handle up to 10 columns
+* changed 'widgettitle' to 'widget-title' (NB: not currently used by the theme)
+
+== CODE & CSS Changes ==
+* updated menu code to better handle parent-child-grandchild etc. structures (NB: menu is no longer centered.)
+* moved the "Comments" to be inline with the post title and made minor style changes
+* changed #main-blog to #the-loop for more code clarity
+
+--------------------------------------------------------------------------------
+==== Older Changelog Details ====
+-- Version 1.6
+  - released: Sept 13, 2010
+  - added license slug and URI to style.css header block
+  - added unique prefix to themes functions where appropriate
+  - added full wp_nav_menu support
+  - added additional WordPress 3.0 core functionality features i.e.: post thumbnails
+  - added full drop-down menu functionality with credits to http://matthewjamestaylor.com/blog/centered-dropdown-menus
+  - added 'the_shortlink()' based on this post: http://wpfirstaid.com/2010/07/add-the_shortlink/
+  - additional code clean-up
+  - CSS: adjusted background and font size on allowed tags for comments
+  - CSS: minor clean up
+
+-- Version 1.5.1
+  - released: June 19, 2010
+  - published on WordPress.org: June 22, 2010
+  - corrections to sidebar.php to remove "second" id=searchform
+  - WP: changed `the_time( 'M j, Y' )` to `the_time( get_option( 'date_format' ) );`
+
+-- Version 1.5
+  - released: June 15, 2010
+  - cleaned up code in functions.php
+  - clean up code to meet WP Standards
+  - WP: updated comments.php to use comment_form() function; old comment form will be removed with next theme revision (post WordPress v3.0)
+
+-- Version 1.4
+  - released: Apr 24, 2010
+  - published on WordPress.org: Apr 28, 2010
+  - Shades of Darkness child theme is no longer included
+  - add revision details to each file
+  - updated shades_dynamic_copyright() function
+  - add class and ID to function widget definition
+  - added WordPress version 3.0 Navigation Menu core widget style elements
+
+  - additional modifications to meet current guidelines as found at: http://codex.wordpress.org/Theme_Development_Checklist.
+
+-- Version 1.3.3
+  - WP: added "GPL2" license statement to style.css
+  - WP: added 'posted' to page author by-line, now reads 'posted by'
+  - WP: added shades_dynamic_copyright() to functions.php; replaced 'copyright' code in footer.php
+  - WP: added shades_theme_version() to functions.php; replaced 'version' code in footer.php
+  - WP: moved wp_footer into its own 'div'
+  - CSS: removed most empty elements
+  - NB: Shades of Darkness will no longer be included with Shades to reduce theme size after version 1.3.3
+  - NB: Shades of Darkness will be available to download at http://buynowshop.com/themes/shades
+
+-- Version 1.3.2
+  - added clearing div to end of the_Loop display
+
+-- Version 1.3.1
+  - WP: added body_class() function
+  - WP: added author link to page.php
+  - CSS: added author related elements and properties
+  - CSS: add '.page p' class
+  - CSS: added 'blockquote p' element
+  - CSS: general consolidations and/or removal of duplicate elements
+
+-- Version 1.3
+  - CSS (new): added "YUI Reset"
+  - CSS (new): added '.page ol', '.page ul', and '.page li'
+  - CSS (edit): removed #author 'width' property
+  - CSS (edit): removed #comments-main 'width' property
+  - CSS (edit): removed #comments-main code 'width' property
+  - added comments to the page.php template file
+  - added support for posts that have multiple pages
+  - pt_BR language files added - thanks to Habner Costa habnertc@msn.com
+
+-- Version 1.2
+  - Added Threaded Comments and related CSS elements and properties
+  - Added support for Sticky Posts - see changes in template files (archive, author, index) -> post="class" to post_class();
+  - Cleanup code for better readability
+  - Separated "navigation" links at end of page(s)
+  - CSS (new): added navigation class
+  - CSS (new): added sticky class element with example properties
+
+-- Version 1.1.1
+	- CSS (edit): .widget h2 -> removed 'padding: 22px 0 0;'
+	- CSS (edit): .widget -> removed 'margin-top:10px;' and 'margin-bottom:20px;'
+	- re-coded footer.php to correct for issues with fopen() errors
+
+-- Version 1.1
+	- update search box; added simple scripting
+	- added "Edit" link to page.php template
+	- re-coded searchform.php
+	- edited sidebar.php to use new searchform.php
+	- CSS (edit): input:focus, textarea:focus -> changed 'padding-bottom: 30px' to 'padding: 1px 0;'
+	- CSS (new): input#s { width: 70%; }
+	- CSS (new): .textwidget form {text-align:center;}
+	- CSS (new): added BNS Plugins section at end of style.css
+	* child theme Shades of Darkness updated to version 1.0.1
+
+NB: As of version 1.1 the following deprecated files have been removed from the theme core files:
+	* home.php
+	* header-home.php
+
+-- Version 1.0.4.1
+  - name correction - removed "(by BNS)"
+-- Version 1.0.4
+  - added child theme Shades of Darkness in folder "shades-of-darkness"
+  - added "child-theme-readme.txt" to help with installation
+  - CSS: Added "WordPress" rules for images and alignments
+-- Version 1.0.3.2
+  - remove mysterious "new line characters from theme files"
+-- Version 1.0.3.1
+  - NB: Removing a core file from a theme will not be reflected within an automatic update of the theme, which is logically correct.
+  -- The contents of the index.php file have been used to overwrite the contents of the home.php file.
+  -- The contents of the header.php file have been used to overwrite the contents of the header-home.php file.
+  -- revision is only to correct this oversight.
+-- Version 1.0.3
+  - deprecated the header-home.php and home.php files by adding a tilde (~) character to the beginning of the file name. The functionalty was merged into the index.php file with additonal PHP code, specifically an IF statement to test for the displayed page being the "home page", or the "front page". This will reduce maintenance and potential errors that cropped up due to the extra files.
+  -- copies of header-come.php and home.php from version 1.0.2 are still included but will be removed in 1.0.4
+  - re-coded footer to programtically write the theme name in the credit line, including recognition of child themes.
+  - added additional internationalization code
+  - CSS: minor adjustment to ".search-submit" for alignment purposes
+  - CSS: changed "pre" element's "width:570px;" to "width:auto;"
+  - CSS: added "overflow:hidden" to #bottom
+  - CSS: removed 1px border from ".post code" elements to improve readability
+  - CSS: add "clear: both" to .wp-caption to address larger images in posts
+
+-- Version 1.0.2
+  - added internationalization (I18n) code as specified at this page: http://codex.wordpress.org/I18n_for_WordPress_Developers
+  - changed `ul id="menu"...` to `div class="menu"...`; added height, margin, and padding elements to the menu class
+  - changed sidebar text alignment to left (from center); and, corrected screenshot image.
+
+-- Version 1.0.1
+  *** first approved version ***
+  - corrected menu over-run on long page names
+-- Version 1.0 -> Initial release
+
+=== Notes ===
 * The Shades Theme (as well as all future theme releases) will no longer directly support older browsers. Please use the most current stable version of your browser of choice.
 
-== Review Ticket ==
+=== Review Tickets ===
 * http://themes.trac.wordpress.org/ticket/5224 - v1.7 - September 11, 2011
 * http://themes.trac.wordpress.org/ticket/7479 - v1.8 - April 20, 2012
 * http://themes.trac.wordpress.org/ticket/8503 - v1.9 - July 5, 2012
