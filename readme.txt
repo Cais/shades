@@ -30,12 +30,14 @@ If you are using the default permalink structure; or if you do not have the 'Jet
 Changelog as of May 30, 2015
 == 2.4 ==
 = Code =
+* Improved i18n implementations
 * Minor code formatting changes
 
 = CSS =
 
 = Miscellaneous =
 * Moved `changelog.txt` into `readme.txt`
+* Updated copyright years
 
 /** ------------------------------------------------------------------------- */
 == 2.3 ==

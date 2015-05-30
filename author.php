@@ -7,10 +7,10 @@
  *
  * @link           http://buynowshop.com/themes/shades/
  * @link           https://github.com/Cais/shades/
- * @link           http://wordpress.org/themes/shades/
+ * @link           https://wordpress.org/themes/shades/
  *
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2014, Edward Caissie
+ * @copyright      Copyright (c) 2009-2015, Edward Caissie
  *
  * @version        2.1
  * @date           March 8, 2013
@@ -24,6 +24,10 @@
  * @version        2.1.2
  * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
+ *
+ * @version 2.4
+ * @date    May 30, 2015
+ * Improved i18n implementations
  */
 
 get_header();
@@ -50,30 +54,35 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 				} else {
 					echo 'guest';
 				}
-				/** End if - user can */
 				if ( ( $curauth->ID ) == '1' ) {
 					echo ' administrator-prime';
-				} /** End if - current author ID */
-				?>">
+				} ?>">
 
 					<h2>
 						<?php _e( 'About ', 'shades' ); ?><?php echo $curauth->display_name; ?>
 					</h2>
 
 					<ul>
+
 						<?php if ( ! empty( $curauth->user_url ) ) { ?>
-							<li><?php _e( 'Website', 'shades' ); ?>: <a
-									href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a> <?php _e( 'or', 'shades' ); ?>
-								<a href="mailto:<?php echo $curauth->user_email; ?>"><?php _e( 'email', 'shades' ); ?></a>
+
+							<li>
+								<?php printf( '%1$s: %2$s or %3$s',
+									__( 'Website', 'shades' ),
+									'<a href="' . $curauth->user_url . '">' . $curauth->user_url . '</a>',
+									'<a href="mailto:' . $curauth->user_email . '">' . __( 'email', 'shades' ) . '</a>' ); ?>
 							</li>
-						<?php
-						}
-						/** End if - not empty - user URL */
-						if ( ! empty( $curauth->user_description ) ) {
-							?>
-							<li><?php _e( 'Biography', 'shades' ); ?>
-								: <?php echo $curauth->user_description; ?></li>
-						<?php } /** End if - not empty - user description */ ?>
+
+						<?php }
+
+						if ( ! empty( $curauth->user_description ) ) { ?>
+							<li>
+								<?php printf( '%1$s: %2$s',
+									__( 'Biography', 'shades' ),
+									$curauth->user_description ) ?>
+							</li>
+						<?php } ?>
+
 					</ul>
 
 				</div>
@@ -84,19 +93,23 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 				</h2>
 
 				<!-- start the_Loop -->
-				<?php
-				if ( have_posts() ) {
+				<?php if ( have_posts() ) {
 
 					$count = 0;
+
 					while ( have_posts() ) {
 
 						the_post();
 						$count ++;
+
 						if ( $count == 1 ) {
+
 							get_template_part( 'content', get_post_format() );
-						} else {
-							?>
+
+						} else { ?>
+
 							<div <?php post_class(); ?>
+
 								id="post-<?php the_ID(); ?>">
 
 								<h1>
@@ -110,6 +123,7 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 								</h1>
 
 								<div class="postdata">
+
 									<?php
 									printf(
 										__( '%1$s on %2$s in %3$s', 'shades' ),
@@ -122,6 +136,7 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 									<?php
 									comments_popup_link( __( ' with No Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( ' with Comments closed', 'shades' ) );
 									edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
+
 								</div>
 								<!-- .postdata -->
 
@@ -135,22 +150,29 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 								<p class="tags"><?php the_tags(); ?></p>
 
 							</div><!-- .post #post-ID -->
-						<?php
-						}
-						/** End if - count is 1 */
+
+						<?php }
+
 					}
-					/** End while - have posts */
+
 					get_template_part( 'shades-navigation' );
+
 				} else {
+
 					get_template_part( 'shades-no-posts' );
-				} /** End if - have posts */
-				?>
+
+				} ?>
 
 			</div>
 			<!-- #the-loop -->
+
 			<?php get_sidebar(); ?>
+
 			<div class="clear"></div>
+
 		</div>
 		<!--end content-->
+
 	</div><!--end wrapper-->
+
 <?php get_footer();

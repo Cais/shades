@@ -7,10 +7,10 @@
  *
  * @link           http://buynowshop.com/themes/shades/
  * @link           https://github.com/Cais/shades/
- * @link           http://wordpress.org/themes/shades/
+ * @link           https://wordpress.org/themes/shades/
  *
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2014, Edward Caissie
+ * @copyright      Copyright (c) 2009-2015, Edward Caissie
  *
  * Last revised April 18, 2012
  * @version        1.8
@@ -39,17 +39,19 @@ get_header(); ?>
 
 				<?php
 				if ( have_posts() ) {
+
 					while ( have_posts() ) {
 
 						the_post();
+
 						if ( get_post_format() !== ( 'aside' || 'quote' || 'status' ) ) {
 
 							get_template_part( 'content', get_post_format() );
 
-						} else {
-							?>
+						} else { ?>
 
 							<div <?php post_class(); ?>
+
 								id="post-<?php the_ID(); ?>">
 
 								<h1>
@@ -68,6 +70,7 @@ get_header(); ?>
 								<!-- post-comments -->
 
 								<div class="postdata">
+
 									<?php
 									printf(
 										__( '%1$s by %2$s on %3$s in ', 'shades' ),
@@ -77,6 +80,7 @@ get_header(); ?>
 										get_the_category_list( ', ' )
 									);
 									edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
+
 								</div>
 								<!-- .postdata -->
 
@@ -89,12 +93,9 @@ get_header(); ?>
 
 							</div><!-- .post #post-ID -->
 
-						<?php
-						}
-						/** End if - post format */
+						<?php }
 
 					}
-					/** End while - have posts */
 
 					get_template_part( 'shades-navigation' );
 
