@@ -10,7 +10,7 @@
  * @link        http://wordpress.org/themes/shades/
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2014, Edward Caissie
+ * @copyright   Copyright (c) 2009-2015, Edward Caissie
  *
  * @version     2.1
  * @date        March 4, 2013
@@ -29,20 +29,20 @@
 /** Define constant for easier updating */
 define( 'SHADES_HOME_URL', 'BuyNowShop.com' );
 
-
 if ( ! function_exists( 'shades_widget_areas' ) ) {
+
 	/**
 	 * Widget Areas
-	 * Registers widget areas
+	 *
+	 * Registers widget areas by hooking into the `widget_init` action
 	 *
 	 * @package  Shades
 	 * @since    2.3
 	 *
 	 * @uses     register_sidebars
-	 *
-	 * @internal Hooked into the `widget_init` action
 	 */
 	function shades_widget_areas() {
+
 		/** Widget definition */
 		register_sidebars(
 			2, array(
@@ -53,16 +53,18 @@ if ( ! function_exists( 'shades_widget_areas' ) ) {
 				'after_title'   => '</h2>',
 			)
 		);
+
 	}
-	/** End functions - widget areas */
+
 }
-/** End if - function exists */
 add_action( 'widgets_init', 'shades_widget_areas' );
 
 
 if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
+
 	/**
 	 * Shades Dynamic Copyright
+	 *
 	 * Creates a dynamic Copyright by statement by reading the year of the first
 	 * published post and appending the current year as well as minimal boiler-
 	 * plate text. Output is then echoed via an apply_filters call.
@@ -131,7 +133,6 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 				set_transient( 'shades_copyright_first_post', $first_post, $args['transient_refresh'] );
 
 			}
-			/** End if - no transient set */
 
 			/** @var $first_date - get the date in a standardized format */
 			$first_date = get_transient( 'shades_copyright_first_post' )->post_date_gmt;
@@ -141,23 +142,24 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 			if ( $first_year == '' ) {
 				$first_year = date( 'Y' );
 			}
-			/** End if - first year */
 
 			/** Add to output string */
 			if ( $first_year == date( 'Y' ) ) {
+
 				/** Only use current year if no posts in previous years */
 				$output .= ' &copy; ' . date( 'Y' );
+
 			} else {
+
 				$output .= ' &copy; ' . $first_year . "-" . date( 'Y' );
+
 			}
-			/** End if - first year */
 
 		} else {
 
 			$output .= ' &copy; ' . $args['copy_years'];
 
 		}
-		/** End if - empty copy years */
 
 		/** Create URL to link back to home of website */
 		empty( $args['url'] )
@@ -175,14 +177,15 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 		echo apply_filters( 'shades_dynamic_copyright', $output, $args );
 
 	}
-	/** End function - dynamic copyright */
+
 }
-/** End if - function exists */
 
 
 if ( ! function_exists( 'shades_theme_version' ) ) {
+
 	/**
 	 * BNS Theme Version
+	 *
 	 * Displays the theme name and version; also accounts for a Child-Theme if present
 	 *
 	 * @uses    is_child_theme
@@ -202,6 +205,7 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 	 * Use consistent code constructs
 	 */
 	function shades_theme_version() {
+
 		/** @var $active_theme_data - array object containing the current theme's data */
 		$active_theme_data = wp_get_theme();
 
@@ -228,20 +232,18 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 			);
 
 		}
-		/** End if - is child theme */
-
 
 	}
-	/** End function - theme version */
 
 }
-/** End if - function exists */
 
 
 /** Tell WordPress to run shades_setup() when the 'after_setup_theme' hook is run. */
 if ( ! function_exists( 'shades_setup' ) ) {
+
 	/**
 	 * Shades Setup
+	 *
 	 * Defines for core functionality supported by theme
 	 *
 	 * @package Shades
@@ -272,12 +274,19 @@ if ( ! function_exists( 'shades_setup' ) ) {
 	 * @version 2.3
 	 * @date    November 23, 2014
 	 * Added filter to allow supported post-formats to be easily extended
+	 *
+	 * @version 2.4
+	 * @date    May 31, 2015
+	 * Moved `$content_width` setting into `shades_setup` function
 	 */
 	function shades_setup() {
+
 		/** This theme uses post thumbnails */
 		add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+
 		/** Add default posts and comments RSS feed links to head */
 		add_theme_support( 'automatic-feed-links' );
+
 		/** Add Custom Background Support */
 		add_theme_support(
 			'custom-background', array(
@@ -297,6 +306,7 @@ if ( ! function_exists( 'shades_setup' ) ) {
 
 		/** Assign glyphs via unique functions so they can be over-written in Child-Theme */
 		if ( ! function_exists( 'shades_glyph_aside' ) ) {
+
 			/**
 			 * Shades Glyph - Aside
 			 */
@@ -307,12 +317,12 @@ if ( ! function_exists( 'shades_setup' ) ) {
 				$aside_glyph .= '</span>';
 				echo apply_filters( 'shades_glyph_aside', $aside_glyph );
 			}
-			/** End function - glyph aside */
+
 		}
-		/** End if - function exists */
 
 
 		if ( ! function_exists( 'shades_glyph_quote' ) ) {
+
 			/**
 			 * Shades Glyph - Quote
 			 */
@@ -323,12 +333,12 @@ if ( ! function_exists( 'shades_setup' ) ) {
 				$quote_glyph .= '</span>';
 				echo apply_filters( 'shades_glyph_quote', $quote_glyph );
 			}
-			/** End function - glyph quote */
+
 		}
-		/** End if - function exists */
 
 
 		if ( ! function_exists( 'shades_glyph_status' ) ) {
+
 			/**
 			 * Shades Glyph - Status
 			 */
@@ -339,16 +349,14 @@ if ( ! function_exists( 'shades_setup' ) ) {
 				$status_glyph .= '</span>';
 				echo $status_glyph;
 			}
-			/** End function - glyph status */
-		}
-		/** End if - function exists */
 
+		}
 
 		/** Add theme support for editor-style */
 		add_editor_style();
 
-
 		if ( ! function_exists( 'shades_nav_menu' ) ) {
+
 			/**
 			 * Shades Navigation Menu
 			 * Adds custom menu support
@@ -357,7 +365,9 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			 * @uses    wp_nav_menu
 			 */
 			function shades_nav_menu() {
+
 				if ( function_exists( 'wp_nav_menu' ) ) {
+
 					wp_nav_menu(
 						array(
 							'menu_class'     => 'nav-menu',
@@ -365,17 +375,20 @@ if ( ! function_exists( 'shades_setup' ) ) {
 							'fallback_cb'    => 'shades_list_pages'
 						)
 					);
+
 				} else {
+
 					shades_list_pages();
+
 				}
-				/** End if function exists */
+
 			}
-			/** End function - nav menu */
+
 		}
-		/** End if - function exists */
 
 
 		if ( ! function_exists( 'shades_list_pages' ) ) {
+
 			/**
 			 * Shades List Pages
 			 * Fallback for Shades Navigation Menu
@@ -383,28 +396,33 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			 * @uses    wp_list_pages
 			 */
 			function shades_list_pages() {
-				if ( is_home() || is_front_page() ) {
-					?>
-					<ul class="nav-menu"><?php wp_list_pages( 'title_li=' ); ?></ul>
-				<?php
-				} else {
-					?>
+
+				if ( is_home() || is_front_page() ) { ?>
+
 					<ul class="nav-menu">
+						<?php wp_list_pages( 'title_li=' ); ?>
+					</ul>
+
+				<?php } else { ?>
+
+					<ul class="nav-menu">
+
 						<li>
 							<a href="<?php echo home_url(); ?>"><?php _e( 'Home', 'shades' ); ?></a>
 						</li>
-						<?php wp_list_pages( 'title_li=' ); ?>
-					</ul><!-- nav-menu -->
-				<?php
-				}
-				/** End if - is home */
-			}
-			/** End function - list pages */
-		}
-		/** End if - function exists */
 
+						<?php wp_list_pages( 'title_li=' ); ?>
+
+					</ul><!-- nav-menu -->
+
+				<?php }
+
+			}
+
+		}
 
 		if ( ! function_exists( 'register_shades_menu' ) ) {
+
 			/**
 			 * Register Shades Menu
 			 *
@@ -413,9 +431,8 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			function register_shades_menu() {
 				register_nav_menu( 'top-menu', __( 'Top Menu', 'shades' ) );
 			}
-			/** End function - register menu */
+
 		}
-		/** End if - function exists */
 		add_action( 'init', 'register_shades_menu' );
 
 
@@ -429,17 +446,21 @@ if ( ! function_exists( 'shades_setup' ) ) {
 		if ( is_readable( $locale_file ) ) {
 			require_once( $locale_file );
 		}
-		/** End if - is readable */
+
+		/** Set the content width based on the theme's design and stylesheet, see #the-loop element in style.css */
+		global $content_width;
+		if ( ! isset( $content_width ) ) {
+			$content_width = 630;
+		}
 
 	}
-	/** End function - setup */
 
 }
-/** End if - function exists */
 add_action( 'after_setup_theme', 'shades_setup' );
 
 
 if ( ! function_exists( 'shades_wp_title' ) ) {
+
 	/**
 	 * Shades WP Title
 	 * Utilizes the `wp_title` filter to add text to the default output
@@ -482,25 +503,22 @@ if ( ! function_exists( 'shades_wp_title' ) ) {
 		if ( $site_tagline && ( is_home() || is_front_page() ) ) {
 			$shades_title_text .= "$sep$site_tagline";
 		}
-		/** End if - site tagline */
 
 		/** Add a page number if necessary */
 		if ( $paged >= 2 || $page >= 2 ) {
 			$shades_title_text .= $sep . sprintf( __( 'Page %s', 'shades' ), max( $paged, $page ) );
 		}
 
-		/** End if - paged */
-
 		return $shades_title_text;
 
 	}
-	/** End function - wp title */
+
 }
-/** End if - function exists */
 add_filter( 'wp_title', 'shades_wp_title', 10, 2 );
 
 
 if ( ! function_exists( 'shades_modified_post' ) ) {
+
 	/**
 	 * Shades Modified Post
 	 * If the post time and the last modified time are different display
@@ -521,13 +539,14 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
 	function shades_modified_post() {
 
 		global $post;
+
 		$last_user = '';
 		if ( $last_id = get_post_meta( $post->ID, '_edit_last', true ) ) {
 			$last_user = get_userdata( $last_id );
 		}
-		/** End if - last id */
 
 		if ( get_the_time() <> get_the_modified_time() ) {
+
 			/** CSS wrapper for modified date details */
 			echo '<h6 class="shades-modified-post">';
 			printf(
@@ -537,16 +556,15 @@ if ( ! function_exists( 'shades_modified_post' ) ) {
 				get_the_modified_time( get_option( 'time_format' ) )
 			);
 			echo '</h6><!-- .shades-modified-post -->';
+
 		}
-		/** End if - get the time */
 
 	}
-	/** End function - modified post */
-}
-/** End if - function exists */
 
+}
 
 if ( ! function_exists( 'shades_use_posted' ) ) {
+
 	/**
 	 * Shades Use Posted
 	 * For posts without titles
@@ -557,6 +575,7 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
 	 * @return  string text only|URL to post
 	 */
 	function shades_use_posted() {
+
 		$shades_no_title = get_the_title();
 		empty( $shades_no_title )
 			? $shades_no_title = '<a href="' . get_permalink() . '" title="' . the_title_attribute(
@@ -569,42 +588,40 @@ if ( ! function_exists( 'shades_use_posted' ) ) {
 			: $shades_no_title = __( 'Posted', 'shades' );
 
 		return $shades_no_title;
+
 	}
-	/** End function - use posted */
+
 }
-/** End if - function exists */
 
-
-/**
- * Enqueue Comment Reply Script
- * If the page being viewed is a single post/page; and, comments are open; and,
- * threaded comments are turned on then enqueue the built-in comment-reply
- * script.
- *
- * @package Shades
- * @since   1.9
- *
- * @uses    comments_open
- * @uses    get_option
- * @uses    is_singular
- * @uses    wp_enqueue_script
- *
- * @version 2.0
- * @date    December 7, 2012
- * Change conditional to show "Threaded Comments" if they are open or closed.
- */
 if ( ! function_exists( 'shades_enqueue_comment_reply' ) ) {
+
+	/**
+	 * Enqueue Comment Reply Script
+	 * If the page being viewed is a single post/page; and, comments are open; and,
+	 * threaded comments are turned on then enqueue the built-in comment-reply
+	 * script.
+	 *
+	 * @package Shades
+	 * @since   1.9
+	 *
+	 * @uses    get_option
+	 * @uses    is_singular
+	 * @uses    wp_enqueue_script
+	 *
+	 * @version 2.0
+	 * @date    December 7, 2012
+	 * Change conditional to show "Threaded Comments" if they are open or closed.
+	 */
 	function shades_enqueue_comment_reply() {
+
 		if ( is_singular() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-		/** End if - is singular */
-	}
-	/** End function - enqueue comment reply */
-}
-/** End if - function exists */
-add_action( 'comment_form_before', 'shades_enqueue_comment_reply' );
 
+	}
+
+}
+add_action( 'comment_form_before', 'shades_enqueue_comment_reply' );
 
 /**
  * Show Featured Image
@@ -619,21 +636,12 @@ add_action( 'comment_form_before', 'shades_enqueue_comment_reply' );
  * @uses    the_post_thumbnail
  */
 function shades_show_featured_image( $size ) {
+
 	if ( is_home() || is_front_page() && has_post_thumbnail() ) {
 		the_post_thumbnail( $size, array( 'class' => 'aligncenter' ) );
 	}
-	/** End if - is home */
+
 }
-
-/** End function - show featured image */
-
-
-/** Set the content width based on the theme's design and stylesheet, see #the-loop element in style.css */
-if ( ! isset( $content_width ) ) {
-	$content_width = 630;
-}
-/** End if - content width */
-
 
 /** Changes BNS Login to use Dashicons */
 add_filter( 'bns_login_dashed_set', '__return_true' );

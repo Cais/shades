@@ -32,6 +32,7 @@ Changelog as of May 30, 2015
 = Code =
 * Improved i18n implementations
 * Minor code formatting changes
+* Moved `$content_width` setting into `shades_setup` function
 
 = CSS =
 
