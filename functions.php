@@ -650,7 +650,7 @@ function shades_show_featured_image( $size ) {
 
 }
 
-if ( function_exists( 'shades_loop' ) ) {
+if ( ! function_exists( 'shades_loop' ) ) {
 
 	/**
 	 * Shades Loop
@@ -676,8 +676,6 @@ if ( function_exists( 'shades_loop' ) ) {
 
 				if ( is_singular() ) {
 					comments_template();
-				} else {
-					get_template_part( 'shades-navigation' );
 				}
 
 			}

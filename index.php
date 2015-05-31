@@ -57,7 +57,9 @@ get_header(); ?>
 
 			<div id="the-loop">
 
-				<?php shades_loop(); ?>
+				<?php
+				shades_loop();
+				get_template_part( 'shades-navigation' );?>
 
 			</div>
 			<!-- #the-loop -->
