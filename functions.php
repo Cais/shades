@@ -304,6 +304,9 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			) )
 		);
 
+		/** Add support for the `<title />` tag */
+		add_theme_support( 'title-tag' );
+
 		/** Assign glyphs via unique functions so they can be over-written in Child-Theme */
 		if ( ! function_exists( 'shades_glyph_aside' ) ) {
 
