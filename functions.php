@@ -176,7 +176,7 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 			: $output .= ' ' . $args['end'];
 
 		/** Construct and sprintf the copyright notice */
-		$output = sprintf( __( '<span id="shades-dynamic-copyright"> %1$s </span><!-- #shades-dynamic-copyright -->', 'shades' ), $output );
+		$output = '<span id="shades-dynamic-copyright"> ' .  $output . ' </span><!-- #shades-dynamic-copyright -->';
 
 		echo apply_filters( 'shades_dynamic_copyright', $output, $args );
 
@@ -219,7 +219,7 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 			$parent_theme_data = $active_theme_data->parent();
 
 			printf(
-				__( '<br /><span id="shades-theme-version">%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.</span>', 'shades' ),
+				'<br /><span id="shades-theme-version">' . __( '%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s.', 'shades' ) . '</span>',
 				$active_theme_data->get( 'Name' ),
 				$active_theme_data->get( 'Version' ),
 				$parent_theme_data->get( 'Name' ),
@@ -230,7 +230,7 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 		} else {
 
 			printf(
-				__( '<br /><span id="shades-theme-version">This site is using the %1$s theme, v%2$s, from <a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>.</span>', 'shades' ),
+				'<br /><span id="shades-theme-version">' . __( 'This site is using the %1$s theme, v%2$s, from ', 'shades' ) . '<a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>.</span>',
 				$active_theme_data->get( 'Name' ),
 				$active_theme_data->get( 'Version' )
 			);
@@ -320,7 +320,7 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			function shades_glyph_aside() {
 				$aside_glyph = '<span class="aside-glyph">';
 				/** default: exclamation mark */
-				$aside_glyph .= __( '!', 'shades' );
+				$aside_glyph .= '!';
 				$aside_glyph .= '</span>';
 				echo apply_filters( 'shades_glyph_aside', $aside_glyph );
 			}
@@ -336,7 +336,7 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			function shades_glyph_quote() {
 				$quote_glyph = '<span class="quote-glyph">';
 				/** default: double-quote */
-				$quote_glyph .= __( '"', 'shades' );
+				$quote_glyph .= '"';
 				$quote_glyph .= '</span>';
 				echo apply_filters( 'shades_glyph_quote', $quote_glyph );
 			}
@@ -352,7 +352,7 @@ if ( ! function_exists( 'shades_setup' ) ) {
 			function shades_glyph_status() {
 				$status_glyph = '<span class="status-glyph">';
 				/** default: amphere (at sign) */
-				$status_glyph .= __( '@', 'shades' );
+				$status_glyph .= '@';
 				$status_glyph .= '</span>';
 				echo $status_glyph;
 			}

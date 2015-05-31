@@ -55,7 +55,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 				get_the_category_list( ', ' )
 			); ?>
 
-			<br /><?php comments_popup_link( __( ' with No Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( ' with Comments closed', 'shades' ) );
+			<br /><?php comments_popup_link();
 
 		} else {
 

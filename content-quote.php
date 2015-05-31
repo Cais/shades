@@ -55,7 +55,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 		);
 
 		if ( is_home() || is_front_page() ) { ?>
-			<br /><?php comments_popup_link( __( ' with No Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( ' with Comments closed', 'shades' ) );
+			<br /><?php comments_popup_link();
 		}
 
 		the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );

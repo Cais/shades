@@ -65,7 +65,7 @@ get_header(); ?>
 								</h1>
 
 								<div class="post-comments">
-									<?php comments_popup_link( __( 'No Comments', 'shades' ), __( '1 Comment', 'shades' ), __( '% Comments', 'shades' ), '', __( 'Comments closed', 'shades' ) ); ?>
+									<?php comments_popup_link(); ?>
 								</div>
 								<!-- post-comments -->
 
@@ -73,7 +73,7 @@ get_header(); ?>
 
 									<?php
 									printf(
-										__( '%1$s by %2$s on %3$s in ', 'shades' ),
+										__( '%1$s by %2$s on %3$s in', 'shades' ) . ' ',
 										shades_use_posted(),
 										get_the_author(),
 										get_the_time( get_option( 'date_format' ) ),

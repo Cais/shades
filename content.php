@@ -49,7 +49,7 @@ if ( is_page() ) { ?>
 				get_the_author(),
 				get_the_time( get_option( 'date_format' ) )
 			);
-			comments_popup_link( __( ' with no Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( '', 'shades' ) );
+			comments_popup_link();
 			the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
 			edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
 
@@ -89,7 +89,7 @@ if ( is_page() ) { ?>
 			<?php if ( ! is_single() ) { ?>
 
 				<div class="post-comments">
-					<?php comments_popup_link( __( 'No Comments', 'shades' ), __( '1 Comment', 'shades' ), __( '% Comments', 'shades' ), '', __( 'Comments closed', 'shades' ) ); ?>
+					<?php comments_popup_link(); ?>
 				</div>
 
 			<?php } ?>
@@ -148,7 +148,7 @@ if ( is_page() ) { ?>
 
 		if ( is_single() ) { ?>
 
-			<div id="author_link"><?php _e( '... other posts by ', 'shades' ); ?><?php the_author_posts_link(); ?></div>
+			<div id="author_link"><?php _e( '... other posts by', 'shades' ); ?> <?php the_author_posts_link(); ?></div>
 
 		<?php } ?>
 

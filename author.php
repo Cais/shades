@@ -134,7 +134,7 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 									the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' ); ?>
 									<br />
 									<?php
-									comments_popup_link( __( ' with No Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( ' with Comments closed', 'shades' ) );
+									comments_popup_link();
 									edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
 
 								</div>
