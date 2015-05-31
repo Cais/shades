@@ -24,6 +24,10 @@
  * @date        December 8, 2014
  * Added function wrapper for widget area registration and hooked it into `widgets_init` action
  * Added BNS Login support for dashicons
+ *
+ * @version 2.4
+ * @date    May 31, 2015
+ * Added `shades_loop` function for DRY reasons
  */
 
 /** Define constant for easier updating */
@@ -642,6 +646,48 @@ function shades_show_featured_image( $size ) {
 
 	if ( is_home() || is_front_page() && has_post_thumbnail() ) {
 		the_post_thumbnail( $size, array( 'class' => 'aligncenter' ) );
+	}
+
+}
+
+if ( function_exists( 'shades_loop' ) ) {
+
+	/**
+	 * Shades Loop
+	 *
+	 * @package Shades
+	 * @since   2.4
+	 *
+	 * @uses    comments_template
+	 * @uses    get_post_format
+	 * @uses    get_template_part
+	 * @uses    have_posts
+	 * @uses    is_singular
+	 * @uses    the_post
+	 */
+	function shades_loop() {
+
+		if ( have_posts() ) {
+
+			while ( have_posts() ) {
+
+				the_post();
+				get_template_part( 'content', get_post_format() );
+
+				if ( is_singular() ) {
+					comments_template();
+				} else {
+					get_template_part( 'shades-navigation' );
+				}
+
+			}
+
+		} else {
+
+			get_template_part( 'shades-no-posts' );
+
+		}
+
 	}
 
 }

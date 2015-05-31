@@ -7,10 +7,10 @@
  *
  * @link        http://buynowshop.com/themes/shades/
  * @link        https://github.com/Cais/shades/
- * @link        http://wordpress.org/themes/shades/
+ * @link        https://wordpress.org/themes/shades/
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2014, Edward Caissie
+ * @copyright   Copyright (c) 2009-2015, Edward Caissie
  *
  * Last revised April 18, 2012
  * @version     1.8
@@ -20,31 +20,23 @@
  * @version     2.1
  * @date        March 4, 2013
  * Refactored code formatting and code block termination comments
+ *
+ * @version 2.4
+ * @date    May 31, 2015
+ * Added `shades_loop` function for DRY reasons
  */
 
 get_header(); ?>
 
 	<div id="maintop"></div>
+
 	<div id="wrapper">
+
 		<div id="content">
+
 			<div id="the-loop">
 
-				<?php
-				if ( have_posts() ) {
-
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'content', get_post_format() );
-						comments_template();
-					}
-					/** End while - have posts */
-
-				} else {
-
-					get_template_part( 'shades-no-posts' );
-
-				} /** End if - have posts */
-				?>
+				<?php shades_loop(); ?>
 
 			</div>
 			<!-- #the-loop -->
@@ -53,6 +45,7 @@ get_header(); ?>
 
 		</div>
 		<!-- #content -->
+
 	</div><!-- #wrapper -->
 
 <?php get_footer();

@@ -30,6 +30,7 @@ If you are using the default permalink structure; or if you do not have the 'Jet
 == 2.4 ==
 = Code =
 * Added "theme_support" for the `title` tag
+* Added `shades_loop` function for DRY reasons
 * Improved i18n implementations
 * Minor code formatting changes
 * Moved `$content_width` setting into `shades_setup` function

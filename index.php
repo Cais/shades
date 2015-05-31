@@ -9,18 +9,18 @@
  * Have you found its Easter egg?
  *
  * @package        Shades
+ * @version        2.4
+ * @date           May 31, 2015
  *
  * @link           http://buynowshop.com/themes/shades/
  * @link           https://github.com/Cais/shades/
- * @link           http://wordpress.org/themes/shades/
+ * @link           https://wordpress.org/themes/shades/
  *
  * @internal       REQUIRES WordPress version 3.4
- * @internal       Tested up to WordPress version 4.1
+ * @internal       Tested up to WordPress version 4.2.2
  *
- * @version        2.3
- * @date           December 2014
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2014, Edward Caissie
+ * @copyright      Copyright (c) 2009-2015, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -53,23 +53,7 @@ get_header(); ?>
 
 			<div id="the-loop">
 
-				<?php
-				if ( have_posts() ) {
-
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'content', get_post_format() );
-					}
-					/** End while - have posts */
-
-					get_template_part( 'shades-navigation' );
-
-				} else {
-
-					get_template_part( 'shades-no-posts' );
-
-				} /** End if - have posts */
-				?>
+				<?php shades_loop(); ?>
 
 			</div>
 			<!-- #the-loop -->
