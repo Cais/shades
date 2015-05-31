@@ -51,7 +51,7 @@ if ( is_page() ) { ?>
 			);
 			comments_popup_link( __( ' with no Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( '', 'shades' ) );
 			the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
-			edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
+			edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
 
 		</div>
 		<!-- .postdata -->
@@ -119,7 +119,7 @@ if ( is_page() ) { ?>
 			}
 
 			the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
-			edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
+			edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
 
 		</div>
 		<!-- .postdata -->

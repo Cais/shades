@@ -135,7 +135,7 @@ $curauth = ( get_query_var( 'author_name ' ) ) ? get_user_by( 'id', get_query_va
 									<br />
 									<?php
 									comments_popup_link( __( ' with No Comments', 'shades' ), __( ' with 1 Comment', 'shades' ), __( ' with % Comments', 'shades' ), '', __( ' with Comments closed', 'shades' ) );
-									edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
+									edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
 
 								</div>
 								<!-- .postdata -->

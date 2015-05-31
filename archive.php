@@ -79,7 +79,7 @@ get_header(); ?>
 										get_the_time( get_option( 'date_format' ) ),
 										get_the_category_list( ', ' )
 									);
-									edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
+									edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
 
 								</div>
 								<!-- .postdata -->

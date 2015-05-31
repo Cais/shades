@@ -59,7 +59,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 		}
 
 		the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
-		edit_post_link( __( 'Edit', 'shades' ), __( ' &#124; ', 'shades' ), __( '', 'shades' ) ); ?>
+		edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
 
 	</div>
 	<!-- postdata -->

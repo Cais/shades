@@ -34,6 +34,7 @@ If you are using the default permalink structure; or if you do not have the 'Jet
 * Adjusted output to move arrow symbols outside of i18n implementation
 * Improved i18n implementations
 * Minor code formatting changes
+* Minor corrections to i18n implementation
 * Moved `$content_width` setting into `shades_setup` function
 * Removed Bookmarks from default sidebar content
 
