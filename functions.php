@@ -230,9 +230,10 @@ if ( ! function_exists( 'shades_theme_version' ) ) {
 		} else {
 
 			printf(
-				'<br /><span id="shades-theme-version">' . __( 'This site is using the %1$s theme, v%2$s, from ', 'shades' ) . '<a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>.</span>',
+				'<br /><span id="shades-theme-version">' . __( 'This site is using the %1$s theme, v%2$s, from %3$s', 'shades' ),
 				$active_theme_data->get( 'Name' ),
-				$active_theme_data->get( 'Version' )
+				$active_theme_data->get( 'Version' ),
+				' <a href="http://' . SHADES_HOME_URL . '" title="' . SHADES_HOME_URL . '">' . SHADES_HOME_URL . '</a>.</span>'
 			);
 
 		}

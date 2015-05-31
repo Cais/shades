@@ -84,7 +84,7 @@ get_header(); ?>
 								</div>
 								<!-- .postdata -->
 
-								<?php the_excerpt( __( 'Read more... ', 'shades' ) ); ?>
+								<?php the_excerpt(); ?>
 
 								<div class="clear"></div>
 								<!-- For inserted media at the end of the post -->

@@ -76,7 +76,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
 	shades_show_featured_image( 'full' );
-	the_content( __( 'Read more... ', 'shades' ) ); ?>
+	the_content( __( 'Read more...', 'shades' ) ); ?>
 
 	<div class="clear"></div>
 	<!-- For inserted media at the end of the post -->
@@ -92,7 +92,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 	if ( is_single() ) {
 		?>
 		<div
-			id="author_link"><?php _e( '... other posts by ', 'shades' ); ?><?php the_author_posts_link(); ?></div>
+			id="author_link"><?php _e( '... other posts by', 'shades' ); ?> <?php the_author_posts_link(); ?></div>
 		<?php
 		shades_modified_post();
 	} /** End if - is single */

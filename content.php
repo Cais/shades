@@ -56,7 +56,7 @@ if ( is_page() ) { ?>
 		</div>
 		<!-- .postdata -->
 
-		<?php the_content( __( 'Read more... ', 'shades' ) ); ?>
+		<?php the_content( __( 'Read more...', 'shades' ) ); ?>
 
 		<div class="clear"></div>
 		<!-- For inserted media at the end of the post -->
@@ -81,7 +81,7 @@ if ( is_page() ) { ?>
 			<a href="<?php the_permalink(); ?>"
 			   title="<?php the_title_attribute(
 				   array(
-					   'before' => __( 'Permalink to: ', 'shades' ),
+					   'before' => __( 'Permalink to:', 'shades' ) . ' ',
 					   'after'  => ''
 				   )
 			   ); ?>"><?php the_title(); ?></a>
@@ -128,7 +128,7 @@ if ( is_page() ) { ?>
 
 		if ( is_home() || is_front_page() || is_single() ) {
 
-			the_content( __( 'Read more... ', 'shades' ) ); ?>
+			the_content( __( 'Read more...', 'shades' ) ); ?>
 
 			<div class="clear"></div><!-- For inserted media at the end of the post -->
 
