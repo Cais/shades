@@ -108,7 +108,7 @@ add_filter( 'comment_class', 'comment_add_userid' ); ?>
 			<?php wp_list_comments(
 				array(
 					'avatar_size' => 60,
-					'reply_text'  => __( '&raquo; Reply to this Comment &laquo;', 'shades' )
+					'reply_text'  => '&raquo; ' . __( 'Reply to this Comment &laquo;', 'shades' )
 				)
 			); ?>
 
