@@ -41,6 +41,7 @@ If you are using the default permalink structure; or if you do not have the 'Jet
 = CSS =
 
 = Miscellaneous =
+* Added default `shades.po` and English (Canada) translation files
 * Moved `changelog.txt` into `readme.txt`
 * Updated copyright years
 

@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shades\n"
+"POT-Creation-Date: 2015-05-31 19:15-0500\n"
+"PO-Revision-Date: 2015-05-31 19:15-0500\n"
+"Last-Translator: Edward Caissie <edward.caissie@gmail.com>\n"
+"Language-Team: Edward Caissie <edward.caissie@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: archive.php:61 author.php:119 content-aside.php:42 content-quote.php:41
+#: content-status.php:40 content.php:39 content.php:84
+msgid "Permalink to:"
+msgstr ""
+
+#: archive.php:76 content-aside.php:51 content-quote.php:50
+#: content-status.php:51 content.php:112
+#, php-format
+msgid "%1$s by %2$s on %3$s in %4$s"
+msgstr ""
+
+#: archive.php:82 author.php:138 content-aside.php:63 content-quote.php:62
+#: content-status.php:72 content.php:54 content.php:122
+msgid "Edit"
+msgstr ""
+
+#: author.php:62
+msgid "About "
+msgstr ""
+
+#: author.php:71
+msgid "Website"
+msgstr ""
+
+#: author.php:73
+msgid "email"
+msgstr ""
+
+#: author.php:81
+msgid "Biography"
+msgstr ""
+
+#: author.php:92
+#, php-format
+msgid "Posts by %1$s"
+msgstr ""
+
+#: author.php:129
+#, php-format
+msgid "%1$s on %2$s in %3$s"
+msgstr ""
+
+#: author.php:134 content-aside.php:62 content-quote.php:61
+#: content-status.php:71 content.php:53 content.php:121
+msgid "Short Link"
+msgstr ""
+
+#: comments.php:22
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: comments.php:28
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:103
+msgid "No Comments"
+msgstr ""
+
+#: comments.php:103
+msgid "One Comment"
+msgstr ""
+
+#: comments.php:103
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:111
+msgid "Reply to this Comment"
+msgstr ""
+
+#: content-aside.php:68 content-quote.php:68 content-status.php:79
+#: content.php:59 content.php:131
+msgid "Read more..."
+msgstr ""
+
+#: content-aside.php:75 content-quote.php:75 content-status.php:86
+#: content.php:66 content.php:137
+msgid "Pages:"
+msgstr ""
+
+#: content-aside.php:84 content-quote.php:84 content-status.php:95
+#: content.php:152
+msgid "... other posts by"
+msgstr ""
+
+#: content-status.php:62
+#, php-format
+msgid "Posted by %1$s on %2$s @ %3$s in %4$s"
+msgstr ""
+
+#: content.php:48 content.php:104
+#, php-format
+msgid "Posted by %1$s on %2$s"
+msgstr ""
+
+#: functions.php:53
+msgid "This is a widget area in the Theme sidebar"
+msgstr ""
+
+#: functions.php:122
+msgid "Copyright"
+msgstr ""
+
+#: functions.php:175
+msgid "All rights reserved."
+msgstr ""
+
+#: functions.php:222
+#, php-format
+msgid "%1$s, v%2$s, was grown from the %3$s theme, v%4$s, created by %5$s."
+msgstr ""
+
+#: functions.php:233
+#, php-format
+msgid "This site is using the %1$s theme, v%2$s, from %3$s"
+msgstr ""
+
+#: functions.php:419
+msgid "Home"
+msgstr ""
+
+#: functions.php:440
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:517
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:561
+#, php-format
+msgid "Last modified by %1$s on %2$s @ %3$s."
+msgstr ""
+
+#: functions.php:595 functions.php:596
+msgid "Posted"
+msgstr ""
+
+#: image.php:38
+msgid "Go back to the gallery post:"
+msgstr ""
+
+#: image.php:42
+msgid "Previous Photo"
+msgstr ""
+
+#: image.php:43
+msgid "Next Photo"
+msgstr ""
+
+#: image.php:59
+#, php-format
+msgid "%1$s (Size: %2$s by %3$s)"
+msgstr ""
+
+#: image.php:60
+msgid "Original image"
+msgstr ""
+
+#: image.php:71
+#, php-format
+msgid "Credit: %1$s"
+msgstr ""
+
+#: image.php:87
+#, php-format
+msgid "Created (timestamp): %1$s"
+msgstr ""
+
+#: image.php:95
+#, php-format
+msgid "Camera: %1$s"
+msgstr ""
+
+#: image.php:103
+msgid "Shutter speed:"
+msgstr ""
+
+#: image.php:112 image.php:114 image.php:119
+msgid "sec"
+msgstr ""
+
+#: image.php:127
+#, php-format
+msgid "Aperture (F-stop): %1$s"
+msgstr ""
+
+#: image.php:132
+#, php-format
+msgid "Caption: %1$s"
+msgstr ""
+
+#: image.php:137
+#, php-format
+msgid "Focal Length: %1$s"
+msgstr ""
+
+#: image.php:142
+#, php-format
+msgid "Speed: ISO %1$s"
+msgstr ""
+
+#: image.php:147
+#, php-format
+msgid "Title: %1$s"
+msgstr ""
+
+#: search.php:54
+msgid "We found it!"
+msgstr ""
+
+#: search.php:56
+msgid "It looks like you searched for ..."
+msgstr ""
+
+#: search.php:65
+msgid "Here are the results:"
+msgstr ""
+
+#: shades-navigation.php:25
+msgid "Older posts"
+msgstr ""
+
+#: shades-navigation.php:29
+msgid "Newer posts"
+msgstr ""
+
+#: shades-no-posts.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: shades-no-posts.php:28
+msgid "Sorry, but you are looking for something that is not here."
+msgstr ""
+
+#: sidebar.php:43
+msgid "Calendar"
+msgstr ""
+
+#: sidebar.php:51
+msgid "Categories"
+msgstr ""
+
+#: sidebar.php:58
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:65
+msgid "Meta"
+msgstr ""
