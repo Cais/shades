@@ -19,6 +19,10 @@
  * @version        2.1.2
  * @date           December 28, 2013
  * Removed default `Search` from sidebar
+ *
+ * @version        2.4
+ * @date           May 31, 2015
+ * Removed Bookmarks from default sidebar content
  */ ?>
 
 <div id="sidebar">
@@ -43,10 +47,6 @@
 							</div>
 						</div><!-- widget calendar -->
 
-						<div class="widget bookmarks">
-							<?php wp_list_bookmarks( 'title_li=&title_before=<h2 class="widget-title">&title_after=</h2>&category_before=&category_after=' ); ?>
-						</div><!-- widget bookmarks -->
-
 						<div class="widget categories">
 							<h2 class="widget-title"><?php _e( 'Categories', 'shades' ); ?></h2>
 							<ul>
@@ -66,8 +66,8 @@
 							<ul>
 								<?php wp_register(); ?>
 								<li><?php wp_loginout(); ?></li>
-								<li><a href="http://wordpress.org/"
-								       title="Powered by WordPress.">WordPress</a>
+								<li>
+									<a href="http://wordpress.org/" title="Powered by WordPress.">WordPress</a>
 								</li>
 								<?php wp_meta(); ?>
 							</ul>
