@@ -7,10 +7,10 @@
  *
  * @link           http://buynowshop.com/themes/shades/
  * @link           https://github.com/Cais/shades/
- * @link           http://wordpress.org/themes/shades/
+ * @link           https://wordpress.org/themes/shades/
  *
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2009-2014, Edward Caissie
+ * @copyright      Copyright (c) 2009-2015, Edward Caissie
  *
  * @version        2.1
  * @date           March 6, 2013
@@ -19,8 +19,7 @@
  * @version        2.1.2
  * @date           December 28, 2013
  * Removed default `Search` from sidebar
- */
-?>
+ */ ?>
 
 <div id="sidebar">
 
@@ -31,9 +30,10 @@
 		<div id="subcolumn">
 
 			<ul>
+
 				<li>
-					<?php
-					if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 1 ) ) : else : ?>
+
+					<?php if ( dynamic_sidebar( 1 ) ) : else : ?>
 
 						<div class="widget calendar">
 							<h2 class="widget-title"><?php _e( 'Calendar', 'shades' ); ?></h2>
@@ -73,12 +73,12 @@
 							</ul>
 						</div><!-- widget meta -->
 
-					<?php
-					endif;
+					<?php endif;
 
-					if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 2 ) ) : else : endif; ?>
+					if ( dynamic_sidebar( 2 ) ) : else : endif; ?>
 
 				</li>
+
 			</ul>
 
 		</div>
