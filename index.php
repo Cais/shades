@@ -41,6 +41,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version        2.4
+ * @date           May 31, 2015
+ * Added `shades_loop` function for DRY reasons
  */
 
 get_header(); ?>

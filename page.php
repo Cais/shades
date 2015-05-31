@@ -21,8 +21,8 @@
  * @date        March 4, 2013
  * Refactored code formatting and code block termination comments
  *
- * @version 2.4
- * @date    May 31, 2015
+ * @version     2.4
+ * @date        May 31, 2015
  * Added `shades_loop` function for DRY reasons
  */
 
