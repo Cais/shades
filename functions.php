@@ -25,8 +25,8 @@
  * Added function wrapper for widget area registration and hooked it into `widgets_init` action
  * Added BNS Login support for dashicons
  *
- * @version 2.4
- * @date    May 31, 2015
+ * @version     2.4
+ * @date        May 31, 2015
  * Added `shades_loop` function for DRY reasons
  */
 

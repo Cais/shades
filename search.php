@@ -8,10 +8,10 @@
  *
  * @link        http://buynowshop.com/themes/shades/
  * @link        https://github.com/Cais/shades/
- * @link        http://wordpress.org/themes/shades/
+ * @link        https://wordpress.org/themes/shades/
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2009-2014, Edward Caissie
+ * @copyright   Copyright (c) 2009-2015, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -50,22 +50,28 @@ get_header(); ?>
 					printf(
 						sprintf(
 							'<h2 class="search-found-pre-text">%1$s <span class="search-query">%2$s</span></h2>',
-							apply_filters( 'shades_search_found_pre_text', __( 'We found it!<br />It looks like you searched for ...', 'shades' ) ),
+							apply_filters( 'shades_search_found_pre_text',
+								__( 'We found it!', 'shades' )
+								. '<br />'
+								. __( 'It looks like you searched for ...', 'shades' )
+							),
 							get_search_query()
 						)
 					);
+
 					_e(
 						apply_filters(
 							'shades_search_found_post_text',
-							__( '<div class="shades-search-found-post-text">Here are the results:</div>', 'shades' )
+							'<div class="shades-search-found-post-text">' . __( 'Here are the results:', 'shades' ) . '</div>'
 						)
 					);
 
 					while ( have_posts() ) {
+
 						the_post();
 						get_template_part( 'content', get_post_format() );
+
 					}
-					/** End while - have posts */
 
 					get_template_part( 'shades-navigation' );
 
@@ -73,8 +79,7 @@ get_header(); ?>
 
 					get_template_part( 'shades-no-posts' );
 
-				} /** End if - have posts */
-				?>
+				} ?>
 
 			</div>
 			<!-- #the-loop -->
