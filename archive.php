@@ -73,7 +73,7 @@ get_header(); ?>
 
 									<?php
 									printf(
-										__( '%1$s by %2$s on %3$s in', 'shades' ) . ' ',
+										__( '%1$s by %2$s on %3$s in %4$s', 'shades' ) . ' ',
 										shades_use_posted(),
 										get_the_author(),
 										get_the_time( get_option( 'date_format' ) ),

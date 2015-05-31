@@ -89,14 +89,15 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 		)
 	);
 
-	if ( is_single() ) {
-		?>
-		<div
-			id="author_link"><?php _e( '... other posts by', 'shades' ); ?> <?php the_author_posts_link(); ?></div>
-		<?php
-		shades_modified_post();
-	} /** End if - is single */
-	?>
+	if ( is_single() ) { ?>
+
+		<div id="author_link">
+			<?php printf( '%1$s %2$s', __( '... other posts by', 'shades' ), the_author_posts_link() ); ?>
+		</div>
+
+		<?php shades_modified_post();
+
+	} ?>
 
 	<p class="tags"><?php the_tags(); ?></p>
 
