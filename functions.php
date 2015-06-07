@@ -721,7 +721,7 @@ if ( ! function_exists( 'shades_loop' ) ) {
 		$link = sprintf(
 			'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
 			esc_url( get_author_posts_url( $authordata->ID, $authordata->user_nicename ) ),
-			esc_attr( sprintf( __( 'Posts by %s' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'Posts by %s', 'shades' ), get_the_author() ) ),
 			get_the_author()
 		);
 

@@ -28,7 +28,7 @@ If you are using the default permalink structure; or if you do not have the 'Jet
 === Changelog ===
 * Changelog as of June 7, 2015
 
-== 2.4 ==
+== 2.4.1 ==
 = Code =
 * Added "theme_support" for the `title` tag
 * Added `shades_loop` function for DRY reasons
