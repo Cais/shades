@@ -348,3 +348,4 @@ NB: As of version 1.1 the following deprecated files have been removed from the 
 * http://themes.trac.wordpress.org/ticket/13451 - v2.1.1 - July 18, 2013
 * http://themes.trac.wordpress.org/ticket/15896 - v2.2 - December 28, 2013
 * https://themes.trac.wordpress.org/ticket/19030 - v2.2.1 - June 1, 2014
+* https://themes.trac.wordpress.org/ticket/21997 - v2.3 - December 2014
