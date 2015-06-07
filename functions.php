@@ -176,7 +176,7 @@ if ( ! function_exists( 'shades_dynamic_copyright' ) ) {
 			: $output .= ' ' . $args['end'];
 
 		/** Construct and sprintf the copyright notice */
-		$output = '<span id="shades-dynamic-copyright"> ' .  $output . ' </span><!-- #shades-dynamic-copyright -->';
+		$output = '<span id="shades-dynamic-copyright"> ' . $output . ' </span><!-- #shades-dynamic-copyright -->';
 
 		echo apply_filters( 'shades_dynamic_copyright', $output, $args );
 
@@ -686,6 +686,62 @@ if ( ! function_exists( 'shades_loop' ) ) {
 			get_template_part( 'shades-no-posts' );
 
 		}
+
+	}
+
+
+	/**
+	 * Get the Author Posts Link
+	 *
+	 * Borrowed from WordPress core `the_author_posts_link` to return the string
+	 * instead of echoing it to the screen
+	 *
+	 * @package Shades
+	 * @since   2.4
+	 *
+	 * @uses    __
+	 * @uses    apply_filters
+	 * @uses    esc_attr
+	 * @uses    esc_url
+	 * @uses    get_author_posts_url
+	 * @uses    get_the_author
+	 *
+	 * @param bool $echo
+	 *
+	 * @return bool|mixed|void
+	 */
+	function shades_get_the_author_posts_link( $echo = false ) {
+
+		global $authordata;
+
+		if ( ! is_object( $authordata ) ) {
+			return false;
+		}
+
+		$link = sprintf(
+			'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
+			esc_url( get_author_posts_url( $authordata->ID, $authordata->user_nicename ) ),
+			esc_attr( sprintf( __( 'Posts by %s' ), get_the_author() ) ),
+			get_the_author()
+		);
+
+		/**
+		 * Filter the link to the author page of the author of the current post.
+		 *
+		 * @param string $link HTML link.
+		 */
+		$link = apply_filters( 'the_author_posts_link', $link );
+
+		/** To echo or not to echo, that is the question. */
+		if ( false == $echo ) {
+			return $link;
+		} else {
+			echo $link;
+		}
+
+		/** Should never see this line but it insures a clean ending */
+
+		return false;
 
 	}
 

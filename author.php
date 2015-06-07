@@ -25,8 +25,8 @@
  * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
  *
- * @version 2.4
- * @date    May 30, 2015
+ * @version        2.4
+ * @date           May 30, 2015
  * Improved i18n implementations
  */
 

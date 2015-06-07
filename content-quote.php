@@ -72,6 +72,9 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 	</div>
 	<!-- postdata -->
 
+	<div class="clear"></div>
+	<!-- Force clear before rendering content -->
+
 	<?php shades_show_featured_image( 'full' );
 	the_content( __( 'Read more...', 'shades' ) ); ?>
 
@@ -89,7 +92,7 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 	if ( is_single() ) { ?>
 
 		<div id="author_link">
-			<?php printf( '%1$s %2$s', __( '... other posts by', 'shades' ), the_author_posts_link() ); ?>
+			<?php printf( '%1$s %2$s', __( '... other posts by', 'shades' ), shades_get_the_author_posts_link() ); ?>
 		</div>
 
 	<?php } ?>

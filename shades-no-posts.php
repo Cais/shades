@@ -15,17 +15,17 @@
  * @copyright   Copyright (c) 2009-2015, Edward Caissie
  */ ?>
 
-<h2>
+	<h2>
 
-	<?php printf(
-		__( 'Search Results for: %s', 'shades' ),
-		'<span>' . esc_html( get_search_query() ) . '</span>'
-	); ?>
+		<?php printf(
+			__( 'Search Results for: %s', 'shades' ),
+			'<span>' . esc_html( get_search_query() ) . '</span>'
+		); ?>
 
-</h2>
+	</h2>
 
-<p class="center">
-	<?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?>
-</p>
+	<p class="center">
+		<?php _e( 'Sorry, but you are looking for something that is not here.', 'shades' ); ?>
+	</p>
 
 <?php get_search_form();

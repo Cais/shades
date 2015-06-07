@@ -33,6 +33,7 @@ If you are using the default permalink structure; or if you do not have the 'Jet
 * Added "theme_support" for the `title` tag
 * Added `shades_loop` function for DRY reasons
 * Adjusted output to move arrow symbols outside of i18n implementation
+* Created `shades_get_the_author_posts_link` to return the URL link instead of echoing it
 * Improved i18n implementations
 * Minor code formatting changes
 * Minor corrections to i18n implementation

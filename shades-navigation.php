@@ -14,8 +14,8 @@
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2009-2015, Edward Caissie
  *
- * @version 2.4
- * @date    May 31, 2015
+ * @version     2.4
+ * @date        May 31, 2015
  * Adjusted output to move arrow symbols outside of i18n implementation
  */ ?>
 

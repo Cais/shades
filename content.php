@@ -26,8 +26,8 @@
  * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
  *
- * @version 2.4
- * @date    June 7, 2015
+ * @version        2.4
+ * @date           June 7, 2015
  * Moved `post-comments` message location to below other post meta data
  */
 
@@ -130,9 +130,12 @@ if ( is_page() ) { ?>
 
 		<?php shades_show_featured_image( 'full' );
 
-		if ( is_home() || is_front_page() || is_single() ) {
+		if ( is_home() || is_front_page() || is_single() ) { ?>
 
-			the_content( __( 'Read more...', 'shades' ) ); ?>
+			<div class="clear"></div>
+			<!-- Force clear before rendering content -->
+
+			<?php the_content( __( 'Read more...', 'shades' ) ); ?>
 
 			<div class="clear"></div><!-- For inserted media at the end of the post -->
 
@@ -153,7 +156,7 @@ if ( is_page() ) { ?>
 		if ( is_single() ) { ?>
 
 			<div id="author_link">
-				<?php printf( '%1$s %2$s', __( '... other posts by', 'shades' ), the_author_posts_link() ); ?>
+				<?php printf( '%1$s %2$s', __( '... other posts by', 'shades' ), shades_get_the_author_posts_link() ); ?>
 			</div>
 
 		<?php } ?>
