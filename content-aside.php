@@ -23,8 +23,11 @@
  * @version        2.1.2
  * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
- */
-?>
+ *
+ * @version        2.4
+ * @date           June 7, 2015
+ * Moved `post-comments` message location to below other post meta data
+ */ ?>
 
 <div <?php $shades_post_title = get_the_title();
 if ( empty( $shades_post_title ) ) {
@@ -55,12 +58,16 @@ post_class(); ?> id="post-<?php the_ID(); ?>">
 			get_the_category_list( ', ' )
 		);
 
-		if ( is_home() || is_front_page() ) { ?>
-			<br /><?php comments_popup_link();
-		}
-
 		the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
-		edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
+		edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' );
+
+		if ( is_home() || is_front_page() ) { ?>
+
+			<div class="post-comments">
+				<?php comments_popup_link(); ?>
+			</div>
+
+		<?php } ?>
 
 	</div>
 

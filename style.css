@@ -1065,8 +1065,7 @@ span.no-title {
 	border-top: 2px inset;
 	float: right;
 	font-family: Georgia, "Times New Roman", Times, serif;
-	/* font-size is relevant to the H1 tag */
-	font-size: 65%;
+	font-size: 75%;
 	font-weight: normal;
 	margin: 2px 0;
 	padding: 0 2px 2px 2px;

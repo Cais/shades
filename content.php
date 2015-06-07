@@ -25,6 +25,10 @@
  * @version        2.1.2
  * @date           December 28, 2013
  * i18n update for `Permalink to: ` phrase
+ *
+ * @version 2.4
+ * @date    June 7, 2015
+ * Moved `post-comments` message location to below other post meta data
  */
 
 /** Check if the content is being displayed on a "page" */
@@ -86,14 +90,6 @@ if ( is_page() ) { ?>
 				   )
 			   ); ?>"><?php the_title(); ?></a>
 
-			<?php if ( ! is_single() ) { ?>
-
-				<div class="post-comments">
-					<?php comments_popup_link(); ?>
-				</div>
-
-			<?php } ?>
-
 		</h1>
 
 		<div class="postdata">
@@ -119,7 +115,15 @@ if ( is_page() ) { ?>
 			}
 
 			the_shortlink( __( 'Short Link', 'shades' ), '', ' &#124; ', '' );
-			edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' ); ?>
+			edit_post_link( __( 'Edit', 'shades' ), ' &#124; ', '' );
+
+			if ( ! is_single() ) { ?>
+
+				<div class="post-comments">
+					<?php comments_popup_link(); ?>
+				</div>
+
+			<?php } ?>
 
 		</div>
 		<!-- .postdata -->

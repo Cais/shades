@@ -26,7 +26,8 @@ A: See core trac ticket: http://core.trac.wordpress.org/ticket/18632
 If you are using the default permalink structure; or if you do not have the 'JetPack' plugin, or 'WordPress Stats' (included with JetPack) plugin, installed you may experience problems with `the_shortcode` not behaving as expected.
 
 === Changelog ===
-* Changelog as of May 31, 2015
+* Changelog as of June 7, 2015
+
 == 2.4 ==
 = Code =
 * Added "theme_support" for the `title` tag
@@ -36,9 +37,11 @@ If you are using the default permalink structure; or if you do not have the 'Jet
 * Minor code formatting changes
 * Minor corrections to i18n implementation
 * Moved `$content_width` setting into `shades_setup` function
+* Moved the `post-comments` message to below other post meta
 * Removed Bookmarks from default sidebar content
 
 = CSS =
+* Adjusted the `post-comments` class font size to be slightly larger
 
 = Miscellaneous =
 * Added default `shades.po` and English (Canada) translation files
